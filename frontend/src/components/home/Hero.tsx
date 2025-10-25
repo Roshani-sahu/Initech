@@ -2,8 +2,11 @@ import React from "react";
 
 const DittoHero = () => {
   return (
-    <section className="min-h-screen px-4 py-16 overflow-hidden bg-gray-50 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+    <section className="relative min-h-screen px-4 py-16 overflow-hidden bg-gray-50 sm:px-6 lg:px-8">
+      {/* 🔹 Animated dotted background */}
+      <div className="absolute inset-0 -z-10 bg-dots-pattern animate-dots"></div>
+
+      <div className="relative mx-auto max-w-7xl">
         {/* Hero Content */}
         <div className="mb-16">
           {/* Main Heading */}
