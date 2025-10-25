@@ -1,10 +1,23 @@
 import React from 'react'
 import './index.css'
+import Header from './components/Header'
+import DittoHero from './components/home/Hero'
+import HomePage from './components/home/HomePage'
+import Testimonialsection from './components/home/Testimonials'
+import TechSection from './components/home/Thetech'
+import Footer from './components/Footer'
+
 
 export default function App() {
   return (
-    <div className='p-4 bg-gray-800 text -white'>
-      hi
+    <div >
+      <Header />
+      <DittoHero />
+      <HomePage />
+      <Testimonialsection />
+      <TechSection />
+      <Footer />
+   
     </div>
   )
 }
