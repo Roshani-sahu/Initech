@@ -3,7 +3,7 @@ import './index.css'
 
 export default function App() {
   return (
-    <div className='bg-gray-200'>
+    <div className='p-4 bg-gray-800 text -white'>
       hi
     </div>
   )
