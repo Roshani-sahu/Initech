@@ -39,11 +39,9 @@
 @font-face {
   font-family: "Aeonik Fono";
   src: url("/fonts/Aeonik.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+ 
 }
 
 .font-aeonik {
-  font-family: "Kairos", cursive;
+  font-family: "Kairos", sans-serif;
 }

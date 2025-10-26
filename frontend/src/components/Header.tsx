@@ -16,7 +16,7 @@ const Header = () => {
         </div>
 
         {/* Center Navigation */}
-        <nav className="flex items-center gap-8 text-black font-aeonik">
+        <nav className="flex items-center text-[15px] font-extralight gap-8 text-black font-aeonik">
           <div className="flex items-center gap-1 cursor-pointer hover:text-gray-600">
             PRODUCTS <ChevronDown size={14} />
           </div>
