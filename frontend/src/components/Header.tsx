@@ -2,8 +2,8 @@ import { ChevronDown } from "lucide-react";
 
 const Header = () => {
   return (
-    <div className="flex justify-center w-full py-6 overflow-x-hidden  sticky top-0 z-50">
-      <header className="flex items-center justify-between w-[95%] max-w-full px-8 py-5 font-mono text-sm bg-white border border-gray-300 shadow-md rounded-2xl">
+    <div className="flex justify-center md:py-6 py-3 overflow-x-hidden  sticky top-0 z-50">
+      <header className="flex items-center justify-between w-[95%] max-w-full px-8  md:py-5 font-mono text-sm bg-white border border-gray-300 shadow-md rounded-2xl">
         {/* Left Logo */}
         <div className="flex justify-start gap-10 ">
         <div className="flex items-center gap-2">
