@@ -19,12 +19,7 @@
   animation-play-state: paused;
 }
 
-@font-face {
-  font-family: 'Eurostar';
-  src: url('/fonts/eurostar.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 @font-face {
   font-family: "Kairos";
@@ -33,6 +28,7 @@
 
 .font-Kairos {
   font-family: "Kairos", cursive;
+  font-weight: 100;
 }
 
 
@@ -45,3 +41,44 @@
 .font-aeonik {
   font-family: "Kairos", sans-serif;
 }
+
+
+
+
+
+
+ .bg-dotted {
+          background-image: radial-gradient(#d1d5db 1px, transparent 2px);
+          background-size: 24px 24px;
+        }
+
+        /* Hover animation effect */
+        .bg-dotted:hover {
+          animation: pulseDots 6s linear infinite;
+        }
+
+        @keyframes pulseDots {
+          0% {
+            background-size: 24px 24px;
+            background-position: 0 0;
+          }
+          50% {
+            background-size: 28px 28px;
+            background-position: 4px 4px;
+          }
+          100% {
+            background-size: 24px 24px;
+            background-position: 0 0;
+          }
+        }
+
+        /* Continuous background floating motion */
+        @keyframes dots {
+          0% {
+            background-position: 0 0;
+          }
+          100% {
+            background-position: 10px 40px;
+          }
+        }
+       

@@ -1,10 +1,8 @@
-import React from "react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen px-4 py-8 overflow-hidden bg-gray-50 sm:px-6 lg:px-8">
+    <section className="relative min-h-screen px-4 py-8 bg-dotted animate-dots overflow-x-hidden  sm:px-6 lg:px-8">
       {/* 🔹 Animated dotted background */}
-      <div className="absolute inset-0 -z-10 bg-dotted animate-dots"></div>
 
       <div className="relative max-w-full mx-auto">
         {/* Hero Content */}
@@ -18,40 +16,34 @@ const Hero = () => {
           {/* Subheading */}
           <h2 className="mb-8 text-5xl font-light font-Kairos  text-[#0A0A0A66] sm:text-6xl lg:text-[100px]">
             Servers & Cloud
-            <br />Optional.
-          </h2>
-
-          {/* Description */}
-          <p className="max-w-md mb-12 text-lg text-gray-900">
+            <br />
+            <div className="flex flex-row gap-4"> <span> Optional. </span> <div className="max-w-md mb-12 text-lg mt-5  text-black font-extralight">
             The only offline-first database with
             <br />
             built-in peer-to-peer networking
-          </p>
+          </div>
+          </div>
+            
+          </h2>
+
+          {/* Description */}
+         
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-4">
-            <button className="flex items-center gap-2 px-6 py-3 font-semibold text-gray-900 transition-colors bg-yellow-300 rounded-md hover:bg-yellow-400">
-              <svg
-                className="w-5 h-5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                  clipRule="evenodd"
-                />
-              </svg>
+            <button className="flex items-center text-base gap-2 px-2 py-2 font-medium text-gray-900 transition-colors bg-[#EAF044] rounded-xl hover:bg-yellow-400">
+             
+              <img src="/icon.svg" alt="" />  
               TRY DITTO FOR FREE
             </button>
-            <button className="px-6 py-3 font-medium text-gray-900 transition-colors hover:text-gray-700">
+            <button className="px-6 py-3 text-base font-medium text-gray-900 transition-colors border border-gray-200 rounded-xl hover:bg-gray-200 hover:text-gray-700">
               SCHEDULE A DEMO
             </button>
           </div>
         </div>
 
         {/* Logos Carousel Section */}
-        <div className="pt-12 border-t border-gray-300">
+        <div className="pb-10 ">
           <div className="relative w-full overflow-hidden">
             <div className="flex animate-scroll whitespace-nowrap">
               {[...Array(2)].map((_, i) => (
@@ -135,47 +127,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* 🔹 Inline Tailwind custom styles */}
-      <style jsx>{`
-        /* Dotted background pattern */
-        .bg-dotted {
-          background-image: radial-gradient(#d1d5db 1px, transparent 1px);
-          background-size: 24px 24px;
-        }
-
-        /* Hover animation effect */
-        .bg-dotted:hover {
-          animation: pulseDots 6s linear infinite;
-        }
-
-        @keyframes pulseDots {
-          0% {
-            background-size: 24px 24px;
-            background-position: 0 0;
-          }
-          50% {
-            background-size: 28px 28px;
-            background-position: 4px 4px;
-          }
-          100% {
-            background-size: 24px 24px;
-            background-position: 0 0;
-          }
-        }
-
-        /* Continuous background floating motion */
-        @keyframes dots {
-          0% {
-            background-position: 0 0;
-          }
-          100% {
-            background-position: 40px 40px;
-          }
-        }
-        .animate-dots {
-          animation: dots 8s linear infinite;
-        }
-      `}</style>
+      
     </section>
   );
 };
