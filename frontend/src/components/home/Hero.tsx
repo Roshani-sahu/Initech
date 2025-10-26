@@ -4,7 +4,7 @@ const DittoHero = () => {
   return (
     <section className="relative min-h-screen px-4 py-16 overflow-hidden bg-gray-50 sm:px-6 lg:px-8">
       {/* 🔹 Animated dotted background */}
-      <div className="absolute inset-0 -z-10 bg-dots-pattern animate-dots"></div>
+      <div className="absolute inset-0 -z-10 bg-dotted animate-dots"></div>
 
       <div className="relative mx-auto max-w-7xl">
         {/* Hero Content */}
@@ -31,7 +31,11 @@ const DittoHero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-4">
             <button className="flex items-center gap-2 px-6 py-3 font-semibold text-gray-900 transition-colors bg-yellow-300 rounded-md hover:bg-yellow-400">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <svg
+                className="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
                 <path
                   fillRule="evenodd"
                   d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
@@ -130,6 +134,48 @@ const DittoHero = () => {
           </div>
         </div>
       </div>
+
+      {/* 🔹 Inline Tailwind custom styles */}
+      <style jsx>{`
+        /* Dotted background pattern */
+        .bg-dotted {
+          background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+          background-size: 24px 24px;
+        }
+
+        /* Hover animation effect */
+        .bg-dotted:hover {
+          animation: pulseDots 6s linear infinite;
+        }
+
+        @keyframes pulseDots {
+          0% {
+            background-size: 24px 24px;
+            background-position: 0 0;
+          }
+          50% {
+            background-size: 28px 28px;
+            background-position: 4px 4px;
+          }
+          100% {
+            background-size: 24px 24px;
+            background-position: 0 0;
+          }
+        }
+
+        /* Continuous background floating motion */
+        @keyframes dots {
+          0% {
+            background-position: 0 0;
+          }
+          100% {
+            background-position: 40px 40px;
+          }
+        }
+        .animate-dots {
+          animation: dots 8s linear infinite;
+        }
+      `}</style>
     </section>
   );
 };

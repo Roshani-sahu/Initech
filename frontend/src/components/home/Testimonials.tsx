@@ -1,6 +1,6 @@
 export default function TestimonialSection() {
   return (
-    <section className="w-full px-4 py-12 bg-gray-100 sm:px-6 lg:px-8">
+    <section className="w-full px-4 py-12 bg-white sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="p-8 bg-gray-100 border-2 border-gray-300 rounded-lg sm:p-12 lg:p-16">
           <div className="grid items-center grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
