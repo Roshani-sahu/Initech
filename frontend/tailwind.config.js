@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         kairos: ['Kairos', 'sans-serif'],
+        aeonik: ['Aeonik Fono', 'sans-serif'],
       },
     },
   },
