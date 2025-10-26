@@ -1,22 +1,22 @@
 import React from "react";
 
-const DittoHero = () => {
+const Hero = () => {
   return (
-    <section className="relative min-h-screen px-4 py-16 overflow-hidden bg-gray-50 sm:px-6 lg:px-8">
+    <section className="relative min-h-screen px-4 py-8 overflow-hidden bg-gray-50 sm:px-6 lg:px-8">
       {/* 🔹 Animated dotted background */}
       <div className="absolute inset-0 -z-10 bg-dotted animate-dots"></div>
 
-      <div className="relative mx-auto max-w-7xl">
+      <div className="relative max-w-full mx-auto">
         {/* Hero Content */}
         <div className="mb-16">
           {/* Main Heading */}
-          <h1 className="mb-4 text-5xl font-bold leading-tight text-gray-900 sm:text-6xl lg:text-7xl">
+          <h1 className="text-5xl mb-2 font-extralight font-Kairos  text-black sm:text-6xl lg:text-[100px]">
             Resilient Edge Device
             <br />Connectivity.
           </h1>
 
           {/* Subheading */}
-          <h2 className="mb-8 text-5xl font-light leading-tight text-gray-400 sm:text-6xl lg:text-7xl">
+          <h2 className="mb-8 text-5xl font-light font-Kairos  text-[#0A0A0A66] sm:text-6xl lg:text-[100px]">
             Servers & Cloud
             <br />Optional.
           </h2>
@@ -180,4 +180,4 @@ const DittoHero = () => {
   );
 };
 
-export default DittoHero;
+export default Hero;

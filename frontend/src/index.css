@@ -18,3 +18,19 @@
 .animate-scroll:hover {
   animation-play-state: paused;
 }
+
+@font-face {
+  font-family: 'Eurostar';
+  src: url('/fonts/eurostar.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kairos";
+  src: url("/fonts/Kairos.ttf") format("truetype");
+}
+
+.font-Kairos {
+  font-family: "Kairos", cursive;
+}
