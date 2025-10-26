@@ -1,7 +1,7 @@
 import React from 'react'
 import './index.css'
 import Header from './components/Header'
-import DittoHero from './components/home/Hero'
+import Hero from './components/home/Hero'
 import HomePage from './components/home/HomePage'
 import Testimonialsection from './components/home/Testimonials'
 import TechSection from './components/home/Thetech'
@@ -12,7 +12,7 @@ export default function App() {
   return (
     <div >
       <Header />
-      <DittoHero />
+      <Hero />
       <HomePage />
       <Testimonialsection />
       <TechSection />
