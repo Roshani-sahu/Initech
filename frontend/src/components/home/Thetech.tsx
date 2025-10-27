@@ -34,7 +34,7 @@ function TechSection() {
             </div>
 
             {/* CRDT-powered conflict resolution */}
-            <div>
+            <div className="border-t border-[#0A0A0A1A] pt-5">
               <h3 className="max-w-xs mb-4 text-4xl font-semibold text-[#5D5D5D] font-Kairos">CRDT-powered conflict resolution</h3>
               <p className="max-w-xl text-xl leading-relaxed text-[#5D5D5D]">
                 To resolve concurrency conflicts that appear in decentralized models, as well as enable delta-based
@@ -48,7 +48,7 @@ function TechSection() {
         <div className="flex items-center justify-center">
           <div className="relative flex items-center justify-center w-full max-w-sm p-8 bg-gray-100 rounded-3xl aspect-square">
             {/* Phone mockup */}
-            <div className="relative flex flex-col items-center justify-center w-48 p-4 bg-white border-8 border-gray-300 shadow-lg h-96 rounded-3xl">
+            <div className="relative flex flex-col items-center justify-center w-48 p-4 bg-white border-8 border-gray-200 shadow-lg h-96 rounded-3xl">
               {/* Phone screen content */}
               <div className="w-full space-y-3">
                 {/* Header placeholder */}
