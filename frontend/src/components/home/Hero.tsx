@@ -1,7 +1,7 @@
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen px-4 md:py-8 bg-dotted animate-dots overflow-x-hidden  sm:px-6 lg:px-8">
+    <section className="relative h-auto px-4 md:py-8 bg-dotted animate-dots overflow-x-hidden  sm:px-6 lg:px-8">
       {/* 🔹 Animated dotted background */}
 
       <div className="relative max-w-full mx-auto">

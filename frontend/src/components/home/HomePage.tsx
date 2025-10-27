@@ -1,17 +1,18 @@
 import React from 'react';
 
-const DittoMissionCritical = () => {
+const MissionCritical = () => {
   return (
     <section className="px-4 py-20 bg-white sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
+          <h2 className="max-w-3xl text-5xl font-normal font-Kairos leading-tight text-gray-900 lg:text-6xl">
+              Keep mission-critical systems online when it matters most
+            </h2>
         <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
           
           {/* Left Content */}
           <div>
             {/* Main Heading */}
-            <h2 className="mb-12 text-5xl font-bold leading-tight text-gray-900 lg:text-6xl">
-              Keep mission-critical systems online when it matters most
-            </h2>
+          
 
             {/* Description */}
             <p className="mb-12 text-base leading-relaxed text-gray-700">
@@ -202,4 +203,4 @@ const DittoMissionCritical = () => {
   );
 };
 
-export default DittoMissionCritical;
+export default MissionCritical;
