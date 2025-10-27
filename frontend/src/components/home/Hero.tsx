@@ -27,11 +27,27 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-4">
-            <button className="flex items-center text-base gap-2 px-2 py-1 md:py-2 font-medium text-gray-900 transition-colors bg-[#EAF044] rounded-xl hover:bg-yellow-400">
-              <img src="/icon.svg" alt="" />
-              TRY DITTO FOR FREE
-            </button>
-            <button className="px-6 py-2 text-base font-medium text-gray-900 transition-colors border border-gray-200 md:py-3 rounded-xl hover:bg-gray-200 hover:text-gray-700">
+          <button className="group flex items-center text-base gap-2 px-2 py-1 md:py-2 font-medium text-gray-900 transition-all bg-[#EAF044] rounded-xl hover:scale-105">
+  <div className="w-10 h-10 bg-[#0A0A0A1A] hover:bg-black transition-all duration-500 ease-in-out rounded-lg flex items-center justify-center relative overflow-hidden">
+    {/* White Icon (initially visible) */}
+    <img
+      src="/1.png"
+      alt="white icon"
+      className="w-5 h-5 absolute invert transition-all duration-500 ease-in-out transform group-hover:translate-x-full group-hover:opacity-0"
+    />
+
+    {/* Black Icon (slides in on hover) */}
+    <img
+      src="/1.png"
+      alt="black icon"
+      className="w-5 h-5 absolute  transition-all duration-500 ease-in-out transform -translate-x-full opacity-0 group-hover:translate-x-0  group-hover:opacity-100"
+    />
+  </div>
+
+  TRY DITTO FOR FREE
+</button>
+
+            <button className="px-6 py-2 bg-white text-base font-medium text-gray-900 transition-colors border border-gray-200 md:py-4 rounded-xl hover:bg-gray-200 hover:text-gray-700">
               SCHEDULE A DEMO
             </button>
           </div>
@@ -44,10 +60,10 @@ const Hero = () => {
               {[...Array(2)].map((_, i) => (
                 <div
                   key={i}
-                  className="flex items-center justify-around w-[200%] sm:w-full gap-6 sm:gap-10 px-4 sm:px-8 flex-shrink-0"
+                  className="flex items-center justify-around w-[200%] sm:w-full gap-6 sm:gap-10 px-4 sm:px-8 shrink-0"
                 >
                   {/* Logipad */}
-                  <div className="flex-shrink-0 text-gray-700">
+                  <div className="shrink-0 text-gray-700">
                     <svg className="h-6 sm:h-8 md:h-10" viewBox="0 0 140 40" fill="none">
                       <text
                         x="0"
@@ -62,7 +78,7 @@ const Hero = () => {
                   </div>
 
                   {/* Japan Airlines */}
-                  <div className="flex-shrink-0 text-gray-800">
+                  <div className="shrink-0 text-gray-800">
                     <svg className="h-6 sm:h-8 md:h-10" viewBox="0 0 200 40" fill="none">
                       <circle cx="20" cy="20" r="10" fill="currentColor" />
                       <text
@@ -78,7 +94,7 @@ const Hero = () => {
                   </div>
 
                   {/* Chick-fil-A */}
-                  <div className="flex-shrink-0 text-gray-800">
+                  <div className="shrink-0 text-gray-800">
                     <svg className="h-6 sm:h-8 md:h-10" viewBox="0 0 130 40" fill="none">
                       <text
                         x="0"
@@ -94,7 +110,7 @@ const Hero = () => {
                   </div>
 
                   {/* ANA */}
-                  <div className="flex-shrink-0 text-gray-800">
+                  <div className="shrink-0 text-gray-800">
                     <svg className="h-6 sm:h-8 md:h-10" viewBox="0 0 120 40" fill="none">
                       <text
                         x="0"

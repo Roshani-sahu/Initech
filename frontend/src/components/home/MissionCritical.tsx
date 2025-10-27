@@ -14,28 +14,25 @@ const MissionCritical = () => {
             
           
             {/* Description */}
-            <p className="mb-12 text-base leading-relaxed text-gray-700">
+            <p className="mb-12 text-lg leading-relaxed text-[#0A0A0A]">
               Ditto is the only edge-native, mobile database that can consistently support your business anytime, anywhere. Edge-native solutions are built specifically to thrive on mobile and edge devices, without relying solely on cloud-based services.
             </p>
 
             {/* Features List */}
             <ul className="mb-12 space-y-6">
               <li className="flex items-start">
-                <span className="flex-shrink-0 inline-block w-2 h-2 mt-2 mr-3 bg-gray-900 rounded-full"></span>
                 <div>
                   <span className="font-semibold text-gray-900">Build flexible operations</span>
                   <span className="text-gray-700"> that are both latency-sensitive and resilient without reliance on network hardware, edge servers, or the cloud</span>
                 </div>
               </li>
               <li className="flex items-start">
-                <span className="flex-shrink-0 inline-block w-2 h-2 mt-2 mr-3 bg-gray-900 rounded-full"></span>
                 <div>
                   <span className="font-semibold text-gray-900">Decentralize your systems</span>
                   <span className="text-gray-700"> to remove single points of failure that lead to operational bottlenecks</span>
                 </div>
               </li>
               <li className="flex items-start">
-                <span className="flex-shrink-0 inline-block w-2 h-2 mt-2 mr-3 bg-gray-900 rounded-full"></span>
                 <div>
                   <span className="font-semibold text-gray-900">Drive consistent revenue and customer service</span>
                   <span className="text-gray-700"> anywhere, regardless of connectivity or bandwidth</span>
@@ -59,7 +56,8 @@ const MissionCritical = () => {
 
           {/* Right Diagram */}
           <div className="relative ">
-            <div className="p-8 border border-gray-200 rounded-lg bg-gray-50 lg:p-12">
+            <img src="/border.svg" className='right-0 top-0 absolute w-2 h-2' alt="" />
+            <div className="p-8 border border-gray-200  bg-gray-50 lg:p-12">
                           <img src="/homepage.svg" alt="" />
 
               
