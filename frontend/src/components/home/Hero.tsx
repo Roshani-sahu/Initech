@@ -2,6 +2,7 @@
 const Hero = () => {
   return (
     <section className="relative min-h-screen px-4 py-8 overflow-x-hidden bg-dotted animate-dots sm:px-6 lg:px-8">
+    <section className="relative h-auto px-4 overflow-x-hidden md:py-8 bg-dotted animate-dots sm:px-6 lg:px-8">
       {/* 🔹 Animated dotted background */}
 
       <div className="relative max-w-full mx-auto">
@@ -14,10 +15,11 @@ const Hero = () => {
           </h1>
 
           {/* Subheading */}
-          <h2 className="mb-8 text-5xl font-light font-Kairos  text-[#0A0A0A66] sm:text-6xl lg:text-[100px]">
+          <h2 className="md:mb-8 text-5xl font-light font-Kairos  text-[#0A0A0A66] sm:text-6xl lg:text-[100px]">
             Servers & Cloud
             <br />
             <div className="flex flex-row gap-4"> <span> Optional. </span> <div className="max-w-md mt-5 mb-12 text-lg text-black font-extralight">
+            <div className="flex flex-col gap-4 md:flex-row"> <span> Optional. </span> <div className="max-w-md mt-5 mb-12 text-lg text-black font-extralight">
             The only offline-first database with
             <br />
             built-in peer-to-peer networking
@@ -31,25 +33,25 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-4">
-            <button className="flex items-center text-base gap-2 px-2 py-2 font-medium text-gray-900 transition-colors bg-[#EAF044] rounded-xl hover:bg-[#EAF044]">
+            <button className="flex items-center text-base gap-2 px-2 py-1 md:py-2 font-medium text-gray-900 transition-colors bg-[#EAF044] rounded-xl hover:bg-yellow-400">
              
               <img src="/icon.svg" alt="" />  
               TRY DITTO FOR FREE
             </button>
-            <button className="px-6 py-3 text-base font-medium text-gray-900 transition-colors border border-gray-200 rounded-xl hover:bg-gray-200 hover:text-gray-700">
+            <button className="px-6 py-2 text-base font-medium text-gray-900 transition-colors border border-gray-200 md:py-3 rounded-xl hover:bg-gray-200 hover:text-gray-700">
               SCHEDULE A DEMO
             </button>
           </div>
         </div>
 
         {/* Logos Carousel Section */}
-        <div className="pb-10 ">
+        <div className="pb-10 -mt-8 md:mt-0">
           <div className="relative w-full overflow-hidden">
             <div className="flex animate-scroll whitespace-nowrap">
               {[...Array(2)].map((_, i) => (
                 <div
                   key={i}
-                  className="flex items-center justify-around min-w-full gap-16 px-8"
+                  className="flex items-center justify-around min-w-full gap-5 px-8"
                 >
                   {/* Logipad */}
                   <div className="flex items-center justify-center text-gray-600">
