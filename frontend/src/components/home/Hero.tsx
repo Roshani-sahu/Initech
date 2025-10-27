@@ -1,9 +1,27 @@
-import React from "react";
-
+import DotGrid from './DOTGRID';
 const Hero = () => {
   return (
-    <section className="relative h-auto px-4 overflow-x-hidden md:py-8 bg-dotted animate-dots sm:px-6 lg:px-8">
-      <div className="relative max-w-full mx-auto">
+    <section
+      className="relative h-auto px-4 overflow-hidden md:py-8 sm:px-6 lg:px-8"
+      style={{ width: "100%",  position: "relative" }}
+    >
+      {/* 🟣 DotGrid as background layer */}
+      <div className="absolute -top-20 -left-10 right-0 bottom-0 -z-10">
+        <DotGrid
+          dotSize={3}
+          gap={15}
+          baseColor="#d1d5db"
+          activeColor="#5227FF"
+          proximity={120}
+          shockRadius={250}
+          shockStrength={5}
+          resistance={750}
+          returnDuration={1.5}
+        />
+      </div>
+
+      {/* ✅ Hero Content */}
+      <div className="relative max-w-full mx-auto z-10">
         {/* Hero Content */}
         <div className="mb-16">
           <h1 className="text-5xl mb-2 font-extralight font-Kairos text-black sm:text-6xl lg:text-[100px]">
