@@ -3,17 +3,16 @@ import React from 'react';
 const MissionCritical = () => {
   return (
     <section className="px-4 py-20 bg-white sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-          <h2 className="max-w-3xl text-5xl font-normal leading-tight text-gray-900 font-Kairos lg:text-6xl">
+      <div className="max-w-full mx-auto">
+          <h2 className="max-w-3xl mb-10 text-5xl font-normal leading-tight text-gray-900 font-Kairos lg:text-6xl">
               Keep mission-critical systems online when it matters most
             </h2>
-        <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
+        <div className="grid items-start grid-cols-1 gap-16 lg:grid-cols-2">
           
           {/* Left Content */}
           <div>
-            {/* Main Heading */}
+            
           
-
             {/* Description */}
             <p className="mb-12 text-base leading-relaxed text-gray-700">
               Ditto is the only edge-native, mobile database that can consistently support your business anytime, anywhere. Edge-native solutions are built specifically to thrive on mobile and edge devices, without relying solely on cloud-based services.

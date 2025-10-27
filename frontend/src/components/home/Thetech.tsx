@@ -8,11 +8,11 @@ export default function Home() {
 
 function TechSection() {
   return (
-    <section className="px-8 py-20 mx-auto max-w-7xl">
+    <section className="max-w-full px-8 py-20 mx-auto">
       {/* Header */}
       <div className="mb-16">
-        <h1 className="mb-6 text-6xl font-bold text-black">The Tech</h1>
-        <p className="max-w-md text-xl text-[#5D5D5D] " >
+        <h1 className="mb-6 text-6xl text-black font-Kairos">The Tech</h1>
+        <p className="max-w-md text-xl text-[#5D5D5D] font-Kairos " >
           Take a quick look at the core technology powering our peer-to-peer and cloud sync plans.
         </p>
       </div>
@@ -27,16 +27,16 @@ function TechSection() {
 
             {/* Offline-first mobile database */}
             <div className="mb-12">
-              <h3 className="mb-4 text-2xl font-bold text-black">Offline-first mobile database</h3>
-              <p className="text-xl leading-relaxed text-gray-700">
+              <h3 className="mb-4 text-2xl font-aeonik text-[#0A0A0A]">Offline-first mobile database</h3>
+              <p className="text-xl leading-relaxed text-[#0A0A0A]">
                 Even when devices are completely offline, they can always read, write, and process data
               </p>
             </div>
 
             {/* CRDT-powered conflict resolution */}
             <div>
-              <h3 className="mb-4 text-4xl font-semibold text-gray-400">CRDT-powered conflict resolution</h3>
-              <p className="text-xl leading-relaxed text-gray-500">
+              <h3 className="max-w-xs mb-4 text-4xl font-semibold text-[#5D5D5D] font-Kairos">CRDT-powered conflict resolution</h3>
+              <p className="max-w-xl text-xl leading-relaxed text-[#5D5D5D]">
                 To resolve concurrency conflicts that appear in decentralized models, as well as enable delta-based
                 sync, Ditto harnesses the power of conflict-free replicated data type (CRDT) technology
               </p>

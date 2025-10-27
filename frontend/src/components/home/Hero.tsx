@@ -1,7 +1,6 @@
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen px-4 py-8 overflow-x-hidden bg-dotted animate-dots sm:px-6 lg:px-8">
     <section className="relative h-auto px-4 overflow-x-hidden md:py-8 bg-dotted animate-dots sm:px-6 lg:px-8">
       {/* 🔹 Animated dotted background */}
 
@@ -18,7 +17,6 @@ const Hero = () => {
           <h2 className="md:mb-8 text-5xl font-light font-Kairos  text-[#0A0A0A66] sm:text-6xl lg:text-[100px]">
             Servers & Cloud
             <br />
-            <div className="flex flex-row gap-4"> <span> Optional. </span> <div className="max-w-md mt-5 mb-12 text-lg text-black font-extralight">
             <div className="flex flex-col gap-4 md:flex-row"> <span> Optional. </span> <div className="max-w-md mt-5 mb-12 text-lg text-black font-extralight">
             The only offline-first database with
             <br />

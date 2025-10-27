@@ -1,22 +1,26 @@
-import './index.css'
-import Header from './components/Header'
-import Hero from './components/home/Hero'
-import HomePage from './components/home/HomePage'
-import Testimonialsection from './components/home/Testimonials'
-import TechSection from './components/home/Thetech'
-import Footer from './components/Footer'
-
+import './index.css';
+// import Header from './components/Header';
+// import Footer from './components/Footer';
+import Home from './pages/HomePage';
+// import Contact from './pages/Contact';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export default function App() {
   return (
-    <div >
-      <Header />
-      <Hero />
-      <HomePage />
-      <Testimonialsection />
-      <TechSection />
-      <Footer />
-   
-    </div>
-  )
+    <Router>
+      <div className="flex flex-col min-h-screen">
+  
+
+        
+        
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* <Route path="/contact" element={<Contact />} /> */}
+          </Routes>
+        
+
+       
+      </div>
+    </Router>
+  );
 }

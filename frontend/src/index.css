@@ -54,7 +54,7 @@
 
         /* Hover animation effect */
         .bg-dotted:hover {
-          animation: pulseDots 6s linear infinite;
+          animation: pulseDots 1s linear forwards ;
         }
 
         @keyframes pulseDots {
@@ -63,7 +63,7 @@
             background-position: 0 0;
           }
           50% {
-            background-size: 28px 28px;
+            background-size: 26px 26px;
             background-position: 4px 4px;
           }
           100% {
