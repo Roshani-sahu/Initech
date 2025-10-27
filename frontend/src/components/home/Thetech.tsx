@@ -12,7 +12,7 @@ function TechSection() {
       {/* Header */}
       <div className="mb-16">
         <h1 className="mb-6 text-6xl text-black font-Kairos">The Tech</h1>
-        <p className="max-w-md text-xl text-[#5D5D5D] font-Kairos " >
+        <p className="max-w-lg text-2xl text-[#5D5D5D] font-Kairos " >
           Take a quick look at the core technology powering our peer-to-peer and cloud sync plans.
         </p>
       </div>
@@ -22,7 +22,7 @@ function TechSection() {
         <div className="space-y-12">
           {/* Foundational Technology */}
           <div>
-            <p className="mb-20 text-sm font-semibold tracking-widest text-gray-600">FOUNDATIONAL TECHNOLOGY</p>
+            <p className="mb-20 text-sm font-semibold tracking-widest text-black">FOUNDATIONAL TECHNOLOGY</p>
             <div className="h-px mb-8 bg-gray-300"></div>
 
             {/* Offline-first mobile database */}

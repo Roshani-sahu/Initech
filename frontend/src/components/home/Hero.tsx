@@ -31,9 +31,9 @@ const Hero = () => {
   <div className="w-10 h-10 bg-[#0A0A0A1A] hover:bg-black transition-all duration-500 ease-in-out rounded-lg flex items-center justify-center relative overflow-hidden">
     {/* White Icon (initially visible) */}
     <img
-      src="/1.png"
+      src="/11.svg"
       alt="white icon"
-      className="w-5 h-5 absolute invert transition-all duration-500 ease-in-out transform group-hover:translate-x-full group-hover:opacity-0"
+      className="w-5 h-5 absolute transition-all duration-500 ease-in-out transform group-hover:translate-x-full group-hover:opacity-0"
     />
 
     {/* Black Icon (slides in on hover) */}
