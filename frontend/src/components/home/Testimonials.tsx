@@ -17,8 +17,8 @@ export default function TestimonialSection() {
 
               {/* Buttons */}
               <div className="flex flex-wrap gap-4">
-                <button className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-extrabold text-black transition-colors bg-[#FFEB3B] rounded-md hover:bg-yellow-400 shadow-sm">
-                  ⚡ HEAR THE FULL STORY
+                <button className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-extrabold text-black transition-colors bg-[#EAF044] rounded-md hover:bg-[#EAF044] shadow-sm">
+                  <img src="buttonicon" alt="" /> HEAR THE FULL STORY
                 </button>
 
                 <button className="inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-gray-900 bg-white border border-gray-300 rounded-md hover:bg-gray-50">

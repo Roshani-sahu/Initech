@@ -1,7 +1,7 @@
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen px-4 py-8 bg-dotted animate-dots overflow-x-hidden  sm:px-6 lg:px-8">
+    <section className="relative min-h-screen px-4 py-8 overflow-x-hidden bg-dotted animate-dots sm:px-6 lg:px-8">
       {/* 🔹 Animated dotted background */}
 
       <div className="relative max-w-full mx-auto">
@@ -17,7 +17,7 @@ const Hero = () => {
           <h2 className="mb-8 text-5xl font-light font-Kairos  text-[#0A0A0A66] sm:text-6xl lg:text-[100px]">
             Servers & Cloud
             <br />
-            <div className="flex flex-row gap-4"> <span> Optional. </span> <div className="max-w-md mb-12 text-lg mt-5  text-black font-extralight">
+            <div className="flex flex-row gap-4"> <span> Optional. </span> <div className="max-w-md mt-5 mb-12 text-lg text-black font-extralight">
             The only offline-first database with
             <br />
             built-in peer-to-peer networking
@@ -31,7 +31,7 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-4">
-            <button className="flex items-center text-base gap-2 px-2 py-2 font-medium text-gray-900 transition-colors bg-[#EAF044] rounded-xl hover:bg-yellow-400">
+            <button className="flex items-center text-base gap-2 px-2 py-2 font-medium text-gray-900 transition-colors bg-[#EAF044] rounded-xl hover:bg-[#EAF044]">
              
               <img src="/icon.svg" alt="" />  
               TRY DITTO FOR FREE
