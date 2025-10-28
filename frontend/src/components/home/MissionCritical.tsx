@@ -1,4 +1,3 @@
-import React from 'react';
 
 const MissionCritical = () => {
   return (
@@ -14,29 +13,26 @@ const MissionCritical = () => {
             
           
             {/* Description */}
-            <p className="mb-12 text-base leading-relaxed text-gray-700">
+            <p className="mb-12 text-lg leading-relaxed text-[#0A0A0A]">
               Ditto is the only edge-native, mobile database that can consistently support your business anytime, anywhere. Edge-native solutions are built specifically to thrive on mobile and edge devices, without relying solely on cloud-based services.
             </p>
 
             {/* Features List */}
-            <ul className="mb-12 space-y-6">
-              <li className="flex items-start">
-                <span className="flex-shrink-0 inline-block w-2 h-2 mt-2 mr-3 bg-gray-900 rounded-full"></span>
-                <div>
+            <ul className="mb-12 space-y-6 text-lg">
+              <li className="flex items-start ">
+                <div className="border-t border-[#0A0A0A1A] pt-5"> 
                   <span className="font-semibold text-gray-900">Build flexible operations</span>
                   <span className="text-gray-700"> that are both latency-sensitive and resilient without reliance on network hardware, edge servers, or the cloud</span>
                 </div>
               </li>
               <li className="flex items-start">
-                <span className="flex-shrink-0 inline-block w-2 h-2 mt-2 mr-3 bg-gray-900 rounded-full"></span>
-                <div>
+                <div className="border-t border-[#0A0A0A1A] pt-5"> 
                   <span className="font-semibold text-gray-900">Decentralize your systems</span>
                   <span className="text-gray-700"> to remove single points of failure that lead to operational bottlenecks</span>
                 </div>
               </li>
               <li className="flex items-start">
-                <span className="flex-shrink-0 inline-block w-2 h-2 mt-2 mr-3 bg-gray-900 rounded-full"></span>
-                <div>
+                <div className="border-t border-[#0A0A0A1A] pt-5"> 
                   <span className="font-semibold text-gray-900">Drive consistent revenue and customer service</span>
                   <span className="text-gray-700"> anywhere, regardless of connectivity or bandwidth</span>
                 </div>
@@ -45,21 +41,38 @@ const MissionCritical = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4">
-              <button className="flex items-center gap-2 px-6 py-3 font-semibold text-gray-900 transition-colors bg-[#EAF044] rounded-md hover:bg-[#EAF044]">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                </svg>
-                TRY DITTO FOR FREE
-              </button>
-              <button className="px-6 py-3 text-sm font-medium text-gray-900 uppercase transition-colors hover:text-gray-700">
-                Meet with a product specialist
-              </button>
+               <button className="group flex items-center text-base gap-2 px-2 py-1 md:py-2 font-medium text-gray-900 transition-all bg-[#EAF044] rounded-xl hover:scale-105">
+  <div className="w-10 h-10 bg-[#0A0A0A1A] hover:bg-black transition-all duration-500 ease-in-out rounded-lg flex items-center justify-center relative overflow-hidden">
+    {/* White Icon (initially visible) */}
+    <img
+      src="/11.svg"
+      alt="white icon"
+      className="w-5 h-5 absolute  transition-all duration-500 ease-in-out transform group-hover:translate-x-full group-hover:opacity-0"
+    />
+
+    {/* Black Icon (slides in on hover) */}
+    <img
+      src="/1.png"
+      alt="black icon"
+      className="w-5 h-5 absolute  transition-all duration-500 ease-in-out transform -translate-x-full opacity-0 group-hover:translate-x-0  group-hover:opacity-100"
+    />
+  </div>
+
+  TRY DITTO FOR FREE
+</button>
+                <button className="px-6 py-2 bg-white text-base font-medium text-gray-900 transition-colors border border-gray-200 md:py-4 rounded-xl hover:bg-gray-200 hover:text-gray-700">
+              MEET WITH A PRODUCT SPECIALIST
+            </button>
             </div>
           </div>
 
           {/* Right Diagram */}
           <div className="relative ">
-            <div className="p-8 border border-gray-200 rounded-lg bg-gray-50 lg:p-12">
+            <img src="/border.svg" className='right-0 top-0 absolute w-2 h-2' alt="" />
+            <img src="/border.svg" className='left-0 rotate-269 top-0 absolute w-2 h-2' alt="" />
+            <img src="/border.svg" className='bottom-0 right-0 rotate-90 absolute w-2 h-2' alt="" />
+            <img src="/border.svg" className='bottom-0 left-0 rotate-180 absolute w-2 h-2' alt="" />
+            <div className="p-8 border border-gray-200  bg-gray-50 lg:p-12">
                           <img src="/homepage.svg" alt="" />
 
               
