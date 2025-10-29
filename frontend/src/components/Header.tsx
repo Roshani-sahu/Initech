@@ -6,8 +6,8 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="flex justify-center py-3 md:py-6 sticky top-0 z-50 bg-white">
-      <header className="flex items-center justify-between w-[95%] max-w-full px-6 md:px-8 py-3 md:py-5 border border-gray-300 shadow-md rounded-2xl bg-white">
+    <div className="flex justify-center py-3 md:py-6 absolute w-full top-0 z-50">
+      <header className="flex items-center justify-between w-[95%]  px-6 md:px-8 py-3 md:py-5 border border-gray-300 shadow-md rounded-2xl bg-white">
         {/* Left Logo */}
         <div className="flex items-center gap-2">
           <div className="flex items-center justify-center w-6 h-6 bg-[#0A0A0A] rounded-sm">

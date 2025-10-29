@@ -21,7 +21,7 @@ const Hero = () => {
       </div>
 
       {/* ✅ Hero Content */}
-      <div className="relative max-w-full mx-auto z-10">
+      <div className="relative mt-34 max-w-full mx-auto z-10">
         {/* Hero Content */}
         <div className="mb-16">
           <h1 className="text-5xl mb-2 font-extralight font-Kairos text-black sm:text-6xl lg:text-[100px]">
