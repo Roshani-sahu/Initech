@@ -6,7 +6,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="flex justify-center py-3 md:py-6 absolute w-full top-0 z-50">
+    <div className="flex justify-center py-3 md:py-6 absolute w-full top-0 z-50 ">
       <header className="flex items-center justify-between w-[95%]  px-6 md:px-8 py-3 md:py-5 border border-gray-300 shadow-md rounded-2xl bg-white">
         {/* Left Logo */}
         <div className="flex items-center gap-2">
@@ -19,7 +19,7 @@ const Header = () => {
         </div>
 
         {/* Center Navigation (Desktop Only) */}
-        <nav className="hidden md:flex items-center text-[15px] font-extralight gap-8 text-black font-aeonik">
+        <nav className="hidden lg:flex items-center text-[15px] font-extralight gap-8 text-black font-aeonik">
           <div className="flex items-center gap-1 cursor-pointer hover:text-gray-600">
             PRODUCTS <ChevronDown size={14} />
           </div>
@@ -29,9 +29,9 @@ const Header = () => {
           <div className="flex items-center gap-1 cursor-pointer hover:text-gray-600">
             COMPANY <ChevronDown size={14} />
           </div>
-          <div className="flex items-center gap-1 cursor-pointer hover:text-gray-600">
+          {/* <div className="flex items-center gap-1 cursor-pointer hover:text-gray-600">
             RESOURCES <ChevronDown size={14} />
-          </div>
+          </div> */}
           <a href="#" className="hover:text-gray-600">
             PRICING
           </a>
@@ -41,7 +41,7 @@ const Header = () => {
         </nav>
 
         {/* Right Buttons (Desktop Only) */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-3">
           <button className="px-4 py-3 transition border border-gray-300 rounded-xl hover:bg-gray-50">
             DOCS
           </button>
@@ -58,7 +58,7 @@ const Header = () => {
         <motion.button
           whileTap={{ scale: 0.9 }}
           onClick={() => setMenuOpen(!menuOpen)}
-          className="block md:hidden p-2 border border-gray-300 rounded-lg"
+          className="block lg:hidden p-2 border border-gray-300 rounded-lg"
         >
           <motion.div
             initial={false}
@@ -101,7 +101,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="absolute top-[72px] left-0 w-full bg-white border-t border-gray-200 shadow-md rounded-b-2xl md:hidden"
+            className="absolute top-[75px] md:top-[100px] left-3 md:left-5 w-[95%] rounded-lg bg-white border-t border-gray-200 shadow-md rounded-b-2xl lg:hidden"
           >
             <nav className="flex flex-col items-start p-5 gap-4 text-[15px] font-light text-black">
               <div className="flex items-center gap-1 cursor-pointer hover:text-gray-600">
