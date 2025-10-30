@@ -53,7 +53,7 @@ export default function TestimonialSection() {
               <div className=" w-full max-w-xl">
                                <div className="relative inline-block group">
   {/* Gray Animated Square */}
-  <div className="w-10 h-8 bg-gray-100 transition-all duration-500 ease-in-out absolute top-0 -left-2 group-hover:scale-110 group-hover:translate-x-1"></div>
+  <div className="w-8 h-7 bg-gray-100 transition-all duration-500 ease-in-out absolute top-0 -left-2 group-hover:scale-120 group-hover:translate-x-1"></div>
 
   {/* Image */}
   <img
