@@ -4,6 +4,7 @@ import Hero from '../components/home/Hero'
 import MissionCritical from '../components/home/MissionCritical'
 import Testimonialsection from '../components/home/Testimonials'
 import TechSection from '../components/home/Thetech'
+import ResilientEdge from '../components/ResilientEdge'
 import Footer from '../components/Footer'
 
 
@@ -15,6 +16,8 @@ export default function HomePage() {
       <MissionCritical />
       <Testimonialsection />
       <TechSection />
+      <ResilientEdge />
+   
       <Footer />
    
     </div>
