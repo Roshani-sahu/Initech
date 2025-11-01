@@ -2,7 +2,9 @@ import React from "react";
 
 const ResilientConnectivity: React.FC = () => {
   return (
-    <section className="relative w-[96%] mx-auto bg-[#0A0A0A] text-white py-20 my-10 overflow-hidden">
+    <section className="group relative w-[96%] mx-auto bg-[#0A0A0A] text-white py-20 my-10 overflow-hidden">
+        <div className="w-8 h-7 bg-white transition-all duration-500 ease-in-out absolute top-0 -left-2 group-hover:scale-125 group-hover:translate-x-1"></div>
+
       <div className="container mx-auto px-6 md:px-6 lg:px-4 flex flex-col md:flex-row items-center justify-between gap-16">
 
         {/* Left Section */}
@@ -28,11 +30,11 @@ const ResilientConnectivity: React.FC = () => {
         {/* Right Section — Circular Graph */}
         <div className="relative flex-1 flex items-center justify-center">
           {/* Outer Circle */}
-          <div className="relative w-[420px] h-[420px] rounded-full border border-dashed border-[#F6F6F6] flex items-center justify-center">
+          {/* <div className="relative w-[420px] h-[420px] rounded-full border border-dashed border-[#F6F6F6] flex items-center justify-center">
 
-            {/* Middle Circle */}
+         
             <div className="w-[260px] h-[260px] rounded-full border border-dashed border-gray-600 flex items-center justify-center text-center">
-              {/* Center Content */}
+              
               <div>
                 <div className="flex justify-center mb-2">
                   <div className="w-5 h-5 bg-white rounded-sm"></div>
@@ -44,7 +46,7 @@ const ResilientConnectivity: React.FC = () => {
               </div>
             </div>
 
-            {/* Small Circles */}
+            
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px] rounded-full border border-dashed border-gray-700 flex items-center justify-center text-sm text-gray-300">
               Latency
             </div>
@@ -64,9 +66,12 @@ const ResilientConnectivity: React.FC = () => {
             <div className="absolute left-[15%] bottom-[10%] transform -translate-x-1/2 translate-y-1/2 w-[120px] h-[120px] rounded-full border border-dashed border-gray-700 flex items-center justify-center text-sm text-gray-300">
               Simplicity
             </div>
-          </div>
+          </div> */}
+        <img src="/connectivity.svg" className="w-[550px]" alt="" />
         </div>
       </div>
+              <div className="w-8 h-7 bg-white transition-all duration-500 ease-in-out absolute bottom-0 -right-2 group-hover:scale-125 group-hover:translate-x-1"></div>
+
     </section>
   );
 };

@@ -82,3 +82,24 @@
           }
         }
        
+
+
+        /* Global thin gray scrollbar style */
+::-webkit-scrollbar {
+  width: 6px; /* makes scrollbar thin */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6b7280; /* Tailwind gray-500 */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* hides track */
+}
+
+/* Optional: For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #6b7280 transparent;
+}

@@ -6,6 +6,8 @@ import Testimonialsection from '../components/home/Testimonials'
 import TechSection from '../components/home/Thetech'
 import ResilientEdge from '../components/home/ResilientEdge'
 import Connectivity from '../components/home/Connectivity'
+import CoreFeatures from '../components/home/CoreFeatures'
+import EdgeInfrastructure from '../components/home/EdgeInfrastructure'
 import Footer from '../components/Footer'
 
 
@@ -17,8 +19,9 @@ export default function HomePage() {
       <MissionCritical />
       <Testimonialsection />
       <TechSection />
-
+      <EdgeInfrastructure/>
       <Connectivity/>
+      <CoreFeatures/>
       <ResilientEdge />
    
       <Footer />
