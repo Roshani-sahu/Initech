@@ -16,9 +16,9 @@ export default function HomePage() {
     <div >
       <Header />
       <Hero />
+      <TechSection />
       <MissionCritical />
       <Testimonialsection />
-      <TechSection />
       <EdgeInfrastructure/>
       <Connectivity/>
       <CoreFeatures/>
