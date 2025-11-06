@@ -13,83 +13,104 @@ function TechSection() {
   const [active, setActive] = useState("offline");
 
   const features = {
-    offline: {
-      title: "Offline-first mobile database",
-      
-      text: "Even when devices are completely offline, they can always read, write, and process data",
-      image: "/phoneimg.webp",
+    webdev: {
+      title: "Website Development",
+      text: "We build fast, responsive, and scalable websites using modern technologies to create seamless digital experiences.",
+      // image: "/webdev.webp",
     },
-    crdt: {
-      title: "CRDT-powered conflict resolution",
-      text: "To resolve concurrency conflicts that appear in decentralized models, as well as enable delta-based sync, Ditto harnesses the power of conflict-free replicated data type (CRDT) technology",
-      image: "/phonelap.webp",
+    appdev: {
+      title: "App Development",
+      text: "Our team crafts high-performance mobile and cross-platform apps tailored to your business goals and user needs.",
+      // image: "/appdev.webp",
+    },
+    aiml: {
+      title: "AI & ML Services",
+      text: "Leverage artificial intelligence and machine learning to automate processes, gain insights, and enhance decision-making.",
+      // image: "/aiml.webp",
+    },
+    iot: {
+      title: "IoT Solutions",
+      text: "We design and deploy IoT ecosystems that connect devices, collect data, and enable intelligent automation.",
+      // image: "/iot.webp",
+    },
+    automation: {
+      title: "AI Automations",
+      text: "Automate repetitive workflows and boost efficiency using AI-driven automation systems built for scalability.",
+      // image: "/automation.webp",
+    },
+    consultancy: {
+      title: "Tech Consultancy",
+      text: "Our experts help you define strategies, adopt new technologies, and architect robust, future-ready digital systems.",
+      // image: "/consultancy.webp",
     },
   };
 
   return (
-    <section className="relative max-w-15xl px-8 py-20 mx-auto overflow-hidden">
+    <section className="relative max-w-full px-6 sm:px-4 py-16 sm:py-12 mx-auto overflow-hidden">
       {/* Header */}
-      <div className="mb-16">
-        <h1 className="mb-6 text-6xl text-black font-Kairos">The Tech</h1>
-        <p className="max-w-lg text-2xl text-[#5D5D5D] font-Kairos">
-          Take a quick look at the core technology powering our peer-to-peer and cloud sync plans.
+      <div className="md:mb-16 mb-10 text-center sm:text-left ">
+        <h1 className="md:mb-9 mb-3 md:text-6xl text-4xl text-black font-Kairos">
+          Services We Provide
+        </h1>
+        <p className="max-w-[500px] md:text-2xl text-lg text-[#5D5D5D] font-Kairos mx-auto sm:mx-0">
+          At Initech, we combine design, engineering, and strategy to build scalable digital solutions for modern businesses.
         </p>
       </div>
 
       {/* Main Content */}
-      <div className="grid items-start grid-cols-2 ">
+      <div className="grid grid-cols-1 lg:grid-cols-3  gap-12 sm:gap-8 items-start">
         {/* Left Column */}
-        <div className="space-y-12">
-          <p className="mb-20 text-sm font-semibold tracking-widest text-black">
+        {/* <div className="md:space-y-16  space-y-8 order-2 lg:order-1"> */}
+          {/* <p className="md:mb-10 text-sm font-semibold tracking-widest text-black mb-6">
             FOUNDATIONAL TECHNOLOGY
-          </p>
-          <div className="h-px mb-8 bg-gray-300"></div>
+          </p> */}
 
-          {/* Feature buttons */}
           {Object.keys(features).map((key) => (
             <div
               key={key}
               onClick={() => setActive(key)}
-              className={`cursor-pointer transition-all duration-500 border-t border-[#0A0A0A1A] pt-5 ${
-                active === key ? "opacity-100" : "opacity-60 hover:opacity-100"
-              }`}
+              className={`cursor-pointer transition-all duration-500 max-w-xl pt-5 
+                ${active === key
+                  ? "border-t border-black opacity-100"
+                  : "border-t border-black opacity-100"
+                }`}
             >
               <h3
-                className={`mb-4 text-3xl font-Kairos transition-all duration-300 ${
-                  active === key ? "text-[#0A0A0A]" : "text-[#5D5D5D]"
-                }`}
+                className={`md:my-5 mb-2 md:text-3xl text-2xl font-Kairos transition-all duration-300 ${active === key ? "text-[#0A0A0A]" : "text-[#0A0A0A]"
+                  }`}
               >
                 {features[key].title}
               </h3>
               <p
-                className={`text-xl leading-relaxed transition-all duration-300 ${
-                  active === key ? "text-[#0A0A0A]" : "text-[#5D5D5D]"
-                }`}
+                className={`md:text-base text-base leading-relaxed transition-all duration-300 ${active === key ? "text-[#0A0A0A]" : "text-[#0A0A0A]"
+                  }`}
               >
                 {features[key].text}
               </p>
             </div>
           ))}
-        </div>
+        {/* </div> */}
 
         {/* Right Column */}
-        <div className="flex items-center justify-center">
-          {/* Enlarged image container */}
-          <div className="relative flex items-center justify-center w-full max-w-3xl p-4 bg-gray-150 rounded-[2.5rem] aspect-[4/3] shadow-lg ml-[30px]mt-[-80px]  z-10 ">
+        {/* <div className="flex justify-center items-center order-1 lg:order-2">
+          <div className="relative flex items-center justify-center w-full max-w-xl bg-gray-100  aspect-4/3  overflow-hidden p-4 sm:p-2">
+
             <AnimatePresence mode="wait">
+
               <motion.img
                 key={active}
-                src={features[active].image}
+                // src={features[active].image}
                 alt={features[active].title}
                 initial={{ opacity: 0, x: 80, scale: 0.9 }}
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 exit={{ opacity: 0, x: -80, scale: 0.9 }}
                 transition={{ duration: 0.7, ease: "easeInOut" }}
-                className="absolute object-contain w-[400%] h-[400%] rounded-2xl"
+                className="absolute object-contain w-full h-full "
               />
+
             </AnimatePresence>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

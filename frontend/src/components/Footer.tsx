@@ -5,22 +5,19 @@ export default function Footer() {
         <div className="grid grid-cols-[auto_1fr_1fr_1fr_1fr] gap-20">
           {/* Logo and Copyright */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              {/* Ditto Logo - Pixelated Grid Style */}
-              <div className="flex gap-0.5">
-                <div className="w-2 h-2 bg-gray-400"></div>
-                <div className="w-2 h-2 bg-gray-400"></div>
-                <div className="w-2 h-2 bg-gray-300"></div>
-              </div>
-              <div className="flex gap-0.5">
-                <div className="w-2 h-2 bg-gray-400"></div>
-                <div className="w-2 h-2 bg-gray-300"></div>
-                <div className="w-2 h-2 bg-gray-300"></div>
-              </div>
-              <span className="text-sm font-semibold text-gray-600 ml-2">Ditto</span>
+            <div className="flex items-center mb-6">
+              {/* <div className="w-6 h-6 bg-gray-400 rounded"></div> */}
+              <div className="flex items-center justify-center w-6 h-6 md:w-8 md:h-8">
+            <img
+              src="/logos/initech.png"
+              alt="INITECH Logo"
+              className="h-8 md:h-10 w-auto object-contain"
+            />
+          </div>
+              <span className="text-lg font-semibold text-gray-700">INITECH</span>
             </div>
-            <p className="text-xs text-gray-600 leading-tight">
-              © 2025 DITTOLIVE INCORPORATED
+            <p className="text-xs leading-relaxed text-gray-600">
+              © 2025 INITECH SOLUTIONS PVT. LTD.
               <br />
               ALL RIGHTS RESERVED.
             </p>
@@ -41,9 +38,9 @@ export default function Footer() {
           </div>
 
           {/* RESOURCES */}
-          <div>
-            <h3 className="text-xs font-bold tracking-widest text-gray-900 mb-3">RESOURCES</h3>
-            <ul className="space-y-1">
+          {/* <div>
+            <h3 className="mb-4 text-xs font-bold tracking-wide text-gray-900">RESOURCES</h3>
+            <ul className="space-y-2">
               {["BLOG", "DEMO APPS", "IN THE NEWS", "PRESS RELEASES", "MAKE A REPORT"].map((item) => (
                 <li key={item}>
                   <a href="#" className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
@@ -52,7 +49,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* SOCIALS */}
           <div>
@@ -70,9 +67,9 @@ export default function Footer() {
 
           {/* LEGAL */}
           <div>
-            <h3 className="text-xs font-bold tracking-widest text-gray-900 mb-3">LEGAL</h3>
-            <ul className="space-y-1">
-              {["PRIVACY POLICY", "COOKIE POLICY", "TRIAL AGREEMENT"].map((item) => (
+            <h3 className="mb-4 text-xs font-bold tracking-wide text-gray-900">LEGAL</h3>
+            <ul className="space-y-2">
+              {["PRIVACY POLICY"].map((item) => (
                 <li key={item}>
                   <a href="#" className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
                     {item}
