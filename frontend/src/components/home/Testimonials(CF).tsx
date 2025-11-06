@@ -1,23 +1,16 @@
 export default function TestimonialSectionCF() {
   return (
-    <section className="w-full px-4 py-20 bg-white sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-full relative">
-        <img src="/border.svg" className='right-0 top-0 absolute w-2 h-2' alt="" />
-        <img src="/border.svg" className='left-0 rotate-269 top-0 absolute w-2 h-2' alt="" />
-        <img src="/border.svg" className='bottom-0 right-0 rotate-90 absolute w-2 h-2' alt="" />
-        <img src="/border.svg" className='bottom-0 left-0 rotate-180 absolute w-2 h-2' alt="" />
-        <div className="p-12 bg-gray-100  border border-gray-200">
-          <div className="grid items-center grid-cols-1 gap-10">
-
+    <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-12 bg-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="p-8 bg-gray-100 border border-gray-200 rounded-lg">
+          <div className="grid items-center grid-cols-1 gap-3">
             {/* Left Content */}
             <div className="flex flex-col justify-center">
-              <h2 className="mb-6 text-2xl font-bold leading-snug text-[#0A0A0A] font-Kairos sm:text-3xl lg:text-[2rem] max-w-3xl">
-                “We don’t follow trends — we create the tools that define them. That’s the Initech way.”
+              <h2 className="mb-3 text-3xl font-bold leading-snug text-[#0A0A0A] font-Kairos whitespace-nowrap px-8">
+                "We don't follow trends — we create the tools that define them. That's the Initech way."
               </h2>
 
-              <p className="text-base leading-relaxed text-[#5D5D5D]">
-                — Co-Founder
-              </p>
+              <p className="text-sm leading-relaxed text-[#5D5D5D] px-8">— Co-Founder</p>
             </div>
           </div>
         </div>
@@ -25,6 +18,8 @@ export default function TestimonialSectionCF() {
     </section>
   )
 }
+
+
 
 
 // export default function TestimonialSection() {

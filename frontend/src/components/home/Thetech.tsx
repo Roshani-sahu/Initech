@@ -46,11 +46,13 @@ function TechSection() {
   };
 
   return (
-    <section className="relative max-w-full px-6 sm:px-4 py-16 sm:py-12 mx-auto overflow-hidden">
+    <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-12 bg-white">
+  <div className="max-w-7xl mx-auto">
+
       {/* Header */}
       <div className="md:mb-16 mb-10 text-center sm:text-left ">
         <h1 className="md:mb-9 mb-3 md:text-6xl text-4xl text-black font-Kairos">
-          Services We Provide
+           Services we Provide
         </h1>
         <p className="max-w-[500px] md:text-2xl text-lg text-[#5D5D5D] font-Kairos mx-auto sm:mx-0">
           At Initech, we combine design, engineering, and strategy to build scalable digital solutions for modern businesses.
@@ -112,6 +114,8 @@ function TechSection() {
           </div>
         </div> */}
       </div>
-    </section>
+     </div>
+</section>
+
   );
 }

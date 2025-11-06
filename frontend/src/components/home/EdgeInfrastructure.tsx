@@ -112,7 +112,9 @@ const EdgeInfrastructure: React.FC = () => {
   const [activeLang, setActiveLang] = useState("SWIFT");
 
   return (
-    <section className="bg-white text-gray-900 px-6 lg:px-8 py-24">
+   <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-12 bg-white">
+  <div className="max-w-7xl mx-auto">
+
       {/* Header */}
       <div className="max-w-5xl mb-20">
         <h2 className="text-4xl md:text-5xl font-Kairos font-semibold leading-tight">
@@ -231,7 +233,9 @@ const EdgeInfrastructure: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+      </div>
+</section>
+
   );
 };
 

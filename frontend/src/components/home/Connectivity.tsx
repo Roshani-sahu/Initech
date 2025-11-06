@@ -2,7 +2,9 @@ import React from "react";
 
 const ResilientConnectivity: React.FC = () => {
   return (
-    <section className="group relative w-[96%] mx-auto bg-[#0A0A0A] text-white py-20 my-10 overflow-hidden">
+    <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-12 bg-white">
+  <div className="max-w-7xl mx-auto">
+
       <div className="w-8 h-7 bg-white transition-all duration-500 ease-in-out absolute top-0 -left-2 group-hover:scale-125 group-hover:translate-x-1"></div>
 
       <div className="container mx-auto px-6 md:px-6 lg:px-4 flex flex-col md:flex-row items-center justify-between gap-16">
@@ -70,7 +72,9 @@ const ResilientConnectivity: React.FC = () => {
       </div>
       <div className="w-8 h-7 bg-white transition-all duration-500 ease-in-out absolute bottom-0 -right-2 group-hover:scale-125 group-hover:translate-x-1"></div>
 
-    </section>
+      </div>
+</section>
+
   );
 };
 
