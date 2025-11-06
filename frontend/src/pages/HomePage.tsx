@@ -2,7 +2,8 @@
 import Header from '../components/Header'
 import Hero from '../components/home/Hero'
 import MissionCritical from '../components/home/MissionCritical'
-import Testimonialsection from '../components/home/Testimonials'
+import TestimonialsectionF from '../components/home/Testimonials(F)'
+import TestimonialSectionCF from '../components/home/Testimonials(CF)'
 import TechSection from '../components/home/Thetech'
 import ResilientEdge from '../components/home/ResilientEdge'
 import Connectivity from '../components/home/Connectivity'
@@ -18,10 +19,11 @@ export default function HomePage() {
       <Header />
       <Hero />
       <TechSection />
+      <TestimonialsectionF />
       <MissionCritical />
-      <Testimonialsection />
       <EdgeInfrastructure/>
       <Connectivity/>
+      <TestimonialSectionCF />
       {/* <CoreFeatures/> */}
       <Industries/>
       <ResilientEdge />

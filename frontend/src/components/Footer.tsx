@@ -7,12 +7,19 @@ export default function Footer() {
           
           {/* Logo and Copyright */}
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-6 h-6 bg-gray-400 rounded"></div>
-              <span className="text-lg font-semibold text-gray-700">Ditto</span>
+            <div className="flex items-center mb-6">
+              {/* <div className="w-6 h-6 bg-gray-400 rounded"></div> */}
+              <div className="flex items-center justify-center w-6 h-6 md:w-8 md:h-8">
+            <img
+              src="/logos/initech.png"
+              alt="INITECH Logo"
+              className="h-8 md:h-10 w-auto object-contain"
+            />
+          </div>
+              <span className="text-lg font-semibold text-gray-700">INITECH</span>
             </div>
             <p className="text-xs leading-relaxed text-gray-600">
-              © 2025 DITTOLIVE INCORPORATED
+              © 2025 INITECH SOLUTIONS PVT. LTD.
               <br />
               ALL RIGHTS RESERVED.
             </p>
@@ -36,7 +43,7 @@ export default function Footer() {
           </div>
 
           {/* RESOURCES */}
-          <div>
+          {/* <div>
             <h3 className="mb-4 text-xs font-bold tracking-wide text-gray-900">RESOURCES</h3>
             <ul className="space-y-2">
               {["BLOG", "DEMO APPS", "IN THE NEWS", "PRESS RELEASES", "MAKE A REPORT"].map((item) => (
@@ -50,7 +57,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* SOCIALS */}
           <div>
@@ -73,7 +80,7 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 text-xs font-bold tracking-wide text-gray-900">LEGAL</h3>
             <ul className="space-y-2">
-              {["PRIVACY POLICY", "COOKIE POLICY", "TRIAL AGREEMENT"].map((item) => (
+              {["PRIVACY POLICY"].map((item) => (
                 <li key={item}>
                   <a
                     href="#"

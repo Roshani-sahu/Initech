@@ -13,15 +13,35 @@ function TechSection() {
   const [active, setActive] = useState("offline");
 
   const features = {
-    offline: {
-      title: "Offline-first mobile database",
-      text: "Even when devices are completely offline, they can always read, write, and process data",
-      image: "/phoneimg.webp",
+    webdev: {
+      title: "Website Development",
+      text: "We build fast, responsive, and scalable websites using modern technologies to create seamless digital experiences.",
+      // image: "/webdev.webp",
     },
-    crdt: {
-      title: "CRDT-powered conflict resolution",
-      text: "To resolve concurrency conflicts that appear in decentralized models, as well as enable delta-based sync, Ditto harnesses the power of conflict-free replicated data type (CRDT) technology",
-      image: "/phonelap.webp",
+    appdev: {
+      title: "App Development",
+      text: "Our team crafts high-performance mobile and cross-platform apps tailored to your business goals and user needs.",
+      // image: "/appdev.webp",
+    },
+    aiml: {
+      title: "AI & ML Services",
+      text: "Leverage artificial intelligence and machine learning to automate processes, gain insights, and enhance decision-making.",
+      // image: "/aiml.webp",
+    },
+    iot: {
+      title: "IoT Solutions",
+      text: "We design and deploy IoT ecosystems that connect devices, collect data, and enable intelligent automation.",
+      // image: "/iot.webp",
+    },
+    automation: {
+      title: "AI Automations",
+      text: "Automate repetitive workflows and boost efficiency using AI-driven automation systems built for scalability.",
+      // image: "/automation.webp",
+    },
+    consultancy: {
+      title: "Tech Consultancy",
+      text: "Our experts help you define strategies, adopt new technologies, and architect robust, future-ready digital systems.",
+      // image: "/consultancy.webp",
     },
   };
 
@@ -30,59 +50,56 @@ function TechSection() {
       {/* Header */}
       <div className="md:mb-16 mb-10 text-center sm:text-left ">
         <h1 className="md:mb-9 mb-3 md:text-6xl text-4xl text-black font-Kairos">
-          The Tech
+          Services We Provide
         </h1>
         <p className="max-w-[500px] md:text-2xl text-lg text-[#5D5D5D] font-Kairos mx-auto sm:mx-0">
-          Take a quick look at the core technology powering our peer-to-peer and cloud sync plans.
+          At Initech, we combine design, engineering, and strategy to build scalable digital solutions for modern businesses.
         </p>
       </div>
 
       {/* Main Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-2  gap-12 sm:gap-8 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-3  gap-12 sm:gap-8 items-start">
         {/* Left Column */}
-        <div className="md:space-y-16  space-y-8 order-2 lg:order-1">
-          <p className="md:mb-10 text-sm font-semibold tracking-widest text-black mb-6">
+        {/* <div className="md:space-y-16  space-y-8 order-2 lg:order-1"> */}
+          {/* <p className="md:mb-10 text-sm font-semibold tracking-widest text-black mb-6">
             FOUNDATIONAL TECHNOLOGY
-          </p>
+          </p> */}
 
           {Object.keys(features).map((key) => (
             <div
               key={key}
               onClick={() => setActive(key)}
               className={`cursor-pointer transition-all duration-500 max-w-xl pt-5 
-  ${
-    active === key
-      ? "border-t border-black opacity-100"
-      : "border-t border-[#0A0A0A1A] opacity-70 hover:border-black hover:opacity-100"
-  }`}
+                ${active === key
+                  ? "border-t border-black opacity-100"
+                  : "border-t border-black opacity-100"
+                }`}
             >
               <h3
-                className={`md:my-5 mb-2 md:text-3xl text-2xl font-Kairos transition-all duration-300 ${
-                  active === key ? "text-[#0A0A0A]" : "text-[#5D5D5D]"
-                }`}
+                className={`md:my-5 mb-2 md:text-3xl text-2xl font-Kairos transition-all duration-300 ${active === key ? "text-[#0A0A0A]" : "text-[#0A0A0A]"
+                  }`}
               >
                 {features[key].title}
               </h3>
               <p
-                className={`md:text-base text-base leading-relaxed transition-all duration-300 ${
-                  active === key ? "text-[#0A0A0A]" : "text-[#5D5D5D]"
-                }`}
+                className={`md:text-base text-base leading-relaxed transition-all duration-300 ${active === key ? "text-[#0A0A0A]" : "text-[#0A0A0A]"
+                  }`}
               >
                 {features[key].text}
               </p>
             </div>
           ))}
-        </div>
+        {/* </div> */}
 
         {/* Right Column */}
-        <div className="flex justify-center items-center order-1 lg:order-2">
+        {/* <div className="flex justify-center items-center order-1 lg:order-2">
           <div className="relative flex items-center justify-center w-full max-w-xl bg-gray-100  aspect-4/3  overflow-hidden p-4 sm:p-2">
-          
+
             <AnimatePresence mode="wait">
 
               <motion.img
                 key={active}
-                src={features[active].image}
+                // src={features[active].image}
                 alt={features[active].title}
                 initial={{ opacity: 0, x: 80, scale: 0.9 }}
                 animate={{ opacity: 1, x: 0, scale: 1 }}
@@ -90,10 +107,10 @@ function TechSection() {
                 transition={{ duration: 0.7, ease: "easeInOut" }}
                 className="absolute object-contain w-full h-full "
               />
-              
+
             </AnimatePresence>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
