@@ -7,8 +7,9 @@ import TestimonialSectionCF from '../components/home/Testimonials(CF)'
 import TechSection from '../components/home/Thetech'
 import ResilientEdge from '../components/home/ResilientEdge'
 import Connectivity from '../components/home/Connectivity'
-import CoreFeatures from '../components/home/CoreFeatures'
+// import CoreFeatures from '../components/home/CoreFeatures'
 import EdgeInfrastructure from '../components/home/EdgeInfrastructure'
+import Industries from '../components/home/Industries'
 import Footer from '../components/Footer'
 
 
@@ -23,7 +24,8 @@ export default function HomePage() {
       <EdgeInfrastructure/>
       <Connectivity/>
       <TestimonialSectionCF />
-      <CoreFeatures/>
+      {/* <CoreFeatures/> */}
+      <Industries/>
       <ResilientEdge />
    
       <Footer />
