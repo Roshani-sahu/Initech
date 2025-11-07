@@ -112,11 +112,11 @@ const EdgeInfrastructure: React.FC = () => {
   const [activeLang, setActiveLang] = useState("SWIFT");
 
   return (
-   <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-12 bg-white">
-  <div className="max-w-7xl mx-auto">
+   <section className="px-6 lg:px-24 py-16 sm:py-12 bg-white">
+  <div className="max-w-8xl mx-auto">
 
       {/* Header */}
-      <div className="max-w-5xl mb-20">
+      <div className="max-w-5xl mb-12">
         <h2 className="text-4xl md:text-5xl font-Kairos font-semibold leading-tight">
           Powering Innovation with Modern Engineering
         </h2>

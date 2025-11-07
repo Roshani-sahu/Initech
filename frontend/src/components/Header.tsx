@@ -70,16 +70,16 @@ const Header = () => {
           {/* <div className="flex items-center gap-1 cursor-pointer hover:text-gr  ay-600">
             RESOURCES <ChevronDown size={14} />
           </div> */}
-          <a href="#" className="text-lg hover:text-gray-600">
+          <a href="/" className="text-lg hover:text-gray-600">
             HOME
           </a>
-          <a href="#" className="text-lg hover:text-gray-600">
+          <a href="/services" className="text-lg hover:text-gray-600">
             SERVICES
           </a>
-          <a href="#" className="text-lg hover:text-gray-600">
+          <a href="/about" className="text-lg hover:text-gray-600">
             ABOUT US
           </a>
-          <a href="#" className="text-lg hover:text-gray-600">
+          <a href="/contact" className="text-lg hover:text-gray-600">
             CONTACT
           </a>
         </nav>
