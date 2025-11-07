@@ -3,7 +3,7 @@ import DotGrid from "../home/DOTGRID";
 const ResilientEdge = () => {
   return (
     <section
-      className="relative flex flex-col items-center justify-center mx-auto h-[360px] bg-black text-center overflow-hidden w-[96%] rounded-2xl"
+      className="relative flex flex-col items-center justify-center mx-auto h-[360px] bg-black text-center overflow-hidden md:w-[85%] rounded-2xl"
       aria-label="Innovation Call to Action"
     >
       {/* 🟣 Animated Dotted Background Layer */}
