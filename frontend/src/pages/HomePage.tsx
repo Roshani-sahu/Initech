@@ -15,7 +15,7 @@ import Footer from '../components/Footer'
 
 export default function HomePage() {
   return (
-    <div >
+    <div className="overflow-x-hidden w-full">
       <Header />
       <Hero />
       <TechSection />

@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        kairos: ['Kairos', 'sans-serif'],
-        aeonik: ['Aeonik Fono', 'sans-serif'],
-                inter: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        kairos: ['"Zalando Sans SemiExpanded"', 'sans-serif'],
+        aeonik: ['"Zalando Sans SemiExpanded"', 'sans-serif'],
+        inter: ['"Zalando Sans SemiExpanded"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
 
       },
     },

@@ -7,7 +7,7 @@ export default function TestimonialSectionCF() {
             {/* Left Content */}
             <div className="flex flex-col justify-center">
               <h2 className="mb-3 text-3xl font-bold leading-snug text-[#0A0A0A] font-Kairos whitespace-nowrap px-8">
-                "We don't follow trends — we create the tools that define them. That's the Initech way."
+                "We don't follow trends — we create the tools that define them. <br/>That's the Initech way."
               </h2>
 
               <p className="text-sm leading-relaxed text-[#5D5D5D] px-8">— Co-Founder</p>

@@ -11,7 +11,8 @@ export default function TestimonialSectionF() {
             {/* Left Content */}
             <div className="flex flex-col justify-center">
               <h2 className="mb-3 text-xl font-bold leading-snug text-[#0A0A0A] font-Kairos whitespace-nowrap">
-                "True innovation begins where technology meets purpose. At Initech, we create solutions that empower
+                "True innovation begins where technology meets purpose. <br />
+                At Initech, we create solutions that empower
                 people to think, work, and live better."
               </h2>
 
