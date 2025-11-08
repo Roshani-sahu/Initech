@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+/* Font Face Declarations */
+@font-face {
+  font-family: 'Kairos';
+  src: url('/fonts/Kairos.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('/fonts/Aeonik.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply Kairos as default font for the entire website */
+* {
+  font-family: 'Kairos', sans-serif;
+}
+
 /* Prevent horizontal scroll globally */
 html, body {
   overflow-x: hidden;
@@ -13,6 +35,7 @@ html {
 
 body {
   position: relative;
+  font-family: 'Kairos', sans-serif;
 }
 
 @keyframes scroll {
@@ -34,17 +57,13 @@ body {
   animation-play-state: paused;
 }
 
-
-
-/* Using Zalando Sans SemiExpanded from Google Fonts */
+/* Font utility classes */
 .font-Kairos {
-  font-family: "Zalando Sans SemiExpanded", sans-serif;
-  font-optical-sizing: auto;
+  font-family: 'Kairos', sans-serif;
 }
 
 .font-aeonik {
-  font-family: "Zalando Sans SemiExpanded", sans-serif;
-  font-optical-sizing: auto;
+  font-family: 'Aeonik', sans-serif;
 }
 
 
