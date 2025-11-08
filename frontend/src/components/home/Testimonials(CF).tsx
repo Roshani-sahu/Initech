@@ -1,12 +1,12 @@
 export default function TestimonialSectionCF() {
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-12 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="px-4 sm:px-6 lg:px-24 py-16 sm:py-12 bg-white">
+      <div className="max-w-8xl mx-auto">
         <div className="p-8 bg-gray-100 border border-gray-200 rounded-lg">
           <div className="grid items-center grid-cols-1 gap-3">
             {/* Left Content */}
             <div className="flex flex-col justify-center">
-              <h2 className="mb-3 text-3xl font-bold leading-snug text-[#0A0A0A] font-Kairos whitespace-nowrap px-8">
+              <h2 className="mb-3 text-xl font-bold leading-snug text-[#0A0A0A] font-Kairos whitespace-nowrap px-8">
                 "We don't follow trends — we create the tools that define them. <br/>That's the Initech way."
               </h2>
 
