@@ -48,11 +48,11 @@ const industries: Industry[] = [
     title: "Telecoms",
     desc: "We enhance global communication by building solutions for network management, customer experience, IoT, security, automation, and analytics.",
   },
-  {
-    icon: Truck,
-    title: "Logistics & Transportation",
-    desc: "Software for freight reservation, transportation management, and streamlined supply chain operations to keep goods and business moving.",
-  },
+  // {
+  //   icon: Truck,
+  //   title: "Logistics & Transportation",
+  //   desc: "Software for freight reservation, transportation management, and streamlined supply chain operations to keep goods and business moving.",
+  // },
   {
     icon: HardHat,
     title: "Engineering & Construction",
@@ -67,8 +67,8 @@ const industries: Industry[] = [
 
 const Industries: React.FC = () => {
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-12 bg-white">
-  <div className="max-w-7xl mx-auto">
+    <section className="px-6 lg:px-24 py-16 sm:py-12 bg-white">
+  <div className="max-w-8xl mx-auto">
 
       <div className="max-w-full mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
         
@@ -80,7 +80,7 @@ const Industries: React.FC = () => {
             we help
           </h2>
 
-          <button className="group flex items-center text-normal gap-2 px-2 py-1 md:py-1 font-medium text-gray-900 transition-all bg-[#EAF044] rounded-xl hover:scale-105">
+          <button className="group flex items-center text-normal gap-2 px-3 py-1 md:py-2 font-medium text-gray-900 transition-all bg-[#EAF044] rounded-xl hover:scale-105">
             <div className="w-10 h-10 bg-[#0A0A0A1A] hover:bg-black transition-all duration-500 ease-in-out rounded-lg flex items-center justify-center relative overflow-hidden">
               {/* White Icon (initially visible) */}
               <img
@@ -96,12 +96,12 @@ const Industries: React.FC = () => {
                 className="w-5 h-5 absolute transition-all duration-500 ease-in-out transform -translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
               />
             </div>
-            EXPLORE OUR SOLUTIONS
-          </button>
-
-          <button className="px-6 py-2 bg-white mt-3 text-base font-medium text-gray-900 transition-colors border border-gray-200 md:py-2 rounded-xl hover:bg-gray-200 hover:text-gray-700">
             CONTACT US
           </button>
+
+          {/* <button className="px-6 py-2 bg-white mt-3 text-base font-medium text-gray-900 transition-colors border border-gray-200 md:py-2 rounded-xl hover:bg-gray-200 hover:text-gray-700">
+            CONTACT US
+          </button> */}
         </div>
 
         {/* Right Section (Industries Grid) */}

@@ -1,6 +1,6 @@
 export default function TestimonialSectionF() {
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-12 bg-white">
+    <section className="px-4 lg:px-8 md:pt-10 py-2 bg-white">
       <div className="max-w-7xl mx-auto">
         <img src="/border.svg" className="right-0 top-0 absolute w-2 h-2" alt="" />
         <img src="/border.svg" className="left-0 rotate-269 top-0 absolute w-2 h-2" alt="" />

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+// import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
   return (
@@ -46,8 +46,8 @@ function TechSection() {
   };
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-12 bg-white">
-  <div className="max-w-7xl mx-auto">
+    <section className="px-4 sm:px-6 lg:px-24 py-16 sm:py-12 bg-white">
+  <div className="max-w-8xl mx-auto">
 
       {/* Header */}
       <div className="md:mb-16 mb-10 text-center sm:text-left ">

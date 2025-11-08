@@ -1,7 +1,7 @@
 const MissionCritical = () => {
   return (
-    <section className="px-4 py-20 bg-white sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className=" py-20 bg-white px-6 lg:px-24">
+      <div className="max-w-8xl mx-auto">
         {/* Heading */}
         <h2 className="max-w-3xl mb-10 text-5xl font-bold leading-tight text-gray-900 font-Kairos lg:text-6xl">
           Why Choose Initech?

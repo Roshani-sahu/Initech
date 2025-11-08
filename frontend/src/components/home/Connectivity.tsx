@@ -2,22 +2,22 @@ import React from "react";
 
 const ResilientConnectivity: React.FC = () => {
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-12 bg-white">
-  <div className="max-w-7xl mx-auto">
+    <section className="px-6 lg:px-24 py-16 sm:py-12 bg-white">
+  <div className="max-w-8xl mx-auto">
 
       <div className="w-8 h-7 bg-white transition-all duration-500 ease-in-out absolute top-0 -left-2 group-hover:scale-125 group-hover:translate-x-1"></div>
 
-      <div className="container mx-auto px-6 md:px-6 lg:px-4 flex flex-col md:flex-row items-center justify-between gap-16">
+      <div className="container mx-auto px-6 md:px-6 lg:px-4 flex flex-col md:flex-row items-start  justify-between gap-16">
 
         {/* Left Section */}
-        <div className="flex-1">
-          <p className="text-sm tracking-widest text-gray-400 mb-4 uppercase">
+        <div className="flex-1 mt-10">
+          <p className="text-sm tracking-widest text-gray-400 mb-5 uppercase">
             Building on Strong Values
           </p>
 
           <h2 className="md:text-5xl text-4xl max-w-3xl font-Kairos font-semibold leading-tight mb-6">
             Our Core Principles at{" "}
-            <span className="text-[#EAF044]">Initech</span>
+            <span className="text-gray-400">Initech</span>
           </h2>
 
           <p className="text-[#9C9C9C] text-base leading-relaxed max-w-2xl">
@@ -67,7 +67,7 @@ const ResilientConnectivity: React.FC = () => {
               Simplicity
             </div>
           </div> */}
-          <img src="/generated-image.png" className="w-[550px]" alt="" />
+          <img src="/generated-image.png" className="w-[450px] rounded-xl" alt="" />
         </div>
       </div>
       <div className="w-8 h-7 bg-white transition-all duration-500 ease-in-out absolute bottom-0 -right-2 group-hover:scale-125 group-hover:translate-x-1"></div>
