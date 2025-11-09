@@ -96,7 +96,7 @@ function AboutHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="max-w-4xl mx-auto md:text-2xl text-lg text-[#5D5D5D] font-Kairos leading-relaxed"
+          className="max-w-4xl mx-auto md:text-2xl text-lg text-[#5D5D5D] font- leading-relaxed"
         >
           We're a passionate team of innovators, engineers, and strategists dedicated to transforming businesses through cutting-edge technology and creative solutions.
         </motion.p>
@@ -174,7 +174,7 @@ function StorySection() {
             >
               Our Story
             </motion.h2>
-            <div className="space-y-6 text-lg text-[#5D5D5D] leading-relaxed">
+            <div className="space-y-6 text-lg text-[#5D5D5D] leading-relaxed font-inter">
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -351,13 +351,13 @@ function MissionVisionValues() {
           <h2 className="text-4xl md:text-6xl font-Kairos font-bold text-black mb-4">
             What Drives Us
           </h2>
-          <p className="text-lg text-[#5D5D5D] max-w-2xl mx-auto">
+          <p className="text-lg text-[#5D5D5D] max-w-2xl mx-auto font-inter">
             Our mission, vision, and values shape our approach to every project
           </p>
         </div>
 
         {/* Tabs */}
-        <div className="flex justify-center gap-4 mb-12 flex-wrap">
+        <div className="flex justify-center gap-4 mb-12 flex-wrap ">
           {(["mission", "vision", "values"] as const).map((tab) => (
             <button
               key={tab}

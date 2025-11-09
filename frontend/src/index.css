@@ -18,9 +18,7 @@
 }
 
 /* Apply Kairos as default font for the entire website */
-* {
-  font-family: 'Kairos', sans-serif;
-}
+
 
 /* Prevent horizontal scroll globally */
 html, body {
@@ -33,9 +31,12 @@ html {
   scroll-behavior: smooth;
 }
 
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
 body {
   position: relative;
-  font-family: 'Kairos', sans-serif;
 }
 
 @keyframes scroll {

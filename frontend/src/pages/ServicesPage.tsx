@@ -58,7 +58,7 @@ function ServicesHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-4xl mx-auto md:text-2xl text-xl text-[#5D5D5D] font-Kairos leading-relaxed mb-12"
+          className="max-w-5xl mx-auto md:text-2xl text-xl text-[#5D5D5D] font-Kairos leading-relaxed mb-12"
         >
           Transform your vision into reality with our comprehensive suite of technology services. 
           From concept to deployment, we craft solutions that drive growth and innovation.
@@ -68,7 +68,7 @@ function ServicesHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-wrap justify-center gap-8 md:gap-16 mt-16"
+          className="flex flex-wrap justify-center gap-8 md:gap-16 mt-16 font-inter"
         >
           {[
             { number: "50+", label: "Projects Delivered" },
@@ -206,7 +206,7 @@ function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto md:text-xl text-lg text-[#5D5D5D] font-Kairos leading-relaxed"
+            className="max-w-3xl mx-auto md:text-xl text-lg text-[#5D5D5D] font-inter leading-relaxed"
           >
             At Initech, we combine design, engineering, and strategy to build scalable digital solutions that propel modern businesses forward.
           </motion.p>
@@ -238,14 +238,14 @@ function ServicesSection() {
                   >
                     {services[key].title}
                   </h3>
-                  <span className={`text-3xl transition-transform duration-300 ${
+                  <span className={`text-3xl transition-transform duration-300  ${
                     active === key ? "rotate-45 text-[#EAF044]" : "text-gray-400 group-hover:rotate-45"
                   }`}>
                     →
                   </span>
                 </div>
                 <p
-                  className={`text-base leading-relaxed transition-all duration-300 ${
+                  className={`text-base leading-relaxed transition-all duration-300 font-inter ${
                     active === key ? "text-gray-300" : "text-[#5D5D5D] group-hover:text-[#0A0A0A]"
                   }`}
                 >
@@ -290,7 +290,7 @@ function ServicesSection() {
                       <span className="flex-shrink-0 w-6 h-6 bg-[#EAF044] rounded-full flex items-center justify-center text-[#0A0A0A] text-xs font-bold mt-0.5 group-hover:scale-110 transition-transform">
                         ✓
                       </span>
-                      <span className="text-[#0A0A0A] text-base leading-relaxed font-medium">
+                      <span className="text-[#0A0A0A] text-base leading-relaxed font-medium font-inter">
                         {feature}
                       </span>
                     </motion.li>
@@ -305,7 +305,7 @@ function ServicesSection() {
                       </h4>
                       <div className="h-1 w-16 bg-[#EAF044] rounded-full"></div>
                     </div>
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-3 font-inter">
                       {services[active].technologies.map((tech, idx) => (
                         <motion.span
                           key={idx}
@@ -400,7 +400,7 @@ function ServiceDetails() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto text-xl text-[#5D5D5D] leading-relaxed"
+            className="max-w-3xl mx-auto text-xl  text-[#5D5D5D] leading-relaxed font-inter"
           >
             We're committed to excellence in every project we undertake, delivering solutions that exceed expectations
           </motion.p>
@@ -429,7 +429,7 @@ function ServiceDetails() {
               <h3 className="text-2xl font-Kairos font-bold mb-4 text-black group-hover:text-[#0A0A0A] transition-colors">
                 {section.title}
               </h3>
-              <p className="text-base text-[#5D5D5D] leading-relaxed group-hover:text-[#0A0A0A] transition-colors">
+              <p className="text-base font-inter text-[#5D5D5D] leading-relaxed group-hover:text-[#0A0A0A] transition-colors">
                 {section.description}
               </p>
 
@@ -458,7 +458,7 @@ function ServiceDetails() {
                 <div className="text-5xl md:text-6xl font-bold text-[#0A0A0A] mb-3 group-hover:text-[#EAF044] transition-colors">
                   {stat.value}
                 </div>
-                <div className="text-sm md:text-base text-[#5D5D5D] font-medium uppercase tracking-wider">
+                <div className="text-sm md:text-base text-[#5D5D5D] font-medium uppercase  tracking-wider">
                   {stat.label}
                 </div>
               </div>
@@ -487,7 +487,7 @@ function CTASection() {
           viewport={{ once: true }}
           className="inline-block mb-6 px-6 py-2 bg-[#EAF044] bg-opacity-20 backdrop-blur-sm rounded-full border border-[#EAF044] border-opacity-30"
         >
-          <span className="text-sm font-bold text-[#EAF044] uppercase tracking-wider">
+          <span className="text-sm font-bold text-black uppercase tracking-wider">
             ✦ Let's Build Together
           </span>
         </motion.div>
@@ -510,7 +510,7 @@ function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-lg md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
+          className="text-lg md:text-2xl text-gray-300 font-normal font-inter mb-12 max-w-3xl mx-auto leading-relaxed"
         >
           Let's discuss how we can help transform your ideas into reality with our expert services. 
           <span className="text-[#EAF044] font-semibold"> Get a free consultation today!</span>
@@ -524,7 +524,7 @@ function CTASection() {
           className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-16"
         >
           <button className="group flex items-center text-lg gap-3 px-8 py-4 font-bold text-gray-900 transition-all bg-[#EAF044] rounded-2xl hover:scale-105 hover:shadow-2xl hover:shadow-[#EAF044]/50">
-            <div className="w-12 h-12 bg-[#0A0A0A1A] hover:bg-black transition-all duration-500 ease-in-out rounded-xl flex items-center justify-center relative overflow-hidden">
+            <div className="w-10 h-6 bg-[#0A0A0A1A] hover:bg-black transition-all duration-500 ease-in-out rounded-xl flex items-center justify-center relative overflow-hidden">
               <img
                 src="/11.svg"
                 alt="white icon"
