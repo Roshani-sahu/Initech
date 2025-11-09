@@ -3,7 +3,7 @@ import DotGrid from "../home/DOTGRID";
 const ResilientEdge = () => {
   return (
     <section
-      className="relative flex flex-col mb-10 items-center justify-center mx-auto h-[360px] bg-black text-center overflow-hidden md:w-[88%] rounded-2xl"
+      className="relative flex flex-col mb-10 items-center justify-center mx-auto h-[360px] bg-black text-center overflow-hidden w-[88%] md:w-[88%] rounded-2xl"
       aria-label="Innovation Call to Action"
     >
       {/* 🟣 Animated Dotted Background Layer */}
@@ -23,7 +23,7 @@ const ResilientEdge = () => {
 
       {/* ✅ Main Content */}
       <div className="relative z-20 px-6">
-        <h1 className="text-[#F6F6F6] text-3xl sm:text-4xl md:text-5xl font-Kairos font-bold tracking-tight leading-snug max-w-3xl mx-auto">
+        <h1 className="text-[#F6F6F6] text-3xl sm:text-4xl md:text-5xl font-Kairos  tracking-tight leading-snug max-w-3xl mx-auto">
           Innovation starts with a single idea. Let’s create yours.
         </h1>
 
