@@ -30,11 +30,11 @@ const Hero = () => {
             Through Smart Technology.
           </h2>
 
-          <h4 className="md:mb-8 text-4xl font-light font-Kairos text-[#0A0A0A66] sm:text-5xl lg:text-[70px]">
+          <h4 className="md:mb-8 text-4xl font-light font-Kairos  text-[#0A0A0A66] sm:text-5xl lg:text-[70px]">
             Seamless Experiences.
             <br />
             Scalable Systems. 
-            <div className="max-w-md mt-6 mb-12 text-lg text-black font-extralight">
+            <div className="max-w-md mt-6 mb-12  text-lg text-black font-extralight">
               Initech builds intelligent, future-ready software solutions that help
               businesses innovate faster and scale smarter.
             </div>

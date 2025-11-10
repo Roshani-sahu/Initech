@@ -11,7 +11,7 @@ const ResilientConnectivity: React.FC = () => {
 
         {/* Left Section */}
         <div className="flex-1 mt-10">
-          <p className="text-sm tracking-widest text-gray-400 mb-5 uppercase">
+          <p className="text-sm tracking-widest font-aeonik text-gray-400 mb-5 uppercase">
             Building on Strong Values
           </p>
 

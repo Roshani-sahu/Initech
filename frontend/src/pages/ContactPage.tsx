@@ -28,13 +28,13 @@ export default function ContactPage() {
 /* --------------------------- HERO SECTION --------------------------- */
 function ContactHero() {
   return (
-    <section className="px-6 lg:px-8 py-24 sm:py-32 bg-gradient-to-b from-white to-gray-50">
+    <section className="px-6 lg:px-8 py-24 md:pt-40 md:pb-12 ">
       <div className="max-w-5xl mx-auto text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="font-Kairos text-5xl md:text-7xl font-bold mb-6 text-black"
+          className="font-Kairos text-5xl md:text-6xl font-semibold  mb-6 text-black"
         >
           Get In Touch
         </motion.h1>
@@ -43,7 +43,7 @@ function ContactHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-2xl mx-auto text-lg md:text-xl text-gray-600"
+          className="max-w-2xl mx-auto text-lg md:text-xl text-[#5D5D5D]"
         >
           Let’s collaborate to turn your ideas into powerful digital experiences. 
           We’re excited to hear from you and discuss how we can help.
@@ -112,7 +112,7 @@ function ContactForm() {
           viewport={{ once: true }}
           className="space-y-8"
         >
-          <h2 className="text-4xl md:text-5xl font-Kairos font-bold text-black">
+          <h2 className="text-4xl md:text-5xl font-Kairos font-normal text-black">
             Let's Start a Conversation
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">

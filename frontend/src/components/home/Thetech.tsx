@@ -51,10 +51,10 @@ function TechSection() {
 
       {/* Header */}
       <div className="md:mb-16 mb-10 text-center sm:text-left ">
-        <h1 className="md:mb-9 mb-3 md:text-6xl text-4xl text-black font-Kairos">
+        <h1 className="md:mb-9 mb-3 md:text-[51px] text-4xl text-black font-Kairos">
            Services we Provide
         </h1>
-        <p className="max-w-[500px] md:text-2xl text-lg text-[#5D5D5D] font-Kairos mx-auto sm:mx-0">
+        <p className="max-w-[700px] md:text-base font-normal text-base text-black font-inter mx-auto sm:mx-0">
           At Initech, we combine design, engineering, and strategy to build scalable digital solutions for modern businesses.
         </p>
       </div>
@@ -84,7 +84,7 @@ function TechSection() {
                 {features[key].title}
               </h3>
               <p
-                className={`md:text-base text-base leading-relaxed transition-all duration-300 ${active === key ? "text-[#0A0A0A]" : "text-[#0A0A0A]"
+                className={`md:text-base font-inter  text-base leading-relaxed transition-all duration-300 ${active === key ? "text-[#0A0A0A]" : "text-[#0A0A0A]"
                   }`}
               >
                 {features[key].text}

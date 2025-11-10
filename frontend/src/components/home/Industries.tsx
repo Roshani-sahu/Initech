@@ -133,10 +133,10 @@ const Industries: React.FC = () => {
                         mixBlendMode: 'multiply'
                       }}
                     />
-                  </div>                    <h3 className="font-semibold text-base mb-1">{industry.title}</h3>
+                  </div>                    <h3 className="font-semibold text-[#0A0A0A] text-base mb-1">{industry.title}</h3>
                   </div>
                   <div>        
-                    <p className="text-sm text-gray-600 leading-relaxed">{industry.desc}</p>
+                    <p className="text-sm text-[#5D5D5D] font-inter leading-relaxed">{industry.desc}</p>
                   </div>
                 </div>
               </div>
