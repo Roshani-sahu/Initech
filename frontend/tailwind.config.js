@@ -6,8 +6,9 @@ export default {
       fontFamily: {
         Kairos: ['Kairos', 'sans-serif'],
         aeonik: ['Aeonik', 'sans-serif'],
-        inter: ['Kairos', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
         sans: ['Kairos', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+
       },
     },
   },

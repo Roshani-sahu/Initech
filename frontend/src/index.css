@@ -18,9 +18,7 @@
 }
 
 /* Apply Kairos as default font for the entire website */
-* {
-  font-family: 'Kairos', sans-serif;
-}
+
 
 /* Prevent horizontal scroll globally */
 html, body {
@@ -35,7 +33,6 @@ html {
 
 body {
   position: relative;
-  font-family: 'Kairos', sans-serif;
 }
 
 @keyframes scroll {
@@ -66,6 +63,9 @@ body {
   font-family: 'Aeonik', sans-serif;
 }
 
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
 
 
 

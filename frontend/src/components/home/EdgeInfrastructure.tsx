@@ -117,10 +117,10 @@ const EdgeInfrastructure: React.FC = () => {
 
       {/* Header */}
       <div className="max-w-5xl mb-12">
-        <h2 className="text-4xl md:text-5xl font-Kairos font-semibold leading-tight">
+        <h2 className="text-4xl md:text-[51px] font-Kairos  leading-tight">
           Powering Innovation with Modern Engineering
         </h2>
-        <p className="text-gray-600 mt-4 text-base max-w-2xl">
+        <p className="text-gray-600 mt-4 text-base  max-w-2xl">
           At Initech, we combine proven engineering practices with emerging
           technologies to design scalable, secure, and future-ready digital
           ecosystems. Our technology stack reflects agility, performance, and a
@@ -135,10 +135,10 @@ const EdgeInfrastructure: React.FC = () => {
           {/* Card 1 */}
           <div className="md:p-20 p-4 flex flex-col justify-between">
             <div className="md:max-w-sm max-w-xs">
-              <h3 className="text-xl md:text-[30px] font-Kairos font-semibold mb-10">
+              <h3 className="text-xl md:text-[30px] font-Kairos  mb-10">
                 Our Core Tech Stack
               </h3>
-              <p className="text-gray-600 text-base mb-14">
+              <p className="text-gray-600 text-sm font-inter mb-14">
                 We leverage cutting-edge frameworks, languages, and tools across
                 cloud, mobile, and edge environments — enabling rapid development,
                 seamless integrations, and reliable scalability.
@@ -173,11 +173,11 @@ const EdgeInfrastructure: React.FC = () => {
           {/* Card 2 */}
           <div className="md:p-20 p-4">
             <div className="md:max-w-[350px] max-w-xs">
-              <h3 className="text-xl md:text-3xl font-Kairos font-semibold mb-12">
+              <h3 className="text-xl md:text-3xl font-Kairos mb-12">
                 Our Development Approach
               </h3>
             </div>
-            <p className="text-gray-600 max-w-xs text-base mb-18">
+            <p className="text-gray-600 max-w-sm font-inter text-sm mb-18">
               We embrace agile methodologies and DevOps practices to deliver
               faster releases, stronger collaboration, and continuous improvement.
               Every solution we build is designed with security, scalability, and
@@ -196,10 +196,10 @@ const EdgeInfrastructure: React.FC = () => {
 
         {/* RIGHT COLUMN (Code Section) */}
         <div className="md:p-16 py-20 p-4 flex flex-col justify-start">
-          <h3 className="text-xl md:text-3xl font-Kairos max-w-xs font-semibold mb-14">
+          <h3 className="text-xl md:text-3xl font-Kairos max-w-xs  mb-14">
             Advanced Tech Stack in Action
           </h3>
-          <p className="text-gray-600 md:max-w-md max-w-[300px] text-base mb-16">
+          <p className="text-gray-600 md:max-w-md max-w-[330px] font-inter text-sm mb-16">
             Our SDKs and APIs empower developers to create connected applications
             that sync intelligently across devices — reducing latency, improving
             resilience, and removing infrastructure complexity.

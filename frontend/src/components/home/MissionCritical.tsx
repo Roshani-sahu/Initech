@@ -3,7 +3,7 @@ const MissionCritical = () => {
     <section className=" py-20 bg-white px-6 lg:px-24">
       <div className="max-w-8xl mx-auto">
         {/* Heading */}
-        <h2 className="max-w-3xl mb-10 text-5xl font-bold leading-tight text-gray-900 font-Kairos lg:text-6xl">
+        <h2 className="max-w-3xl mb-10 text-5xl  leading-tight text-gray-900 font-Kairos lg:text-6xl">
           Why Choose Initech?
         </h2>
 
@@ -19,8 +19,8 @@ const MissionCritical = () => {
           
           {/* Feature 1 */}
           <div className="border-t border-[#0A0A0A1A] pt-6">
-            <h3 className="font-semibold text-gray-900 text-lg">Edge-Native Architecture</h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
+            <h3 className=" text-gray-900 font-Kairos text-2xl">Edge-Native Architecture</h3>
+            <p className="text-gray-700 font-inter text-base mt-2 leading-relaxed">
               Operate without dependency on constant cloud connectivity. Initech ensures
               performance even in low or zero-network conditions.
             </p>
@@ -28,8 +28,8 @@ const MissionCritical = () => {
 
           {/* Feature 2 */}
           <div className="border-t border-[#0A0A0A1A] pt-6">
-            <h3 className="font-semibold text-gray-900 text-lg">Zero Downtime Reliability</h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
+            <h3 className=" text-gray-900 font-Kairos text-2xl">Zero Downtime Reliability</h3>
+            <p className="text-gray-700 font-inter text-base mt-2 leading-relaxed">
               Built for industries where uptime is critical — your operations stay connected,
               synchronized, and secure 24/7.
             </p>
@@ -37,8 +37,8 @@ const MissionCritical = () => {
 
           {/* Feature 3 */}
           <div className="border-t border-[#0A0A0A1A] pt-6">
-            <h3 className="font-semibold text-gray-900 text-lg">End-to-End Security</h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
+            <h3 className=" text-gray-900 font-Kairos text-2xl">End-to-End Security</h3>
+            <p className="text-gray-700 font-inter text-base mt-2 leading-relaxed">
               Advanced encryption and secure sync protocols ensure data integrity from
               device to device — no matter the environment.
             </p>
@@ -46,8 +46,8 @@ const MissionCritical = () => {
 
           {/* Feature 4 */}
           <div className="border-t border-[#0A0A0A1A] pt-6">
-            <h3 className="font-semibold text-gray-900 text-lg">Scalable Flexibility</h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
+            <h3 className=" text-gray-900 font-Kairos text-2xl">Scalable Flexibility</h3>
+            <p className="text-gray-700 font-inter text-base mt-2 leading-relaxed">
               From small edge deployments to global infrastructure — Initech scales
               effortlessly with your needs.
             </p>
@@ -55,8 +55,8 @@ const MissionCritical = () => {
 
           {/* Feature 5 */}
           <div className="border-t border-[#0A0A0A1A] pt-6">
-            <h3 className="font-semibold text-gray-900 text-lg">Optimized Efficiency</h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
+            <h3 className=" text-gray-900 font-Kairos text-2xl">Optimized Efficiency</h3>
+            <p className="text-gray-700 font-inter text-base mt-2 leading-relaxed">
               Reduce latency, bandwidth use, and cloud costs with intelligent peer-to-peer
               data sharing and real-time decision making.
             </p>
@@ -64,8 +64,8 @@ const MissionCritical = () => {
 
           {/* Feature 6 */}
           <div className="border-t border-[#0A0A0A1A] pt-6">
-            <h3 className="font-semibold text-gray-900 text-lg">Future-Ready Technology</h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
+            <h3 className=" text-gray-900 font-Kairos text-2xl">Future-Ready Technology</h3>
+            <p className="text-gray-700 font-inter text-base mt-2 leading-relaxed">
               Designed for tomorrow’s connected ecosystems — from smart cities to
               autonomous systems and industrial IoT networks.
             </p>
