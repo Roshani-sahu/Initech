@@ -23,8 +23,8 @@ export default function AboutPage() {
       <StorySection />
       <MissionVisionValues />
       <StatsSection />
-      <TeamSection />
-      <WhyChooseUs />
+      {/* <TeamSection /> */}
+      {/* <WhyChooseUs /> */}
       <TimelineSection />
       <CTASection />
       <Footer />
@@ -473,7 +473,7 @@ function StatsSection() {
                 <div className="text-black">{stat.icon}</div>
               </motion.div>
               <motion.div 
-                className="text-4xl  font-bold text-[#EAF044] mb-2 font-Kairos"
+                className="text-4xl  font-bold text-white mb-2 font-Kairos"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ 
