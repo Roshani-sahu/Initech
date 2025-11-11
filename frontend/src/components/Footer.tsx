@@ -8,8 +8,8 @@ export default function Footer() {
   };
 
    const socialLinks = {
-    LINKEDIN: "https://www.linkedin.com/in/your-username",
-    GITHUB: "https://github.com/your-username",
+    LINKEDIN: "https://www.linkedin.com/in/prayas-jain-578653240/",
+    GITHUB: "https://github.com/prayas17",
     "TWITTER / X": "https://twitter.com/your-username",
   };
 
@@ -44,7 +44,7 @@ export default function Footer() {
             <div>
               <h3 className="text-xs font-bold tracking-widest text-gray-900 mb-3">COMPANY</h3>
               <ul className="space-y-1">
-                {["Services", "ABOUT US", "OUR CUSTOMERS", "PRICING", "CAREERS"].map((item) => (
+                {["SERVICES", "ABOUT US", "OUR CUSTOMERS", "PRICING", "CAREERS"].map((item) => (
                   <li key={item}>
       <a
         href={routes[item]}

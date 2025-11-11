@@ -28,13 +28,13 @@ export default function ContactPage() {
 /* --------------------------- HERO SECTION --------------------------- */
 function ContactHero() {
   return (
-    <section className="px-6 lg:px-8 py-24 md:pt-40 md:pb-12 ">
+    <section className="px-6 lg:px-8 pt-34  md:pt-40 md:pb-12 ">
       <div className="max-w-5xl mx-auto text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="font-Kairos text-5xl md:text-6xl font-semibold  mb-6 text-black"
+          className="font-Kairos text-5xl md:text-6xl   mb-6 text-black"
         >
           Get In Touch
         </motion.h1>
@@ -103,7 +103,7 @@ function ContactForm() {
 
   return (
     <section className="px-6 lg:px-8 py-20 bg-white">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
         {/* LEFT COLUMN */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -112,7 +112,7 @@ function ContactForm() {
           viewport={{ once: true }}
           className="space-y-8"
         >
-          <h2 className="text-4xl md:text-5xl font-Kairos font-normal text-black">
+          <h2 className="text-4xl md:text-5xl font-Kairos text-center md:text-start  font-normal text-black">
             Let's Start a Conversation
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
@@ -127,7 +127,7 @@ function ContactForm() {
               { title: "NDA Available", text: "Your ideas and information remain confidential." },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
-                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#EAF044]/30">
+                <div className="w-12 h-12 flex items-center justify-center rounded-xl ">
                   <CheckCircle className="w-6 h-6 text-black" />
                 </div>
                 <div>
@@ -145,8 +145,11 @@ function ContactForm() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-gray-50 rounded-2xl p-8 lg:p-10 shadow-sm"
-        >
+className="relative bg-linear-to-r from-gray-100 via-gray-200 to-gray-300 rounded-2xl p-8 lg:p-10"
+  style={{
+    boxShadow: "0 0 20px 5px rgba(200,200,200,0.5), 0 0 40px 10px rgba(150,150,150,0.3)",
+  }}
+>
           {isSubmitted ? (
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -227,22 +230,38 @@ function ContactForm() {
               />
 
               <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-3 px-6 py-4 font-semibold text-black bg-[#EAF044] rounded-xl hover:bg-[#e2eb40] active:scale-95 transition-all disabled:opacity-50"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin" />
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-5 h-5" />
-                    Send Message
-                  </>
-                )}
-              </button>
+  type="submit"
+  disabled={isSubmitting}
+  className="group md:w-[40%] mx-auto flex items-center justify-center gap-3 px-2 py-2 font-semibold text-white bg-linear-to-r from-gray-400 via-gray-500 to-gray-600 rounded-xl 
+             hover:scale-[1.03] active:scale-95 transition-all duration-500 ease-in-out disabled:opacity-60 disabled:cursor-not-allowed"
+>
+  {isSubmitting ? (
+    <>
+      <div className="w-5 h-5 border-2 border-gray-900 border-t-transparent rounded-full animate-spin" />
+      <span>Sending...</span>
+    </>
+  ) : (
+    <>
+      {/* Animated icon container */}
+      <div className="w-10 h-10 bg-[white] group-hover:bg-black transition-all duration-500 ease-in-out rounded-lg flex items-center justify-center relative overflow-hidden">
+        {/* White icon (visible initially) */}
+        <Send
+          className="w-5 h-5 text-black  absolute transition-all duration-500 ease-in-out 
+                     transform group-hover:translate-x-full group-hover:opacity-0"
+        />
+
+        {/* Black icon (slides in on hover) */}
+        <Send
+          className="w-5 h-5 text-white absolute transition-all duration-500 ease-in-out 
+                     transform -translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+        />
+      </div>
+
+      <span className="tracking-wide">Send Message</span>
+    </>
+  )}
+</button>
+
             </form>
           )}
         </motion.div>
@@ -260,7 +279,7 @@ function InputField({ label, ...props }: any) {
       </label>
       <input
         {...props}
-        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EAF044] focus:border-transparent transition-all"
+        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2  transition-all"
       />
     </div>
   );
@@ -274,7 +293,7 @@ function SelectField({ label, options, ...props }: any) {
       </label>
       <select
         {...props}
-        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EAF044] focus:border-transparent transition-all"
+        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2  transition-all"
       >
         <option value="">Select a service</option>
         {options.map((option: string) => (
@@ -296,7 +315,7 @@ function TextAreaField({ label, ...props }: any) {
       <textarea
         {...props}
         rows={5}
-        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EAF044] focus:border-transparent resize-none transition-all"
+        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2  resize-none transition-all"
       />
     </div>
   );
@@ -321,38 +340,46 @@ function ContactInfo() {
   ];
 
   return (
-    <section className="px-6 lg:px-8 py-20 bg-gray-50">
-      <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-Kairos font-bold text-black mb-4">
-          Other Ways to Reach Us
-        </h2>
-        <p className="text-lg text-gray-600 mb-16">
-          Choose the method that works best for you.
-        </p>
+    <section className="relative px-6 lg:px-8 py-24 bg-linear-to-br from-gray-50 via-gray-100 to-gray-200 overflow-hidden">
+  {/* Decorative blurred gradient glows */}
+  <div className="absolute top-0 left-1/3 w-96 h-96 bg-linear-to-r from-gray-300 via-gray-100 to-white opacity-30 blur-3xl rounded-full -z-10"></div>
+  <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-linear-to-r from-white via-gray-200 to-gray-400 opacity-40 blur-3xl rounded-full -z-10"></div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center">
-          {contactDetails.map((detail, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all"
-            >
-              <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6 rounded-full bg-[#EAF044]/30 text-black">
-                {detail.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-black mb-2">{detail.title}</h3>
-              <p className="text-lg font-medium text-black">{detail.primary}</p>
-              {detail.secondary && (
-                <p className="text-lg font-medium text-black">{detail.secondary}</p>
-              )}
-              <p className="text-sm text-gray-500 md-2">{detail.description}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
+  <div className="max-w-5xl mx-auto text-center">
+    <h2 className="text-4xl md:text-5xl font-Kairos  text-gray-900 mb-4">
+      Other Ways to Reach Us
+      {/* Other Ways to <span className="bg-linear-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">Reach Us</span> */}
+    </h2>
+    <p className="text-lg text-gray-600 mb-16 font-inter max-w-2xl mx-auto">
+      Choose the method that works best for you — we’re always here to connect and collaborate.
+    </p>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 justify-center">
+      {contactDetails.map((detail, idx) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: idx * 0.15 }}
+          viewport={{ once: true }}
+          className="relative group bg-white/90 backdrop-blur-lg rounded-2xl p-8 hover:scale-105 shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-all duration-500 border border-gray-100"
+        >
+          {/* Gradient border glow effect */}
+
+          <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 text-white text-3xl shadow-md group-hover:scale-110 transition-transform duration-300">
+            {detail.icon}
+          </div>
+
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">{detail.title}</h3>
+          <p className="text-lg font-medium text-gray-700">{detail.primary}</p>
+          {detail.secondary && (
+            <p className="text-lg font-medium text-gray-700">{detail.secondary}</p>
+          )}
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
   );
 }
