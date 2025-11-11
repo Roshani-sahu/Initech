@@ -15,7 +15,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-white border-t border-gray-200">
-      <div className="max-w-full mx-auto px-12 py-12">
+      <div className="max-w-full mx-auto px-14 py-12">
         <div className="flex justify-between items-start gap-20 flex-wrap">
           
           {/* 🔹 Left: Logo and Copyright */}
@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
 
           {/* 🔹 Right: Company, Socials, Legal (aligned right) */}
-          <div className="flex gap-16 text-right">
+          <div className="flex gap-20 text-right">
             
             {/* COMPANY */}
             <div>

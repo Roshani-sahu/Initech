@@ -96,7 +96,7 @@ function AboutHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="max-w-4xl mx-auto md:text-2xl text-lg text-[#5D5D5D] font-Kairos leading-relaxed"
+          className="max-w-4xl mx-auto md:text-xl text-lg text-[#5D5D5D] font-inter leading-relaxed"
         >
           We're a passionate team of innovators, engineers, and strategists dedicated to transforming businesses through cutting-edge technology and creative solutions.
         </motion.p>
@@ -166,7 +166,7 @@ function StorySection() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <motion.h2 
-              className="text-4xl md:text-6xl font-Kairos font-bold text-black mb-6"
+              className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
@@ -174,7 +174,7 @@ function StorySection() {
             >
               Our Story
             </motion.h2>
-            <div className="space-y-6 text-lg text-[#5D5D5D] leading-relaxed">
+            <div className="space-y-6 text-lg text-[#5D5D5D] leading-relaxed font-inter">
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -348,16 +348,16 @@ function MissionVisionValues() {
     <section className="px-4 sm:px-6 lg:px-8 py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-Kairos font-bold text-black mb-4">
+          <h2 className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-4">
             What Drives Us
           </h2>
-          <p className="text-lg text-[#5D5D5D] max-w-2xl mx-auto">
+          <p className="text-lg text-[#5D5D5D] max-w-2xl mx-auto font-inter">
             Our mission, vision, and values shape our approach to every project
           </p>
         </div>
 
         {/* Tabs */}
-        <div className="flex justify-center gap-4 mb-12 flex-wrap">
+        <div className="flex justify-center gap-4 mb-12 flex-wrap ">
           {(["mission", "vision", "values"] as const).map((tab) => (
             <button
               key={tab}
@@ -406,7 +406,7 @@ function MissionVisionValues() {
                   <div className="w-6 h-6 bg-[#EAF044] rounded-full flex items-center justify-center shrink-0 mt-1">
                     <CheckCircle className="w-4 h-4 text-black" />
                   </div>
-                  <span className="text-[#0A0A0A] text-base leading-relaxed">{point}</span>
+                  <span className="text-[#5D5D5D] text-base leading-relaxed">{point}</span>
                 </motion.div>
               ))}
             </div>
@@ -473,7 +473,7 @@ function StatsSection() {
                 <div className="text-black">{stat.icon}</div>
               </motion.div>
               <motion.div 
-                className="text-4xl md:text-5xl font-bold text-[#EAF044] mb-2 font-Kairos"
+                className="text-4xl  font-bold text-[#EAF044] mb-2 font-Kairos"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ 
@@ -533,7 +533,7 @@ function TeamSection() {
           viewport={{ once: true }}
         >
           <motion.h2 
-            className="text-4xl md:text-6xl font-Kairos font-bold text-black mb-6"
+            className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-6"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -598,7 +598,7 @@ function TeamSection() {
                 />
               </motion.div>
               <motion.h3 
-                className="text-xl font-Kairos font-semibold text-black mb-2"
+                className="text-xl font-Kairos font-normal text-black mb-2"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: idx * 0.1 + 0.3 }}
@@ -692,7 +692,7 @@ function WhyChooseUs() {
     <section className="px-4 sm:px-6 lg:px-8 py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-Kairos font-bold text-black mb-4">
+          <h2 className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-4">
             Why Choose Initech?
           </h2>
           <p className="text-lg text-[#5D5D5D] max-w-2xl mx-auto">
@@ -736,7 +736,7 @@ function WhyChooseUs() {
                 <div className="text-black">{reason.icon}</div>
               </motion.div>
               <motion.h3 
-                className="text-xl font-Kairos font-semibold text-black mb-3 relative z-10"
+                className="text-xl font-Kairos font-normal text-black mb-3 relative z-10"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: idx * 0.1 + 0.2 }}
@@ -797,7 +797,7 @@ function TimelineSection() {
           viewport={{ once: true }}
         >
           <motion.h2 
-            className="text-4xl md:text-6xl font-Kairos font-bold text-black mb-4"
+            className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-4"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -855,7 +855,7 @@ function TimelineSection() {
                     transition={{ duration: 0.3 }}
                   >
                     <motion.div 
-                      className="text-4xl font-bold text-[#EAF044] mb-2 font-Kairos"
+                      className="text-4xl font-normal text-[#EAF044] mb-2 font-Kairos"
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       transition={{ 
@@ -868,7 +868,7 @@ function TimelineSection() {
                       {milestone.year}
                     </motion.div>
                     <motion.h3 
-                      className="text-2xl font-Kairos font-semibold text-black mb-2"
+                      className="text-2xl font-Kairos font-normal text-black mb-2"
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: idx * 0.1 + 0.4 }}
@@ -966,7 +966,7 @@ function CTASection() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-6xl font-Kairos font-bold text-white mb-6"
+          className="text-4xl md:text-6xl font-Kairos font-normal text-white mb-6"
         >
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -1004,7 +1004,7 @@ function CTASection() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <motion.button 
-            className="group flex items-center text-normal gap-2 px-6 py-4 font-medium text-gray-900 transition-all bg-[#EAF044] rounded-xl hover:scale-105"
+            className="group flex items-center text-normal gap-2 px-4 py-3 font-medium text-gray-900 transition-all bg-[#EAF044] rounded-xl hover:scale-105"
             whileHover={{ scale: 1.1, y: -5 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400 }}

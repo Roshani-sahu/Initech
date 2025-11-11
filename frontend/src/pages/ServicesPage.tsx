@@ -58,7 +58,7 @@ function ServicesHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-4xl mx-auto md:text-2xl text-xl text-[#5D5D5D] font-Kairos leading-relaxed mb-12"
+          className="max-w-5xl mx-auto md:text-2xl text-xl text-[#5D5D5D] font-Kairos leading-relaxed mb-12"
         >
           Transform your vision into reality with our comprehensive suite of technology services. 
           From concept to deployment, we craft solutions that drive growth and innovation.
@@ -68,7 +68,7 @@ function ServicesHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-wrap justify-center gap-8 md:gap-16 mt-16"
+          className="flex flex-wrap justify-center gap-8 md:gap-16 mt-16 font-inter"
         >
           {[
             { number: "50+", label: "Projects Delivered" },
@@ -76,7 +76,7 @@ function ServicesHero() {
             { number: "24/7", label: "Support Available" }
           ].map((stat, idx) => (
             <div key={idx} className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#0A0A0A] mb-2">
+              <div className="text-4xl md:text-4xl font-bold text-[#0A0A0A] mb-2">
                 {stat.number}
               </div>
               <div className="text-sm md:text-base text-[#5D5D5D] font-medium">
@@ -196,7 +196,7 @@ function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="md:mb-6 mb-4 md:text-7xl text-5xl text-black font-Kairos font-bold"
+            className="md:mb-6 mb-4 md:text-6xl text-5xl text-black font-Kairos font-normal"
           >
             What We Offer
           </motion.h2>
@@ -206,7 +206,7 @@ function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto md:text-xl text-lg text-[#5D5D5D] font-Kairos leading-relaxed"
+            className="max-w-3xl mx-auto md:text-xl text-lg text-[#5D5D5D] font-inter leading-relaxed"
           >
             At Initech, we combine design, engineering, and strategy to build scalable digital solutions that propel modern businesses forward.
           </motion.p>
@@ -232,20 +232,20 @@ function ServicesSection() {
               >
                 <div className="flex items-start justify-between mb-3">
                   <h3
-                    className={`md:text-3xl text-2xl font-Kairos font-bold transition-all duration-300 ${
+                    className={`md:text-3xl text-2xl font-Kairos font-normal transition-all duration-300 ${
                       active === key ? "text-white" : "text-[#0A0A0A]"
                     }`}
                   >
                     {services[key].title}
                   </h3>
-                  <span className={`text-3xl transition-transform duration-300 ${
+                  <span className={`text-3xl transition-transform duration-300  ${
                     active === key ? "rotate-45 text-[#EAF044]" : "text-gray-400 group-hover:rotate-45"
                   }`}>
                     →
                   </span>
                 </div>
                 <p
-                  className={`text-base leading-relaxed transition-all duration-300 ${
+                  className={`text-base leading-relaxed transition-all duration-300 font-inter ${
                     active === key ? "text-gray-300" : "text-[#5D5D5D] group-hover:text-[#0A0A0A]"
                   }`}
                 >
@@ -272,7 +272,7 @@ function ServicesSection() {
                       Selected Service
                     </span>
                   </div>
-                  <h4 className="text-3xl font-Kairos font-bold text-black mb-2">
+                  <h4 className="text-3xl font-Kairos font-normal text-black mb-2">
                     Key Features
                   </h4>
                   <div className="h-1 w-16 bg-[#EAF044] rounded-full"></div>
@@ -290,7 +290,7 @@ function ServicesSection() {
                       <span className="flex-shrink-0 w-6 h-6 bg-[#EAF044] rounded-full flex items-center justify-center text-[#0A0A0A] text-xs font-bold mt-0.5 group-hover:scale-110 transition-transform">
                         ✓
                       </span>
-                      <span className="text-[#0A0A0A] text-base leading-relaxed font-medium">
+                      <span className="text-[#0A0A0A] text-base leading-relaxed font-medium font-inter">
                         {feature}
                       </span>
                     </motion.li>
@@ -300,12 +300,12 @@ function ServicesSection() {
                 {services[active].technologies && (
                   <>
                     <div className="mb-6">
-                      <h4 className="text-2xl font-Kairos font-bold text-black mb-2">
+                      <h4 className="text-2xl font-Kairos font-normal text-black mb-2">
                         Technologies We Use
                       </h4>
                       <div className="h-1 w-16 bg-[#EAF044] rounded-full"></div>
                     </div>
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-3 font-inter">
                       {services[active].technologies.map((tech, idx) => (
                         <motion.span
                           key={idx}
@@ -370,7 +370,7 @@ function ServiceDetails() {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-white to-gray-50 text-gray-900 px-6 lg:px-10 py-24 lg:py-32">
+    <section className="relative bg-gradient-to-b from-white to-gray-50 text-gray-900 px-6 lg:px-10 py-24 lg:pb-24 lg:pt-12">
       <div className="max-w-7xl mx-auto">
         <div className="mb-20 text-center">
           <motion.div
@@ -390,7 +390,7 @@ function ServiceDetails() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-7xl font-Kairos font-bold leading-tight mb-6"
+            className="text-4xl md:text-6xl font-Kairos font-normal leading-tight mb-6"
           >
             Why Choose Initech
           </motion.h2>
@@ -400,7 +400,7 @@ function ServiceDetails() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto text-xl text-[#5D5D5D] leading-relaxed"
+            className="max-w-3xl mx-auto text-xl  text-[#5D5D5D] leading-relaxed font-inter"
           >
             We're committed to excellence in every project we undertake, delivering solutions that exceed expectations
           </motion.p>
@@ -426,10 +426,10 @@ function ServiceDetails() {
               </div>
               
               {/* Content */}
-              <h3 className="text-2xl font-Kairos font-bold mb-4 text-black group-hover:text-[#0A0A0A] transition-colors">
+              <h3 className="text-2xl font-Kairos font-normal mb-4 text-black group-hover:text-[#0A0A0A] transition-colors">
                 {section.title}
               </h3>
-              <p className="text-base text-[#5D5D5D] leading-relaxed group-hover:text-[#0A0A0A] transition-colors">
+              <p className="text-base font-inter text-[#5D5D5D] leading-relaxed group-hover:text-[#0A0A0A] transition-colors">
                 {section.description}
               </p>
 
@@ -455,10 +455,10 @@ function ServiceDetails() {
               { value: "24/7", label: "Expert Support" }
             ].map((stat, idx) => (
               <div key={idx} className="group">
-                <div className="text-5xl md:text-6xl font-bold text-[#0A0A0A] mb-3 group-hover:text-[#EAF044] transition-colors">
+                <div className="text-5xl md:text-5xl font-bold text-[#0A0A0A] mb-3 group-hover:text-[#EAF044] transition-colors">
                   {stat.value}
                 </div>
-                <div className="text-sm md:text-base text-[#5D5D5D] font-medium uppercase tracking-wider">
+                <div className="text-sm md:text-base text-[#5D5D5D] font-medium uppercase  tracking-wider">
                   {stat.label}
                 </div>
               </div>
@@ -485,9 +485,9 @@ function CTASection() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="inline-block mb-6 px-6 py-2 bg-[#EAF044] bg-opacity-20 backdrop-blur-sm rounded-full border border-[#EAF044] border-opacity-30"
+          className="inline-block mb-6 px-3 py-2 bg-[#EAF044] bg-opacity-20 backdrop-blur-sm rounded-full border border-[#EAF044] border-opacity-30"
         >
-          <span className="text-sm font-bold text-[#EAF044] uppercase tracking-wider">
+          <span className="text-sm font-bold text-black uppercase tracking-wider">
             ✦ Let's Build Together
           </span>
         </motion.div>
@@ -497,7 +497,7 @@ function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-7xl lg:text-8xl font-Kairos font-bold text-white mb-8 leading-tight"
+          className="text-5xl md:text-7xl lg:text-7xl font-Kairos font-normal text-white mb-8 leading-tight"
         >
           Ready to Start <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#EAF044] to-white">
@@ -510,7 +510,7 @@ function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-lg md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl text-gray-300 font-normal font-inter mb-12 max-w-3xl mx-auto leading-relaxed"
         >
           Let's discuss how we can help transform your ideas into reality with our expert services. 
           <span className="text-[#EAF044] font-semibold"> Get a free consultation today!</span>
@@ -523,8 +523,8 @@ function CTASection() {
           viewport={{ once: true }}
           className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-16"
         >
-          <button className="group flex items-center text-lg gap-3 px-8 py-4 font-bold text-gray-900 transition-all bg-[#EAF044] rounded-2xl hover:scale-105 hover:shadow-2xl hover:shadow-[#EAF044]/50">
-            <div className="w-12 h-12 bg-[#0A0A0A1A] hover:bg-black transition-all duration-500 ease-in-out rounded-xl flex items-center justify-center relative overflow-hidden">
+          <button className="group flex items-center text-lg gap-3 px-6 py-3 font-bold text-gray-900 transition-all bg-[#EAF044] rounded-2xl hover:scale-105 hover:shadow-2xl hover:shadow-[#EAF044]/50">
+            <div className="w-10 h-10 bg-[#0A0A0A1A] hover:bg-black transition-all duration-500 ease-in-out rounded-xl flex items-center justify-center relative overflow-hidden">
               <img
                 src="/11.svg"
                 alt="white icon"
@@ -539,7 +539,7 @@ function CTASection() {
             GET IN TOUCH
           </button>
 
-          <button className="px-8 py-4 bg-transparent text-lg font-bold text-white transition-all border-2 border-gray-600 rounded-2xl hover:bg-white hover:text-gray-900 hover:border-white hover:scale-105">
+          <button className="px-6 py-4 bg-transparent text-lg font-bold text-white transition-all border-2 border-gray-600 rounded-2xl hover:bg-white hover:text-gray-900 hover:border-white hover:scale-105">
             VIEW OUR PORTFOLIO
           </button>
         </motion.div>
