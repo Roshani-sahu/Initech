@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { Eye, Users, Scale, Layers, Users2, Shield } from "lucide-react";
+
 
 interface ServiceDetail {
   title: string;
@@ -327,44 +329,51 @@ function ServicesSection() {
 }
 
 function ServiceDetails() {
-  const detailSections = [
-    {
-      icon: "/icons/lightning.svg",
-      title: "Fast Delivery",
-      description: "We follow agile methodologies to deliver projects on time without compromising quality.",
-      color: "from-yellow-50 to-yellow-100"
-    },
-    {
-      icon: "/icons/cloud.svg",
-      title: "Scalable Solutions",
-      description: "Our solutions are built to grow with your business, handling increased load seamlessly.",
-      color: "from-blue-50 to-blue-100"
-    },
-    {
-      icon: "/icons/lock.svg",
-      title: "Security First",
-      description: "We implement industry-standard security practices to protect your data and users.",
-      color: "from-green-50 to-green-100"
-    },
-    {
-      icon: "/icons/layers.svg",
-      title: "Full-Stack Expertise",
-      description: "From frontend to backend, cloud to mobile, we handle every aspect of development.",
-      color: "from-purple-50 to-purple-100"
-    },
-    {
-      icon: "/icons/check.svg",
-      title: "Quality Assurance",
-      description: "Rigorous testing ensures your product is reliable, performant, and bug-free.",
-      color: "from-pink-50 to-pink-100"
-    },
-    {
-      icon: "/icons/reactive.svg",
-      title: "Ongoing Support",
-      description: "We provide continuous maintenance and support to keep your systems running smoothly.",
-      color: "from-orange-50 to-orange-100"
-    }
-  ];
+ const detailSections = [
+  {
+    icon: Eye,
+    title: "Full Transparency",
+    description:
+      "We maintain complete transparency throughout every stage of development — from project initiation to delivery. Clear roadmaps, measurable KPIs, structured reporting, and regular sync-ups ensure our clients have full visibility into progress, performance, and product quality.",
+    color: "from-blue-50 to-blue-100"
+  },
+  {
+    icon: Users,
+    title: "Client Involvement",
+    description:
+      "We adapt to your preferred level of participation. Whether you want a turnkey solution or hands-on involvement, our flexible workflows, open communication, and collaborative tools keep you informed and empowered throughout the process.",
+    color: "from-green-50 to-green-100"
+  },
+  {
+    icon: Scale,
+    title: "Reasonable Costs",
+    description:
+      "We deliver premium-quality software at fair and transparent pricing. Our efficient development practices, proven frameworks, and maintainable codebase ensure you receive maximum value and sustainable ROI without budget overruns.",
+    color: "from-yellow-50 to-yellow-100"
+  },
+  {
+    icon: Layers,
+    title: "Scoping",
+    description:
+      "Our precise scoping process transforms business requirements into actionable project plans. We define clear goals, prioritize features, and outline deliverables that eliminate scope creep and align perfectly with your strategic objectives.",
+    color: "from-purple-50 to-purple-100"
+  },
+  {
+    icon: Users2,
+    title: "Resource Planning",
+    description:
+      "We allocate top-tier specialists whose expertise aligns with your project’s goals. By matching technical proficiency with business understanding, we ensure optimal team performance, smooth execution, and efficient resource utilization.",
+    color: "from-pink-50 to-pink-100"
+  },
+  {
+    icon: Shield,
+    title: "Risk Management",
+    description:
+      "Proactive risk management is integral to our workflow. We identify potential challenges early, implement preventive measures, and maintain transparent communication—ensuring your project remains stable, secure, and on track for success.",
+    color: "from-orange-50 to-orange-100"
+  }
+];
+
 
   return (
     <section className="relative bg-linear-to-b from-white to-gray-50 text-gray-900 px-6 lg:px-10 py-24 lg:pb-24 lg:pt-12">
@@ -405,6 +414,7 @@ function ServiceDetails() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {detailSections.map((section, idx) => (
+
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 30 }}
@@ -414,13 +424,15 @@ function ServiceDetails() {
               className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-[#EAF044] hover:-translate-y-2"
             >
               {/* Icon Container */}
-              <div className={`mb-6 w-16 h-16 rounded-2xl bg-linear-to-br ${section.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-500`}>
-                <img
-                  src={section.icon}
-                  alt={section.title}
-                  className="w-8 h-8 object-contain"
-                />
-              </div>
+              <div
+        className={`mb-6 w-16 h-16 rounded-2xl bg-linear-to-br ${section.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-500`}
+      >
+        
+        {(() => {
+          const Icon = section.icon;
+          return <Icon className="w-8 h-8 text-gray-800 transition-all duration-500 group-hover:text-black" />;
+        })()}
+      </div>
               
               {/* Content */}
               <h3 className="text-2xl font-Kairos font-normal mb-4 text-black group-hover:text-[#0A0A0A] transition-colors">
