@@ -25,13 +25,13 @@ export default function ServicesPage() {
 
 function ServicesHero() {
   return (
-    <section className="relative px-4 sm:px-6 lg:px-8 pt-32 pb-24 sm:pt-40 sm:pb-32 bg-gradient-to-br from-white via-gray-50 to-white overflow-hidden">
+    <section className="relative px-4 sm:px-6 lg:px-8 pt-38 pb-14  bg-linear-to-br from-white via-gray-50 to-white overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#EAF044] opacity-5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0A0A0A] opacity-5 rounded-full blur-3xl"></div>
       
       <div className="max-w-7xl mx-auto text-center relative z-10">
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -40,16 +40,16 @@ function ServicesHero() {
           <span className="text-sm font-semibold text-[#0A0A0A] uppercase tracking-wider">
             ✦ Professional Services
           </span>
-        </motion.div>
+        </motion.div> */}
         
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="md:text-8xl text-6xl text-black font-Kairos font-bold mb-8 leading-tight"
+          className="md:text-8xl text-6xl text-black font-Kairos  mb-8 leading-tight"
         >
           Innovative Solutions <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0A0A0A] via-gray-700 to-[#0A0A0A]">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-[#0A0A0A] via-gray-700 to-[#0A0A0A]">
             For Modern Business
           </span>
         </motion.h1>
@@ -58,13 +58,13 @@ function ServicesHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-5xl mx-auto md:text-2xl text-xl text-[#5D5D5D] font-Kairos leading-relaxed mb-12"
+          className="max-w-5xl mx-auto md:text-2xl text-xl text-[#5D5D5D] font-inter leading-relaxed mb-12"
         >
           Transform your vision into reality with our comprehensive suite of technology services. 
           From concept to deployment, we craft solutions that drive growth and innovation.
         </motion.p>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -84,7 +84,7 @@ function ServicesHero() {
               </div>
             </div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
@@ -245,12 +245,11 @@ function ServicesSection() {
                   </span>
                 </div>
                 <p
-                  className={`text-base leading-relaxed transition-all duration-300 font-inter ${
-                    active === key ? "text-gray-300" : "text-[#5D5D5D] group-hover:text-[#0A0A0A]"
-                  }`}
-                >
-                  {services[key].description}
-                </p>
+  className={`text-base leading-relaxed font-inter transition-all duration-500 ease-in-out overflow-hidden
+    ${active === key ? "opacity-100 text-gray-300 max-h-40" : "opacity-0 max-h-0 text-transparent group-hover:opacity-100 group-hover:max-h-40 group-hover:text-[#0A0A0A]"}`}
+>
+  {services[key].description}
+</p>
               </motion.div>
             ))}
           </div>
@@ -264,15 +263,13 @@ function ServicesSection() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
-                className="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 rounded-3xl p-10 shadow-xl"
+                className="bg-linear-to-br from-gray-50 to-white border-2 border-gray-200 rounded-3xl p-10 shadow-xl"
               >
                 <div className="mb-8">
-                  <div className="inline-block px-4 py-2 bg-[#EAF044] rounded-full mb-6">
-                    <span className="text-xs font-bold text-[#0A0A0A] uppercase tracking-wider">
-                      Selected Service
-                    </span>
-                  </div>
-                  <h4 className="text-3xl font-Kairos font-normal text-black mb-2">
+                  <h3 className="md:text-4xl text-2xl font-Kairos  transition-all duration-300 text-[#0A0A0A] mb-8">
+                    {services[active].title}
+                  </h3>
+                  <h4 className="text-2xl  font-Kairos font-normal text-black mb-2">
                     Key Features
                   </h4>
                   <div className="h-1 w-16 bg-[#EAF044] rounded-full"></div>
@@ -287,7 +284,7 @@ function ServicesSection() {
                       transition={{ delay: idx * 0.1 }}
                       className="flex items-start gap-4 group"
                     >
-                      <span className="flex-shrink-0 w-6 h-6 bg-[#EAF044] rounded-full flex items-center justify-center text-[#0A0A0A] text-xs font-bold mt-0.5 group-hover:scale-110 transition-transform">
+                      <span className="shrink-0 w-6 h-6 bg-[#EAF044] rounded-full flex items-center justify-center text-[#0A0A0A] text-xs font-bold mt-0.5 group-hover:scale-110 transition-transform">
                         ✓
                       </span>
                       <span className="text-[#0A0A0A] text-base leading-relaxed font-medium font-inter">
@@ -370,7 +367,7 @@ function ServiceDetails() {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-white to-gray-50 text-gray-900 px-6 lg:px-10 py-24 lg:pb-24 lg:pt-12">
+    <section className="relative bg-linear-to-b from-white to-gray-50 text-gray-900 px-6 lg:px-10 py-24 lg:pb-24 lg:pt-12">
       <div className="max-w-7xl mx-auto">
         <div className="mb-20 text-center">
           <motion.div
@@ -417,7 +414,7 @@ function ServiceDetails() {
               className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-[#EAF044] hover:-translate-y-2"
             >
               {/* Icon Container */}
-              <div className={`mb-6 w-16 h-16 rounded-2xl bg-gradient-to-br ${section.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-500`}>
+              <div className={`mb-6 w-16 h-16 rounded-2xl bg-linear-to-br ${section.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-500`}>
                 <img
                   src={section.icon}
                   alt={section.title}
@@ -440,7 +437,7 @@ function ServiceDetails() {
         </div>
 
         {/* Trust indicators */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
@@ -464,7 +461,7 @@ function ServiceDetails() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
@@ -472,15 +469,15 @@ function ServiceDetails() {
 
 function CTASection() {
   return (
-    <section className="relative px-4 sm:px-6 lg:px-8 py-28 bg-[#0A0A0A] overflow-hidden">
+    <section className="relative px-4 sm:px-6 lg:px-8 py-28 bg-black overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-10">
+      {/* <div className="absolute top-0 left-0 w-full h-full opacity-10">
         <div className="absolute top-10 left-10 w-72 h-72 bg-[#EAF044] rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#EAF044] rounded-full blur-3xl"></div>
-      </div>
+      </div> */}
 
       <div className="max-w-6xl mx-auto text-center relative z-10">
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -490,7 +487,7 @@ function CTASection() {
           <span className="text-sm font-bold text-black uppercase tracking-wider">
             ✦ Let's Build Together
           </span>
-        </motion.div>
+        </motion.div> */}
 
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -500,7 +497,7 @@ function CTASection() {
           className="text-5xl md:text-7xl lg:text-7xl font-Kairos font-normal text-white mb-8 leading-tight"
         >
           Ready to Start <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#EAF044] to-white">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-white via-[#EAF044] to-white">
             Your Project?
           </span>
         </motion.h2>
@@ -523,7 +520,7 @@ function CTASection() {
           viewport={{ once: true }}
           className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-16"
         >
-          <button className="group flex items-center text-lg gap-3 px-6 py-3 font-bold text-gray-900 transition-all bg-[#EAF044] rounded-2xl hover:scale-105 hover:shadow-2xl hover:shadow-[#EAF044]/50">
+          <button className="group flex items-center text-lg gap-3 px-3 py-2 font-bold text-gray-900 transition-all bg-[#EAF044] rounded-2xl hover:scale-105 hover:shadow-2xl hover:shadow-[#EAF044]/50">
             <div className="w-10 h-10 bg-[#0A0A0A1A] hover:bg-black transition-all duration-500 ease-in-out rounded-xl flex items-center justify-center relative overflow-hidden">
               <img
                 src="/11.svg"
@@ -539,7 +536,7 @@ function CTASection() {
             GET IN TOUCH
           </button>
 
-          <button className="px-6 py-4 bg-transparent text-lg font-bold text-white transition-all border-2 border-gray-600 rounded-2xl hover:bg-white hover:text-gray-900 hover:border-white hover:scale-105">
+          <button className="px-4 py-3 bg-transparent text-lg font-bold text-white transition-all border-2 border-gray-600 rounded-2xl hover:bg-white hover:text-gray-900 hover:border-white hover:scale-105">
             VIEW OUR PORTFOLIO
           </button>
         </motion.div>
