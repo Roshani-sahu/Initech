@@ -251,31 +251,14 @@ function StorySection() {
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >
+                  
                   <Users className="w-20 h-20 text-[#5D5D5D] mx-auto mb-4" />
                   <p className="text-[#5D5D5D] text-lg">Team Photo Placeholder</p>
-                  <p className="text-[#5D5D5D] text-sm mt-2">Add your company image here</p>
+                  <p className="text-[#5D5D5D] text-sm mt-2"><img src="/ourstory.jpg" alt="" /></p>
                 </motion.div>
               </div>
               
-              {/* Decorative badge */}
-              <motion.div 
-                className="absolute top-8 right-8 bg-[#EAF044] rounded-full p-6 shadow-lg"
-                initial={{ scale: 0, rotate: -180 }}
-                whileInView={{ scale: 1, rotate: 0 }}
-                transition={{ 
-                  delay: 0.5, 
-                  duration: 0.8,
-                  type: "spring",
-                  stiffness: 200
-                }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.1, rotate: 5 }}
-              >
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-black">5+</div>
-                  <div className="text-xs text-black">Years</div>
-                </div>
-              </motion.div>
+
 
               {/* Floating particles */}
               <motion.div
@@ -305,112 +288,274 @@ function StorySection() {
 }
 
 function MissionVisionValues() {
-  const [activeTab, setActiveTab] = useState<"mission" | "vision" | "values">("mission");
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
-  const content = {
-    mission: {
-      icon: <Target className="w-12 h-12" />,
-      title: "Our Mission",
-      description: "To empower businesses with innovative technology solutions that drive growth, efficiency, and competitive advantage in the digital age.",
-      points: [
-        "Deliver exceptional value through cutting-edge technology",
-        "Build long-term partnerships based on trust and results",
-        "Stay ahead of technological trends and innovations",
-        "Provide solutions that scale with your business"
-      ]
+  const cards = [
+    {
+      icon: <Target className="w-8 h-8" />,
+      title: "Mission",
+      subtitle: "Our Purpose",
+      description: "Empowering businesses with innovative technology solutions that drive growth and competitive advantage.",
+      features: [
+        "Cutting-edge technology solutions",
+        "Long-term strategic partnerships",
+        "Scalable business solutions",
+        "Innovation-driven approach"
+      ],
+      gradient: "from-slate-600 to-gray-800",
+      bgColor: "bg-slate-50",
+      accentColor: "text-slate-600"
     },
-    vision: {
-      icon: <Lightbulb className="w-12 h-12" />,
-      title: "Our Vision",
-      description: "To be the world's most trusted technology partner, recognized for transforming businesses and shaping the future of digital innovation.",
-      points: [
-        "Lead the industry in innovative digital solutions",
-        "Expand our global presence and impact",
-        "Foster a culture of continuous learning and excellence",
-        "Make advanced technology accessible to all businesses"
-      ]
+    {
+      icon: <Lightbulb className="w-8 h-8" />,
+      title: "Vision",
+      subtitle: "Our Future",
+      description: "To be the world's most trusted technology partner, shaping the future of digital innovation.",
+      features: [
+        "Industry-leading solutions",
+        "Global presence & impact",
+        "Culture of excellence",
+        "Accessible technology"
+      ],
+      gradient: "from-[#EAF044] to-yellow-400",
+      bgColor: "bg-yellow-50",
+      accentColor: "text-yellow-600"
     },
-    values: {
-      icon: <Heart className="w-12 h-12" />,
-      title: "Our Values",
-      description: "The principles that guide everything we do and define who we are as a company.",
-      points: [
-        "Innovation: We embrace creativity and push boundaries",
-        "Integrity: We act with honesty and transparency",
-        "Excellence: We deliver quality in every project",
-        "Collaboration: We believe in teamwork and partnership",
-        "Customer-First: Your success is our success"
-      ]
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Values",
+      subtitle: "Our Principles",
+      description: "The core principles that guide everything we do and define who we are as a company.",
+      features: [
+        "Innovation & creativity",
+        "Integrity & transparency",
+        "Excellence in delivery",
+        "Customer-first mindset"
+      ],
+      gradient: "from-gray-700 to-black",
+      bgColor: "bg-gray-50",
+      accentColor: "text-gray-700"
     }
-  };
+  ];
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-4">
-            What Drives Us
-          </h2>
-          <p className="text-lg text-[#5D5D5D] max-w-2xl mx-auto font-inter">
-            Our mission, vision, and values shape our approach to every project
-          </p>
-        </div>
+    <section className="px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, #EAF044 2px, transparent 2px),
+                           radial-gradient(circle at 75% 75%, #3B82F6 2px, transparent 2px)`,
+          backgroundSize: '60px 60px'
+        }} />
+      </div>
 
-        {/* Tabs */}
-        <div className="flex justify-center gap-4 mb-12 flex-wrap ">
-          {(["mission", "vision", "values"] as const).map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`px-8 py-3 rounded-xl font-medium text-lg transition-all ${
-                activeTab === tab
-                  ? "bg-[#EAF044] text-black shadow-lg scale-105"
-                  : "bg-white text-[#5D5D5D] hover:bg-gray-100"
-              }`}
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Header */}
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <motion.h2 
+            className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-4"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            What Drives Us
+          </motion.h2>
+          <motion.p 
+            className="text-lg text-[#5D5D5D] max-w-2xl mx-auto font-inter"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            Our mission, vision, and values shape our approach to every project
+          </motion.p>
+        </motion.div>
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {cards.map((card, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              onHoverStart={() => setHoveredCard(index)}
+              onHoverEnd={() => setHoveredCard(null)}
+              className="group relative"
             >
-              {tab.charAt(0).toUpperCase() + tab.slice(1)}
-            </button>
+              <motion.div
+                className={`relative h-full ${card.bgColor} rounded-3xl p-8 border border-gray-100 overflow-hidden cursor-pointer`}
+                whileHover={{ 
+                  scale: 1.02,
+                  y: -8,
+                  boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.15)"
+                }}
+                transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+              >
+                {/* Gradient Background */}
+                <motion.div
+                  className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                />
+                
+                {/* Floating Icon */}
+                <motion.div
+                  className={`w-16 h-16 bg-gradient-to-br ${card.gradient} rounded-2xl flex items-center justify-center mb-6 text-white shadow-lg relative overflow-hidden`}
+                  whileHover={{ 
+                    scale: 1.1,
+                    rotate: [0, -5, 5, 0],
+                    boxShadow: "0 20px 40px rgba(0, 0, 0, 0.2)"
+                  }}
+                  transition={{ duration: 0.4 }}
+                >
+                  {/* Shimmer effect */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20"
+                    animate={{
+                      x: [-100, 100]
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      repeatDelay: 2
+                    }}
+                  />
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                    animate={{
+                      rotate: hoveredCard === index ? [0, 5, -5, 0] : 0
+                    }}
+                  >
+                    {card.icon}
+                  </motion.div>
+                </motion.div>
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <motion.div className="mb-4">
+                    <motion.p 
+                      className={`text-sm font-semibold ${card.accentColor} mb-1`}
+                      initial={{ opacity: 0.7 }}
+                      whileHover={{ opacity: 1 }}
+                    >
+                      {card.subtitle}
+                    </motion.p>
+                    <motion.h3 
+                      className="text-2xl font-Kairos font-bold text-black"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {card.title}
+                    </motion.h3>
+                  </motion.div>
+
+                  <motion.p 
+                    className="text-[#5D5D5D] leading-relaxed mb-6"
+                    initial={{ opacity: 0.8 }}
+                    whileHover={{ opacity: 1 }}
+                  >
+                    {card.description}
+                  </motion.p>
+
+                  {/* Features List */}
+                  <div className="space-y-3">
+                    {card.features.map((feature, idx) => (
+                      <motion.div
+                        key={idx}
+                        className="flex items-center gap-3"
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.8 + idx * 0.1, duration: 0.4 }}
+                        viewport={{ once: true }}
+                        whileHover={{ x: 5 }}
+                      >
+                        <motion.div
+                          className={`w-2 h-2 bg-gradient-to-r ${card.gradient} rounded-full`}
+                          whileHover={{ scale: 1.5 }}
+                          transition={{ duration: 0.2 }}
+                          animate={{
+                            scale: hoveredCard === index ? [1, 1.2, 1] : 1
+                          }}
+                        />
+                        <span className="text-sm text-[#5D5D5D] group-hover:text-black transition-colors duration-300">
+                          {feature}
+                        </span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Hover Effect Overlay */}
+                <motion.div
+                  className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-current to-transparent opacity-0 group-hover:opacity-100"
+                  style={{ color: card.gradient.includes('EAF044') ? '#EAF044' : card.gradient.includes('blue') ? '#3B82F6' : '#374151' }}
+                  transition={{ duration: 0.3 }}
+                />
+                
+                {/* Floating particles animation */}
+                <motion.div
+                  className="absolute top-4 right-4 w-2 h-2 bg-current rounded-full opacity-20"
+                  animate={{
+                    y: [0, -10, 0],
+                    opacity: [0.2, 0.6, 0.2]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: index * 0.5
+                  }}
+                  style={{ color: card.gradient.includes('EAF044') ? '#EAF044' : card.gradient.includes('blue') ? '#3B82F6' : '#374151' }}
+                />
+                <motion.div
+                  className="absolute top-8 right-8 w-1 h-1 bg-current rounded-full opacity-30"
+                  animate={{
+                    y: [0, -8, 0],
+                    opacity: [0.3, 0.8, 0.3]
+                  }}
+                  transition={{
+                    duration: 2.5,
+                    repeat: Infinity,
+                    delay: index * 0.7
+                  }}
+                  style={{ color: card.gradient.includes('EAF044') ? '#EAF044' : card.gradient.includes('blue') ? '#3B82F6' : '#374151' }}
+                />
+              </motion.div>
+            </motion.div>
           ))}
         </div>
 
-        {/* Content */}
+        {/* Bottom CTA */}
         <motion.div
-          key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg"
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          viewport={{ once: true }}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <div className="w-20 h-20 bg-[#EAF044] rounded-2xl flex items-center justify-center mb-6">
-                {content[activeTab].icon}
-              </div>
-              <h3 className="text-3xl md:text-4xl font-Kairos font-bold text-black mb-4">
-                {content[activeTab].title}
-              </h3>
-              <p className="text-lg text-[#5D5D5D] leading-relaxed">
-                {content[activeTab].description}
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              {content[activeTab].points.map((point, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: idx * 0.1 }}
-                  className="flex items-start gap-3"
-                >
-                  <div className="w-6 h-6 bg-[#EAF044] rounded-full flex items-center justify-center shrink-0 mt-1">
-                    <CheckCircle className="w-4 h-4 text-black" />
-                  </div>
-                  <span className="text-[#5D5D5D] text-base leading-relaxed">{point}</span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+          <motion.p 
+            className="text-lg text-[#5D5D5D] mb-6"
+            whileHover={{ scale: 1.02 }}
+          >
+            Ready to experience the difference our values make?
+          </motion.p>
+          <motion.button
+            className="px-8 py-4 bg-gradient-to-r from-[#EAF044] to-yellow-400 text-black font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+            whileHover={{ 
+              scale: 1.05,
+              boxShadow: "0 20px 40px rgba(234, 240, 68, 0.3)"
+            }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Start Your Journey
+          </motion.button>
         </motion.div>
       </div>
     </section>
