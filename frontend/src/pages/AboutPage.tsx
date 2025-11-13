@@ -1,16 +1,17 @@
 import { useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Header from "../components/Header";
+import Impact from "../components/about/Impact"
 import Footer from "../components/Footer";
 import { 
   Users, 
   Target, 
   Award, 
   TrendingUp, 
-  Heart, 
+  // Heart, 
   Lightbulb,
   Shield,
-  Zap,
+  // Zap,
   Globe,
   CheckCircle
 } from "lucide-react";
@@ -23,6 +24,7 @@ export default function AboutPage() {
       <StorySection />
       <MissionVisionValues />
       <StatsSection />
+      <Impact/>
       {/* <TeamSection /> */}
       {/* <WhyChooseUs /> */}
       <TimelineSection />
@@ -339,7 +341,7 @@ function MissionVisionValues() {
   ];
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <section className="px-4 sm:px-6 lg:px-8 py-20 bg-linear-to-b from-white to-gray-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -402,12 +404,12 @@ function MissionVisionValues() {
               >
                 {/* Gradient Background */}
                 <motion.div
-                  className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                  className={`absolute inset-0 bg-linear-to-br ${card.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
                 />
                 
                 {/* Floating Icon */}
                 <motion.div
-                  className={`w-16 h-16 bg-gradient-to-br ${card.gradient} rounded-2xl flex items-center justify-center mb-6 text-white shadow-lg relative overflow-hidden`}
+                  className={`w-16 h-16 bg-linear-to-br ${card.gradient} rounded-2xl flex items-center justify-center mb-6 text-white shadow-lg relative overflow-hidden`}
                   whileHover={{ 
                     scale: 1.1,
                     rotate: [0, -5, 5, 0],
@@ -417,7 +419,7 @@ function MissionVisionValues() {
                 >
                   {/* Shimmer effect */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20"
+                    className="absolute inset-0 bg-linear-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20"
                     animate={{
                       x: [-100, 100]
                     }}
@@ -478,7 +480,7 @@ function MissionVisionValues() {
                         whileHover={{ x: 5 }}
                       >
                         <motion.div
-                          className={`w-2 h-2 bg-gradient-to-r ${card.gradient} rounded-full`}
+                          className={`w-2 h-2 bg-linear-to-r ${card.gradient} rounded-full`}
                           whileHover={{ scale: 1.5 }}
                           transition={{ duration: 0.2 }}
                           animate={{
@@ -495,7 +497,7 @@ function MissionVisionValues() {
 
                 {/* Hover Effect Overlay */}
                 <motion.div
-                  className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-current to-transparent opacity-0 group-hover:opacity-100"
+                  className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-current to-transparent opacity-0 group-hover:opacity-100"
                   style={{ color: card.gradient.includes('EAF044') ? '#EAF044' : card.gradient.includes('blue') ? '#3B82F6' : '#374151' }}
                   transition={{ duration: 0.3 }}
                 />
@@ -547,7 +549,7 @@ function MissionVisionValues() {
             Ready to experience the difference our values make?
           </motion.p>
           <motion.button
-            className="px-8 py-4 bg-gradient-to-r from-[#EAF044] to-yellow-400 text-black font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+            className="px-8 py-4 bg-linear-to-r from-[#EAF044] to-yellow-400 text-black font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
             whileHover={{ 
               scale: 1.05,
               boxShadow: "0 20px 40px rgba(234, 240, 68, 0.3)"
@@ -647,272 +649,272 @@ function StatsSection() {
   );
 }
 
-function TeamSection() {
-  const teamMembers = [
-    {
-      role: "Leadership",
-      description: "Experienced executives driving strategic vision and growth"
-    },
-    {
-      role: "Engineering",
-      description: "Skilled developers building robust, scalable solutions"
-    },
-    {
-      role: "Design",
-      description: "Creative minds crafting beautiful user experiences"
-    },
-    {
-      role: "Strategy",
-      description: "Consultants guiding digital transformation journeys"
-    }
-  ];
+// function TeamSection() {
+//   const teamMembers = [
+//     {
+//       role: "Leadership",
+//       description: "Experienced executives driving strategic vision and growth"
+//     },
+//     {
+//       role: "Engineering",
+//       description: "Skilled developers building robust, scalable solutions"
+//     },
+//     {
+//       role: "Design",
+//       description: "Creative minds crafting beautiful user experiences"
+//     },
+//     {
+//       role: "Strategy",
+//       description: "Consultants guiding digital transformation journeys"
+//     }
+//   ];
 
-  return (
-    <section className="px-4 sm:px-6 lg:px-8 py-20 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <motion.h2 
-            className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-6"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            Meet Our Team
-          </motion.h2>
-          <motion.p 
-            className="text-lg text-[#5D5D5D] max-w-3xl mx-auto"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            A diverse group of talented individuals united by a passion for technology and innovation. We're builders, thinkers, and problem-solvers committed to your success.
-          </motion.p>
-        </motion.div>
+//   return (
+//     <section className="px-4 sm:px-6 lg:px-8 py-20 bg-white">
+//       <div className="max-w-7xl mx-auto">
+//         <motion.div 
+//           className="text-center mb-16"
+//           initial={{ opacity: 0, y: 30 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.6 }}
+//           viewport={{ once: true }}
+//         >
+//           <motion.h2 
+//             className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-6"
+//             initial={{ opacity: 0, scale: 0.9 }}
+//             whileInView={{ opacity: 1, scale: 1 }}
+//             transition={{ duration: 0.6, delay: 0.2 }}
+//             viewport={{ once: true }}
+//           >
+//             Meet Our Team
+//           </motion.h2>
+//           <motion.p 
+//             className="text-lg text-[#5D5D5D] max-w-3xl mx-auto"
+//             initial={{ opacity: 0 }}
+//             whileInView={{ opacity: 1 }}
+//             transition={{ duration: 0.6, delay: 0.3 }}
+//             viewport={{ once: true }}
+//           >
+//             A diverse group of talented individuals united by a passion for technology and innovation. We're builders, thinkers, and problem-solvers committed to your success.
+//           </motion.p>
+//         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 50, rotateY: -20 }}
-              whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
-              transition={{ 
-                duration: 0.6, 
-                delay: idx * 0.1,
-                type: "spring",
-                stiffness: 80
-              }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ 
-                y: -10,
-                transition: { duration: 0.3 }
-              }}
-              className="group"
-            >
-              <motion.div 
-                className="relative h-64 bg-linear-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden mb-4 group-hover:shadow-xl transition-shadow"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <motion.div
-                    animate={{ 
-                      scale: [1, 1.1, 1],
-                      rotate: [0, 5, -5, 0]
-                    }}
-                    transition={{ 
-                      duration: 4, 
-                      repeat: Infinity,
-                      delay: idx * 0.5
-                    }}
-                  >
-                    <Users className="w-16 h-16 text-[#5D5D5D]" />
-                  </motion.div>
-                </div>
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+//           {teamMembers.map((member, idx) => (
+//             <motion.div
+//               key={idx}
+//               initial={{ opacity: 0, y: 50, rotateY: -20 }}
+//               whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
+//               transition={{ 
+//                 duration: 0.6, 
+//                 delay: idx * 0.1,
+//                 type: "spring",
+//                 stiffness: 80
+//               }}
+//               viewport={{ once: true, margin: "-50px" }}
+//               whileHover={{ 
+//                 y: -10,
+//                 transition: { duration: 0.3 }
+//               }}
+//               className="group"
+//             >
+//               <motion.div 
+//                 className="relative h-64 bg-linear-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden mb-4 group-hover:shadow-xl transition-shadow"
+//                 whileHover={{ scale: 1.05 }}
+//                 transition={{ duration: 0.3 }}
+//               >
+//                 <div className="absolute inset-0 flex items-center justify-center">
+//                   <motion.div
+//                     animate={{ 
+//                       scale: [1, 1.1, 1],
+//                       rotate: [0, 5, -5, 0]
+//                     }}
+//                     transition={{ 
+//                       duration: 4, 
+//                       repeat: Infinity,
+//                       delay: idx * 0.5
+//                     }}
+//                   >
+//                     <Users className="w-16 h-16 text-[#5D5D5D]" />
+//                   </motion.div>
+//                 </div>
                 
-                {/* Hover overlay */}
-                <motion.div 
-                  className="absolute inset-0 bg-[#EAF044] opacity-0 group-hover:opacity-20 transition-opacity duration-300"
-                />
-              </motion.div>
-              <motion.h3 
-                className="text-xl font-Kairos font-normal text-black mb-2"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: idx * 0.1 + 0.3 }}
-                viewport={{ once: true }}
-              >
-                {member.role}
-              </motion.h3>
-              <motion.p 
-                className="text-[#5D5D5D] text-sm"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: idx * 0.1 + 0.4 }}
-                viewport={{ once: true }}
-              >
-                {member.description}
-              </motion.p>
-            </motion.div>
-          ))}
-        </div>
+//                 {/* Hover overlay */}
+//                 <motion.div 
+//                   className="absolute inset-0 bg-[#EAF044] opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+//                 />
+//               </motion.div>
+//               <motion.h3 
+//                 className="text-xl font-Kairos font-normal text-black mb-2"
+//                 initial={{ opacity: 0, x: -20 }}
+//                 whileInView={{ opacity: 1, x: 0 }}
+//                 transition={{ delay: idx * 0.1 + 0.3 }}
+//                 viewport={{ once: true }}
+//               >
+//                 {member.role}
+//               </motion.h3>
+//               <motion.p 
+//                 className="text-[#5D5D5D] text-sm"
+//                 initial={{ opacity: 0 }}
+//                 whileInView={{ opacity: 1 }}
+//                 transition={{ delay: idx * 0.1 + 0.4 }}
+//                 viewport={{ once: true }}
+//               >
+//                 {member.description}
+//               </motion.p>
+//             </motion.div>
+//           ))}
+//         </div>
 
-        <motion.div 
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <p className="text-lg text-[#5D5D5D] mb-6">
-            Want to be part of our journey?
-          </p>
-          <motion.button 
-            className="group flex items-center text-normal gap-2 px-6 py-3 font-medium text-gray-900 transition-all bg-[#EAF044] rounded-xl hover:scale-105 mx-auto"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <div className="w-10 h-10 bg-[#0A0A0A1A] hover:bg-black transition-all duration-500 ease-in-out rounded-lg flex items-center justify-center relative overflow-hidden">
-              <img
-                src="/11.svg"
-                alt="white icon"
-                className="w-5 h-5 absolute transition-all duration-500 ease-in-out transform group-hover:translate-x-full group-hover:opacity-0"
-              />
-              <img
-                src="/1.png"
-                alt="black icon"
-                className="w-5 h-5 absolute transition-all duration-500 ease-in-out transform -translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
-              />
-            </div>
-            JOIN OUR TEAM
-          </motion.button>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
+//         <motion.div 
+//           className="mt-16 text-center"
+//           initial={{ opacity: 0, y: 30 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.6, delay: 0.5 }}
+//           viewport={{ once: true }}
+//         >
+//           <p className="text-lg text-[#5D5D5D] mb-6">
+//             Want to be part of our journey?
+//           </p>
+//           <motion.button 
+//             className="group flex items-center text-normal gap-2 px-6 py-3 font-medium text-gray-900 transition-all bg-[#EAF044] rounded-xl hover:scale-105 mx-auto"
+//             whileHover={{ scale: 1.05 }}
+//             whileTap={{ scale: 0.95 }}
+//           >
+//             <div className="w-10 h-10 bg-[#0A0A0A1A] hover:bg-black transition-all duration-500 ease-in-out rounded-lg flex items-center justify-center relative overflow-hidden">
+//               <img
+//                 src="/11.svg"
+//                 alt="white icon"
+//                 className="w-5 h-5 absolute transition-all duration-500 ease-in-out transform group-hover:translate-x-full group-hover:opacity-0"
+//               />
+//               <img
+//                 src="/1.png"
+//                 alt="black icon"
+//                 className="w-5 h-5 absolute transition-all duration-500 ease-in-out transform -translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+//               />
+//             </div>
+//             JOIN OUR TEAM
+//           </motion.button>
+//         </motion.div>
+//       </div>
+//     </section>
+//   );
+// }
 
-function WhyChooseUs() {
-  const reasons = [
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Proven Expertise",
-      description: "Years of experience delivering successful projects across industries and technologies."
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Quality Assurance",
-      description: "Rigorous testing and quality control processes ensure flawless execution."
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Dedicated Support",
-      description: "Our team is always available to assist you throughout your journey."
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Scalable Solutions",
-      description: "Built to grow with your business, handling increasing demands seamlessly."
-    },
-    {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: "Innovation First",
-      description: "We stay ahead of trends, bringing you the latest technology and methodologies."
-    },
-    {
-      icon: <Heart className="w-8 h-8" />,
-      title: "Client-Centric",
-      description: "Your success is our priority. We go above and beyond to exceed expectations."
-    }
-  ];
+// function WhyChooseUs() {
+//   const reasons = [
+//     {
+//       icon: <Zap className="w-8 h-8" />,
+//       title: "Proven Expertise",
+//       description: "Years of experience delivering successful projects across industries and technologies."
+//     },
+//     {
+//       icon: <Shield className="w-8 h-8" />,
+//       title: "Quality Assurance",
+//       description: "Rigorous testing and quality control processes ensure flawless execution."
+//     },
+//     {
+//       icon: <Users className="w-8 h-8" />,
+//       title: "Dedicated Support",
+//       description: "Our team is always available to assist you throughout your journey."
+//     },
+//     {
+//       icon: <TrendingUp className="w-8 h-8" />,
+//       title: "Scalable Solutions",
+//       description: "Built to grow with your business, handling increasing demands seamlessly."
+//     },
+//     {
+//       icon: <Lightbulb className="w-8 h-8" />,
+//       title: "Innovation First",
+//       description: "We stay ahead of trends, bringing you the latest technology and methodologies."
+//     },
+//     {
+//       icon: <Heart className="w-8 h-8" />,
+//       title: "Client-Centric",
+//       description: "Your success is our priority. We go above and beyond to exceed expectations."
+//     }
+//   ];
 
-  return (
-    <section className="px-4 sm:px-6 lg:px-8 py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-4">
-            Why Choose Initech?
-          </h2>
-          <p className="text-lg text-[#5D5D5D] max-w-2xl mx-auto">
-            We combine technical excellence with business acumen to deliver exceptional results
-          </p>
-        </div>
+//   return (
+//     <section className="px-4 sm:px-6 lg:px-8 py-20 bg-gray-50">
+//       <div className="max-w-7xl mx-auto">
+//         <div className="text-center mb-16">
+//           <h2 className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-4">
+//             Why Choose Initech?
+//           </h2>
+//           <p className="text-lg text-[#5D5D5D] max-w-2xl mx-auto">
+//             We combine technical excellence with business acumen to deliver exceptional results
+//           </p>
+//         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reasons.map((reason, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 50, scale: 0.8 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ 
-                duration: 0.6, 
-                delay: idx * 0.1,
-                type: "spring",
-                stiffness: 100
-              }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ 
-                y: -10,
-                boxShadow: "0 20px 50px rgba(0,0,0,0.15)",
-                transition: { duration: 0.3 }
-              }}
-              className="bg-white rounded-2xl p-8 hover:shadow-xl transition-shadow relative overflow-hidden group"
-            >
-              {/* Animated background on hover */}
-              <motion.div
-                className="absolute inset-0 bg-linear-to-br from-[#EAF044] to-yellow-200 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
-              />
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+//           {reasons.map((reason, idx) => (
+//             <motion.div
+//               key={idx}
+//               initial={{ opacity: 0, y: 50, scale: 0.8 }}
+//               whileInView={{ opacity: 1, y: 0, scale: 1 }}
+//               transition={{ 
+//                 duration: 0.6, 
+//                 delay: idx * 0.1,
+//                 type: "spring",
+//                 stiffness: 100
+//               }}
+//               viewport={{ once: true, margin: "-50px" }}
+//               whileHover={{ 
+//                 y: -10,
+//                 boxShadow: "0 20px 50px rgba(0,0,0,0.15)",
+//                 transition: { duration: 0.3 }
+//               }}
+//               className="bg-white rounded-2xl p-8 hover:shadow-xl transition-shadow relative overflow-hidden group"
+//             >
+//               {/* Animated background on hover */}
+//               <motion.div
+//                 className="absolute inset-0 bg-linear-to-br from-[#EAF044] to-yellow-200 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+//               />
 
-              <motion.div 
-                className="w-16 h-16 bg-[#EAF044] rounded-xl flex items-center justify-center mb-6 relative z-10"
-                whileHover={{ 
-                  scale: 1.1, 
-                  rotate: [0, -10, 10, 0],
-                  transition: { duration: 0.5 }
-                }}
-              >
-                <div className="text-black">{reason.icon}</div>
-              </motion.div>
-              <motion.h3 
-                className="text-xl font-Kairos font-normal text-black mb-3 relative z-10"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: idx * 0.1 + 0.2 }}
-                viewport={{ once: true }}
-              >
-                {reason.title}
-              </motion.h3>
-              <motion.p 
-                className="text-[#5D5D5D] leading-relaxed relative z-10"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: idx * 0.1 + 0.3 }}
-                viewport={{ once: true }}
-              >
-                {reason.description}
-              </motion.p>
+//               <motion.div 
+//                 className="w-16 h-16 bg-[#EAF044] rounded-xl flex items-center justify-center mb-6 relative z-10"
+//                 whileHover={{ 
+//                   scale: 1.1, 
+//                   rotate: [0, -10, 10, 0],
+//                   transition: { duration: 0.5 }
+//                 }}
+//               >
+//                 <div className="text-black">{reason.icon}</div>
+//               </motion.div>
+//               <motion.h3 
+//                 className="text-xl font-Kairos font-normal text-black mb-3 relative z-10"
+//                 initial={{ opacity: 0, x: -20 }}
+//                 whileInView={{ opacity: 1, x: 0 }}
+//                 transition={{ delay: idx * 0.1 + 0.2 }}
+//                 viewport={{ once: true }}
+//               >
+//                 {reason.title}
+//               </motion.h3>
+//               <motion.p 
+//                 className="text-[#5D5D5D] leading-relaxed relative z-10"
+//                 initial={{ opacity: 0 }}
+//                 whileInView={{ opacity: 1 }}
+//                 transition={{ delay: idx * 0.1 + 0.3 }}
+//                 viewport={{ once: true }}
+//               >
+//                 {reason.description}
+//               </motion.p>
 
-              {/* Corner decoration */}
-              <motion.div
-                className="absolute -bottom-6 -right-6 w-24 h-24 bg-[#EAF044] rounded-full opacity-0 group-hover:opacity-20"
-                initial={{ scale: 0 }}
-                whileHover={{ scale: 1 }}
-                transition={{ duration: 0.4 }}
-              />
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+//               {/* Corner decoration */}
+//               <motion.div
+//                 className="absolute -bottom-6 -right-6 w-24 h-24 bg-[#EAF044] rounded-full opacity-0 group-hover:opacity-20"
+//                 initial={{ scale: 0 }}
+//                 whileHover={{ scale: 1 }}
+//                 transition={{ duration: 0.4 }}
+//               />
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 function TimelineSection() {
   const ref = useRef(null);
