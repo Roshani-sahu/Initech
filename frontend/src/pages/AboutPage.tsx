@@ -1,19 +1,14 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Header from "../components/Header";
-import Impact from "../components/about/Impact";
-// import OurImpact from "../components/about/new";
+// import Impact from "../components/about/Impact";
+//  import OurImpact from "../components/about/new";
+import Stats from "../components/about/Stats";
 import Footer from "../components/Footer";
 import DotGrid from "../components/home/DOTGRID";
 import { 
-  Users, 
-  Target, 
   Award, 
   TrendingUp, 
-  // Heart, 
-  Lightbulb,
-  Shield,
-  // Zap,
   Globe,
   CheckCircle
 } from "lucide-react";
@@ -25,9 +20,10 @@ export default function AboutPage() {
       <AboutHero />
       <StorySection />
       <MissionVisionValues />
-      <StatsSection />
+      {/* <StatsSection /> */}
+      <Stats/>
       {/* <Impact/> */}
-      {/* <OurImpact/> */}
+       {/* <OurImpact/>  */}
    
     
       {/* <TeamSection /> */}
@@ -46,7 +42,7 @@ function AboutHero() {
   const y = useTransform(scrollYProgress, [0, 0.3], [0, -50]);
 
   return (
-      <section className="relative min-h-screen flex items-center px-2 sm:px-6 lg:px-8 py-16 sm:py-20 bg-linear-to-b from-white to-gray-50 overflow-hidden">
+      <section className="relative flex items-center px-2 sm:px-6 lg:px-8 md:py-40 py-20 bg-linear-to-b from-white to-gray-50 overflow-hidden">
       <motion.div 
         style={{ opacity, scale, y }}
         className="max-w-7xl mx-auto text-center"
@@ -154,12 +150,12 @@ function AboutHero() {
 
 function StorySection() {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"]
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: ref,
+  //   offset: ["start end", "end start"]
+  // });
 
-  const rotateX = useTransform(scrollYProgress, [0, 0.5, 1], [15, 0, -15]);
+  // const rotateX = useTransform(scrollYProgress, [0, 0.5, 1], [15, 0, -15]);
 
   return (
     <section ref={ref} className="px-4 sm:px-6 lg:px-8 py-20 bg-white">
@@ -253,7 +249,7 @@ function StorySection() {
   );
 }
 function MissionVisionValues() {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  // const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const cards = [
     {
@@ -282,7 +278,7 @@ function MissionVisionValues() {
         "Culture of excellence",
         "Accessible technology"
       ],
-      gradient: "from-[#EAF044] to-yellow-400",
+      gradient: "from-yellow-300 to-yellow-200",
       bgColor: "bg-yellow-50",
       accentColor: "text-yellow-600"
     },
@@ -435,52 +431,52 @@ function MissionVisionValues() {
   );
 }
 
-function StatsSection() {
-  const stats = [
-    { value: "200+", label: "Projects Completed" },
-    { value: "150+", label: "Happy Clients" },
-    { value: "15+", label: "Countries Served" },
-    { value: "98%", label: "Client Satisfaction" },
-  ];
+// function StatsSection() {
+//   const stats = [
+//     { value: "200+", label: "Projects Completed" },
+//     { value: "150+", label: "Happy Clients" },
+//     { value: "15+", label: "Countries Served" },
+//     { value: "98%", label: "Client Satisfaction" },
+//   ];
 
-  return (
-    <section className="px-4 sm:px-6 lg:px-8 py-20 bg-white">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-4">
-            Our Impact in Numbers
-          </h2>
-          <p className="text-lg text-[#5D5D5D] max-w-2xl mx-auto font-inter">
-            Measurable results that speak to our commitment to excellence
-          </p>
-        </div>
+//   return (
+//     <section className="px-4 sm:px-6 lg:px-8 py-20 bg-white">
+//       <div className="max-w-7xl mx-auto">
+//         {/* Header */}
+//         <div className="text-center mb-16">
+//           <h2 className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-4">
+//             Our Impact in Numbers
+//           </h2>
+//           <p className="text-lg text-[#5D5D5D] max-w-2xl mx-auto font-inter">
+//             Measurable results that speak to our commitment to excellence
+//           </p>
+//         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, idx) => (
-            <div
-              key={idx}
-              className="text-center bg-white rounded-2xl p-8 shadow-lg border border-yellow-200/40 hover:border-yellow-300/50 hover:shadow-xl transition-all duration-300"
-            >
-              {/* Static Icon */}
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 border border-gray-200">
-                <CheckCircle className="w-8 h-8 text-gray-600" />
-              </div>
+//         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+//           {stats.map((stat, idx) => (
+//             <div
+//               key={idx}
+//               className="text-center bg-white rounded-2xl p-8 shadow-lg border border-yellow-200/40 hover:border-yellow-300/50 hover:shadow-xl transition-all duration-300"
+//             >
+//               {/* Static Icon */}
+//               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 border border-gray-200">
+//                 <CheckCircle className="w-8 h-8 text-gray-600" />
+//               </div>
               
-              <div className="text-4xl font-bold text-black mb-2 font-Kairos">
-                {stat.value}
-              </div>
+//               <div className="text-4xl font-bold text-black mb-2 font-Kairos">
+//                 {stat.value}
+//               </div>
               
-              <div className="text-[#5D5D5D] text-sm md:text-base font-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+//               <div className="text-[#5D5D5D] text-sm md:text-base font-medium">
+//                 {stat.label}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 // function TeamSection() {
 //   const teamMembers = [
@@ -776,6 +772,14 @@ function TimelineSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
+          <motion.h2 
+            className="text-2xl font-Kairos md:text-6xl text-black mb-3 max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+Milestones          </motion.h2>
           
           <motion.p 
             className="text-lg text-[#5D5D5D] max-w-2xl mx-auto"
@@ -827,7 +831,7 @@ function TimelineSection() {
                     transition={{ duration: 0.3 }}
                   >
                     <motion.div 
-                      className="text-4xl font-normal text-[#EAF044] mb-2 font-Kairos"
+                      className="text-4xl font-normal text-black mb-2 font-Kairos"
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       transition={{ 
@@ -840,7 +844,7 @@ function TimelineSection() {
                       {milestone.year}
                     </motion.div>
                     <motion.h3 
-                      className="text-2xl font-Kairos font-normal text-black mb-2"
+                      className="text-2xl font-Kairos font-normal text-gray-500 mb-2"
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: idx * 0.1 + 0.4 }}
@@ -861,7 +865,7 @@ function TimelineSection() {
                 </div>
 
                 <motion.div 
-                  className="w-12 h-12 bg-[#EAF044] rounded-full flex items-center justify-center shrink-0 relative z-10 border-4 border-white shadow-lg"
+                  className="w-12 h-12 bg-[#EAF044] rounded-full flex items-center justify-center shrink-0 relative z-10 border-4 border-gray-200 shadow-lg"
                   initial={{ scale: 0, rotate: -180 }}
                   whileInView={{ scale: 1, rotate: 0 }}
                   transition={{ 
@@ -902,7 +906,7 @@ function TimelineSection() {
 function CTASection() {
   return (
     <section
-      className="relative flex flex-col mb-10 items-center justify-center mx-auto h-[360px] bg-black text-center overflow-hidden w-[88%] md:w-[88%] rounded-2xl"
+      className="relative flex flex-col my-10 items-center justify-center mx-auto h-[400px] bg-black text-center overflow-hidden w-[88%] md:w-[88%] rounded-2xl"
       aria-label="Ready to Transform Your Business"
     >
       {/* Animated Dotted Background Layer */}
@@ -922,7 +926,7 @@ function CTASection() {
 
       {/* Main Content */}
       <div className="relative z-20 px-6">
-        <h1 className="text-[#F6F6F6] text-3xl sm:text-4xl md:text-5xl font-Kairos tracking-tight leading-snug max-w-3xl mx-auto">
+        <h1 className="text-[#F6F6F6] text-3xl sm:text-4xl md:text-5xl font-Kairos tracking-tight leading-snug max-w-xl mx-auto">
           Ready to Transform <span className="text-[#EAF044]">Your Business?</span>
         </h1>
 

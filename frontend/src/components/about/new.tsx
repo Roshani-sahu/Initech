@@ -105,13 +105,13 @@
 //           viewport={{ once: true }}
 //           className="text-center mb-20"
 //         >
-//           <motion.div
+//           {/* <motion.div
 //             className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8"
 //             whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.15)" }}
 //           >
 //             <Sparkles className="w-5 h-5 text-[#EAF044]" />
 //             <span className="text-white font-medium">Our Global Impact</span>
-//           </motion.div>
+//           </motion.div> */}
           
 //           <motion.h1 
 //             className="text-5xl md:text-7xl font-Kairos font-bold text-white mb-6 leading-tight"
@@ -142,31 +142,8 @@
 //         </motion.div>
 
 //         {/* Interactive 3D Carousel */}
-//         <div className="relative h-[600px] mb-20">
-//           {/* Control Panel */}
-//           <div className="absolute top-0 right-0 z-20 flex items-center gap-4">
-//             <motion.button
-//               onClick={() => setIsPlaying(!isPlaying)}
-//               className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
-//               whileHover={{ scale: 1.1 }}
-//               whileTap={{ scale: 0.9 }}
-//             >
-//               {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
-//             </motion.button>
-            
-//             <div className="flex gap-2">
-//               {impacts.map((_, index) => (
-//                 <motion.button
-//                   key={index}
-//                   onClick={() => setActiveIndex(index)}
-//                   className={`w-3 h-3 rounded-full transition-all ${
-//                     activeIndex === index ? "bg-[#EAF044] scale-125" : "bg-white/30 hover:bg-white/50"
-//                   }`}
-//                   whileHover={{ scale: 1.2 }}
-//                 />
-//               ))}
-//             </div>
-//           </div>
+//         <div className="relative h-[600px]  mb-20">
+          
 
 //           {/* 3D Cards */}
 //           <div className="relative w-full h-full flex items-center justify-center">
@@ -260,6 +237,8 @@
 //                         >
 //                           {impact.description}
 //                         </motion.p>
+
+                        
                         
 //                         {/* Metric Display */}
 //                         <motion.div 
@@ -287,7 +266,33 @@
 //               })}
 //             </AnimatePresence>
 //           </div>
+//           {/* Control Panel */}
+//           <div className=" z-20 flex justify-center  items-center gap-4">
+//             {/* <motion.button
+//               onClick={() => setIsPlaying(!isPlaying)}
+//               className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+//               whileHover={{ scale: 1.1 }}
+//               whileTap={{ scale: 0.9 }}
+//             >
+//               {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+//             </motion.button> */}
+            
+//             <div className="flex gap-2">
+//               {impacts.map((_, index) => (
+//                 <motion.button
+//                   key={index}
+//                   onClick={() => setActiveIndex(index)}
+//                   className={`w-3 h-3 rounded-full transition-all ${
+//                     activeIndex === index ? "bg-[#EAF044] scale-125" : "bg-white/30 hover:bg-white/50"
+//                   }`}
+//                   whileHover={{ scale: 1.2 }}
+//                 />
+//               ))}
+//             </div>
+//           </div>
 //         </div>
+
+        
 
 //         {/* Project Showcase */}
 //         <motion.div
