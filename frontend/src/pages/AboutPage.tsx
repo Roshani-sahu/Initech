@@ -46,7 +46,7 @@ function AboutHero() {
   const y = useTransform(scrollYProgress, [0, 0.3], [0, -50]);
 
   return (
-    <section className="relative px-2 sm:px-6 lg:px-8 py-16 sm:py-20 bg-linear-to-b from-white to-gray-50 overflow-hidden">
+      <section className="relative min-h-screen flex items-center px-2 sm:px-6 lg:px-8 py-16 sm:py-20 bg-linear-to-b from-white to-gray-50 overflow-hidden">
       <motion.div 
         style={{ opacity, scale, y }}
         className="max-w-7xl mx-auto text-center"
@@ -68,7 +68,7 @@ function AboutHero() {
           >
             About Initech
           </motion.span> */}
-        </motion.div>
+        </motion.div >
         
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
@@ -111,7 +111,7 @@ function AboutHero() {
 
       {/* Decorative animated elements */}
       <motion.div 
-        className="absolute top-20 left-10 w-72 h-72 bg-[#EAF044] rounded-full mix-blend-multiply filter blur-3xl opacity-20"
+        className="absolute top-20 left-10 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl "
         animate={{
           scale: [1, 1.2, 1],
           x: [0, 30, 0],
@@ -124,7 +124,7 @@ function AboutHero() {
         }}
       />
       <motion.div 
-        className="absolute top-40 right-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
+        className="absolute top-40 right-10 w-72 h-72  rounded-full mix-blend-multiply filter blur-3xl "
         animate={{
           scale: [1, 1.3, 1],
           x: [0, -30, 0],
@@ -162,7 +162,7 @@ function StorySection() {
   const rotateX = useTransform(scrollYProgress, [0, 0.5, 1], [15, 0, -15]);
 
   return (
-    <section ref={ref} className="px-4 sm:px-6 lg:px-8 py-8 bg-white">
+    <section ref={ref} className="px-4 sm:px-6 lg:px-8 py-20 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left - Story Content */}
@@ -171,82 +171,87 @@ function StorySection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, type: "spring", stiffness: 50 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
           >
-            <motion.div className="mb-6">
-             
-              <motion.h2 
-                className="text-4xl md:text-5xl font-Kairos font-normal text-black"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                Our Story
-              </motion.h2>
-            </motion.div>
-            
+            <motion.h2 
+              className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              Our Story
+            </motion.h2>
             <div className="space-y-6 text-lg text-[#5D5D5D] leading-relaxed font-inter">
-              <motion.div
-                className="p-4 bg-gray-50 rounded-xl border-l-4 border-black-400 hover:bg-gray-100 transition-colors duration-300"
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
                 viewport={{ once: true }}
-                whileHover={{ x: 5 }}
               >
-                <strong className="text-black">Founded with Vision:</strong> We bridge the gap between innovative technology and real-world business challenges, growing from a small startup to a trusted technology partner worldwide.
-              </motion.div>
-              
-              <motion.div
-                className="p-4 bg-gray-50 rounded-xl border-l-4 border-[#EAF044] hover:bg-gray-100 transition-colors duration-300"
+                Founded with a vision to bridge the gap between innovative technology and real-world business challenges, Initech has grown from a small startup to a trusted technology partner for businesses worldwide.
+              </motion.p>
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
                 viewport={{ once: true }}
-                whileHover={{ x: 5 }}
               >
-                <strong className="text-black">From Passion to Purpose:</strong> What started as a passion project has evolved into a full-service digital solutions company, helping 200+ clients transform operations and achieve measurable growth.
-              </motion.div>
-              
-              <motion.div
-                className="p-4 bg-gray-50 rounded-xl border-l-4 border-gray-400 hover:bg-gray-100 transition-colors duration-300"
+                What started as a passion project by a group of tech enthusiasts has evolved into a full-service digital solutions company. We've helped over 200+ clients transform their operations, enhance customer experiences, and achieve measurable growth.
+              </motion.p>
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
                 viewport={{ once: true }}
-                whileHover={{ x: 5 }}
               >
-                <strong className="text-black">Today's Excellence:</strong> We combine expertise in web development, mobile applications, AI/ML, IoT, and strategic consulting to exceed expectations.
-              </motion.div>
+                Today, we combine expertise in web development, mobile applications, AI/ML, IoT, and strategic consulting to deliver solutions that don't just meet expectations—they exceed them.
+              </motion.p>
             </div>
 
-           
+            <motion.div 
+              className="mt-8 flex flex-wrap gap-4"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              {['200+ Projects Delivered', '50+ Team Members', '15+ Countries Served'].map((text, idx) => (
+                <motion.div 
+                  key={idx}
+                  className="flex items-center gap-3"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.7 + idx * 0.1, duration: 0.5 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05, x: 5 }}
+                >
+                  <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <CheckCircle className="w-6 h-6 text-[#EAF044]" />
+                  </motion.div>
+                  <span className="text-black font-medium">{text}</span>
+                </motion.div>
+              ))}
+            </motion.div>
           </motion.div>
 
-          {/* Right - Image/Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, type: "spring", stiffness: 50 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="relative"
-            style={{ rotateX }}
-          >
-            <div className="relative h-[500px] bg-linear-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden">
+          {/* Right - Static Image */}
+          <div className="flex items-center justify-center">
+            <div className="h-[500px] w-full bg-gray-100 rounded-2xl overflow-hidden">
               <img 
                 src="/ourstory.jpg" 
                 alt="Our Story" 
                 className="w-full h-full object-cover"
               />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
-
 function MissionVisionValues() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
@@ -347,24 +352,19 @@ function MissionVisionValues() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              onHoverStart={() => setHoveredCard(index)}
-              onHoverEnd={() => setHoveredCard(null)}
               className="group relative"
             >
               <motion.div
-                className={`relative h-full ${card.bgColor} rounded-3xl p-8 border border-gray-100 overflow-hidden cursor-pointer`}
+                className="relative h-full bg-white rounded-3xl p-8 border border-gray-200 hover:border-gray-300 overflow-hidden cursor-pointer transition-all duration-500 ease-out"
                 whileHover={{ 
-                  scale: 1.02,
-                  y: -8,
-                  boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.15)"
+                  y: -2,
+                  boxShadow: "0 8px 25px -8px rgba(0, 0, 0, 0.1)"
                 }}
-                transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                style={{
+                  boxShadow: "0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+                }}
               >
-                {/* Gradient Background */}
-                <motion.div
-                  className={`absolute inset-0 bg-linear-to-br ${card.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
-                />
-                
                 {/* Static Icon */}
                 <div className={`w-16 h-16 bg-linear-to-br ${card.gradient} rounded-2xl flex items-center justify-center mb-6 text-white shadow-lg`}>
                   {card.icon}
@@ -372,93 +372,34 @@ function MissionVisionValues() {
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <motion.div className="mb-4">
-                    <motion.p 
-                      className={`text-sm font-semibold ${card.accentColor} mb-1`}
-                      initial={{ opacity: 0.7 }}
-                      whileHover={{ opacity: 1 }}
-                    >
+                  <div className="mb-4">
+                    <p className={`text-sm font-semibold ${card.accentColor} mb-1`}>
                       {card.subtitle}
-                    </motion.p>
-                    <motion.h3 
-                      className="text-2xl font-Kairos font-bold text-black"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.2 }}
-                    >
+                    </p>
+                    <h3 className="text-2xl font-Kairos font-bold text-black">
                       {card.title}
-                    </motion.h3>
-                  </motion.div>
+                    </h3>
+                  </div>
 
-                  <motion.p 
-                    className="text-[#5D5D5D] leading-relaxed mb-6"
-                    initial={{ opacity: 0.8 }}
-                    whileHover={{ opacity: 1 }}
-                  >
+                  <p className="text-[#5D5D5D] leading-relaxed mb-6">
                     {card.description}
-                  </motion.p>
+                  </p>
 
                   {/* Features List */}
                   <div className="space-y-3">
                     {card.features.map((feature, idx) => (
-                      <motion.div
+                      <div
                         key={idx}
                         className="flex items-center gap-3"
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.8 + idx * 0.1, duration: 0.4 }}
-                        viewport={{ once: true }}
-                        whileHover={{ x: 5 }}
                       >
-                        <motion.div
-                          className={`w-2 h-2 bg-linear-to-r ${card.gradient} rounded-full`}
-                          whileHover={{ scale: 1.5 }}
-                          transition={{ duration: 0.2 }}
-                          animate={{
-                            scale: hoveredCard === index ? [1, 1.2, 1] : 1
-                          }}
-                        />
-                        <span className="text-sm text-[#5D5D5D] group-hover:text-black transition-colors duration-300">
+                        <div className={`w-2 h-2 bg-linear-to-r ${card.gradient} rounded-full`} />
+                        <span className="text-sm text-[#5D5D5D]">
                           {feature}
                         </span>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </div>
-
-                {/* Hover Effect Overlay */}
-                <motion.div
-                  className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-current to-transparent opacity-0 group-hover:opacity-100"
-                  style={{ color: card.gradient.includes('EAF044') ? '#EAF044' : card.gradient.includes('blue') ? '#3B82F6' : '#374151' }}
-                  transition={{ duration: 0.3 }}
-                />
-                
-                {/* Floating particles animation */}
-                <motion.div
-                  className="absolute top-4 right-4 w-2 h-2 bg-current rounded-full opacity-20"
-                  animate={{
-                    y: [0, -10, 0],
-                    opacity: [0.2, 0.6, 0.2]
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    delay: index * 0.5
-                  }}
-                  style={{ color: card.gradient.includes('EAF044') ? '#EAF044' : card.gradient.includes('blue') ? '#3B82F6' : '#374151' }}
-                />
-                <motion.div
-                  className="absolute top-8 right-8 w-1 h-1 bg-current rounded-full opacity-30"
-                  animate={{
-                    y: [0, -8, 0],
-                    opacity: [0.3, 0.8, 0.3]
-                  }}
-                  transition={{
-                    duration: 2.5,
-                    repeat: Infinity,
-                    delay: index * 0.7
-                  }}
-                  style={{ color: card.gradient.includes('EAF044') ? '#EAF044' : card.gradient.includes('blue') ? '#3B82F6' : '#374151' }}
-                />
               </motion.div>
             </motion.div>
           ))}
@@ -503,92 +444,37 @@ function StatsSection() {
   ];
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-20 bg-white relative overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, #EAF044 2px, transparent 2px)`,
-          backgroundSize: '60px 60px'
-        }} />
-      </div>
-
-      <div className="max-w-7xl mx-auto relative z-10">
+    <section className="px-4 sm:px-6 lg:px-8 py-20 bg-white">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <motion.h2 
-            className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-4"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-4">
             Our Impact in Numbers
-          </motion.h2>
-          <motion.p 
-            className="text-lg text-[#5D5D5D] max-w-2xl mx-auto font-inter"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
+          </h2>
+          <p className="text-lg text-[#5D5D5D] max-w-2xl mx-auto font-inter">
             Measurable results that speak to our commitment to excellence
-          </motion.p>
-        </motion.div>
+          </p>
+        </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, idx) => (
-            <motion.div
+            <div
               key={idx}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ 
-                duration: 0.6, 
-                delay: idx * 0.15,
-                type: "spring",
-                stiffness: 100
-              }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ 
-                y: -5,
-                transition: { duration: 0.3 }
-              }}
-              className="text-center bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 group"
+              className="text-center bg-white rounded-2xl p-8 shadow-lg border border-yellow-200/40 hover:border-yellow-300/50 hover:shadow-xl transition-all duration-300"
             >
-              {/* Static Checkmark Icon */}
-              <div className="w-16 h-16 bg-[#EAF044] rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
-                <CheckCircle className="w-8 h-8 text-black" />
+              {/* Static Icon */}
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 border border-gray-200">
+                <CheckCircle className="w-8 h-8 text-gray-600" />
               </div>
               
-              <motion.div 
-                className="text-4xl font-bold text-black mb-2 font-Kairos group-hover:text-[#EAF044] transition-colors duration-300"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                transition={{ 
-                  delay: idx * 0.15 + 0.3,
-                  type: "spring",
-                  stiffness: 200
-                }}
-                viewport={{ once: true }}
-              >
+              <div className="text-4xl font-bold text-black mb-2 font-Kairos">
                 {stat.value}
-              </motion.div>
+              </div>
               
-              <motion.div 
-                className="text-[#5D5D5D] text-sm md:text-base font-medium"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: idx * 0.15 + 0.5 }}
-                viewport={{ once: true }}
-              >
+              <div className="text-[#5D5D5D] text-sm md:text-base font-medium">
                 {stat.label}
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
