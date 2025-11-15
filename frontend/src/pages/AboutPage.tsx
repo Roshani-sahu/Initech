@@ -4,6 +4,7 @@ import Header from "../components/Header";
 // import Impact from "../components/about/Impact";
 //  import OurImpact from "../components/about/new";
 import Stats from "../components/about/Stats";
+import HowWeCanHelp from "../components/about/HowWeCanHelp";
 import Footer from "../components/Footer";
 import DotGrid from "../components/home/DOTGRID";
 import { 
@@ -29,6 +30,7 @@ export default function AboutPage() {
       {/* <TeamSection /> */}
       {/* <WhyChooseUs /> */}
       <TimelineSection />
+      <HowWeCanHelp />
       <CTASection />
       <Footer />
     </main>
@@ -101,7 +103,7 @@ function AboutHero() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="max-w-4xl mx-auto md:text-xl text-lg text-[#5D5D5D] font-inter leading-relaxed"
         >
-          We're a passionate team of innovators, engineers, and strategists dedicated to transforming businesses through cutting-edge technology and creative solutions.
+  We are a team of passionate innovators and engineers committed to helping businesses evolve through modern technology, intelligent solutions, and user-focused digital experiences.
         </motion.p>
       </motion.div>
 
@@ -184,7 +186,7 @@ function StorySection() {
                 transition={{ delay: 0.3, duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                Founded with a vision to bridge the gap between innovative technology and real-world business challenges, Initech has grown from a small startup to a trusted technology partner for businesses worldwide.
+    Initech began with a vision to create meaningful digital solutions that help businesses grow. From a small startup, we’ve evolved into a trusted technology partner for companies across industries.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -192,7 +194,7 @@ function StorySection() {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                What started as a passion project by a group of tech enthusiasts has evolved into a full-service digital solutions company. We've helped over 200+ clients transform their operations, enhance customer experiences, and achieve measurable growth.
+    What started with a passionate team of problem-solvers has grown into a full-service tech company delivering custom software, web platforms, and mobile applications that drive real business value.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -200,7 +202,7 @@ function StorySection() {
                 transition={{ delay: 0.5, duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                Today, we combine expertise in web development, mobile applications, AI/ML, IoT, and strategic consulting to deliver solutions that don't just meet expectations—they exceed them.
+    Guided by transparency, innovation, and teamwork, we build technology that empowers organizations to adapt, scale, and succeed in a digital-first world.
               </motion.p>
             </div>
 
@@ -251,56 +253,60 @@ function StorySection() {
 function MissionVisionValues() {
   // const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
-  const cards = [
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Mission",
-      subtitle: "Our Purpose",
-      description: "Empowering businesses with innovative technology solutions that drive growth and competitive advantage.",
-      features: [
-        "Cutting-edge technology solutions",
-        "Long-term strategic partnerships",
-        "Scalable business solutions",
-        "Innovation-driven approach"
-      ],
-      gradient: "from-slate-600 to-gray-800",
-      bgColor: "bg-slate-50",
-      accentColor: "text-slate-600"
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Vision",
-      subtitle: "Our Future",
-      description: "To be the world's most trusted technology partner, shaping the future of digital innovation.",
-      features: [
-        "Industry-leading solutions",
-        "Global presence & impact",
-        "Culture of excellence",
-        "Accessible technology"
-      ],
-      gradient: "from-yellow-300 to-yellow-200",
-      bgColor: "bg-yellow-50",
-      accentColor: "text-yellow-600"
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: "Values",
-      subtitle: "Our Principles",
-      description: "The core principles that guide everything we do and define who we are as a company.",
-      features: [
-        "Innovation & creativity",
-        "Integrity & transparency",
-        "Excellence in delivery",
-        "Customer-first mindset"
-      ],
-      gradient: "from-gray-700 to-black",
-      bgColor: "bg-gray-50",
-      accentColor: "text-gray-700"
-    }
-  ];
+ const cards = [
+  {
+    icon: <Globe className="w-8 h-8" />,
+    title: "Mission",
+    subtitle: "Our Purpose",
+    description:
+      "Empowering organizations through scalable and sustainable digital solutions that accelerate growth, optimize operations, and strengthen competitive advantage.",
+    features: [
+      "Sustainable, high-performance technology solutions",
+      "Client-focused strategies tailored to business goals",
+      "Agile development for faster time-to-market",
+      "Innovation driven by measurable outcomes",
+    ],
+    gradient: "from-slate-600 to-gray-800",
+    bgColor: "bg-slate-50",
+    accentColor: "text-slate-600",
+  },
+  {
+    icon: <TrendingUp className="w-8 h-8" />,
+    title: "Vision",
+    subtitle: "Our Future",
+    description:
+      "To become the world’s most trusted technology innovation partner, delivering future-ready digital solutions that shape industries and empower global businesses.",
+    features: [
+      "Global excellence in software engineering",
+      "Future-driven innovation culture",
+      "Scalable solutions for evolving markets",
+      "Commitment to continuous improvement",
+    ],
+    gradient: "from-yellow-300 to-yellow-200",
+    bgColor: "bg-yellow-50",
+    accentColor: "text-yellow-600",
+  },
+  {
+    icon: <Award className="w-8 h-8" />,
+    title: "Values",
+    subtitle: "Our Principles",
+    description:
+      "Our values define how we work—prioritizing integrity, transparency, innovation, cultural awareness, and unwavering commitment to delivering secure and impactful solutions.",
+    features: [
+      "Integrity, transparency & ethical practices",
+      "Security-first development & data protection",
+      "Collaborative innovation through teamwork",
+      "Cultural sensitivity & global awareness",
+    ],
+    gradient: "from-gray-700 to-black",
+    bgColor: "bg-gray-50",
+    accentColor: "text-gray-700",
+  },
+];
+
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-20 bg-linear-to-b from-white to-gray-50 relative overflow-hidden">
+    <section className="px-4 sm:px-6 lg:px-8 py-20 bg-gray-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -743,7 +749,7 @@ function MissionVisionValues() {
 //       </div>
 //     </section>
 //   );
-// }
+// } 
 
 function TimelineSection() {
   const ref = useRef(null);
