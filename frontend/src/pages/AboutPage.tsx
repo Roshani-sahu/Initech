@@ -1,19 +1,15 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Header from "../components/Header";
-import Impact from "../components/about/Impact";
-// import OurImpact from "../components/about/new";
+// import Impact from "../components/about/Impact";
+//  import OurImpact from "../components/about/new";
+import Stats from "../components/about/Stats";
+import HowWeCanHelp from "../components/about/HowWeCanHelp";
 import Footer from "../components/Footer";
 import DotGrid from "../components/home/DOTGRID";
 import { 
-  Users, 
-  Target, 
   Award, 
   TrendingUp, 
-  // Heart, 
-  Lightbulb,
-  Shield,
-  // Zap,
   Globe,
   CheckCircle
 } from "lucide-react";
@@ -25,14 +21,16 @@ export default function AboutPage() {
       <AboutHero />
       <StorySection />
       <MissionVisionValues />
-      <StatsSection />
+      {/* <StatsSection /> */}
+      <Stats/>
       {/* <Impact/> */}
-      {/* <OurImpact/> */}
+       {/* <OurImpact/>  */}
    
     
       {/* <TeamSection /> */}
       {/* <WhyChooseUs /> */}
       <TimelineSection />
+      <HowWeCanHelp />
       <CTASection />
       <Footer />
     </main>
@@ -46,7 +44,7 @@ function AboutHero() {
   const y = useTransform(scrollYProgress, [0, 0.3], [0, -50]);
 
   return (
-    <section className="relative px-2 sm:px-6 lg:px-8 py-16 sm:py-20 bg-linear-to-b from-white to-gray-50 overflow-hidden">
+      <section className="relative flex items-center px-2 sm:px-6 lg:px-8 md:py-40 py-20 bg-linear-to-b from-white to-gray-50 overflow-hidden">
       <motion.div 
         style={{ opacity, scale, y }}
         className="max-w-7xl mx-auto text-center"
@@ -68,7 +66,7 @@ function AboutHero() {
           >
             About Initech
           </motion.span> */}
-        </motion.div>
+        </motion.div >
         
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
@@ -105,13 +103,13 @@ function AboutHero() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="max-w-4xl mx-auto md:text-xl text-lg text-[#5D5D5D] font-inter leading-relaxed"
         >
-          We're a passionate team of innovators, engineers, and strategists dedicated to transforming businesses through cutting-edge technology and creative solutions.
+  We are a team of passionate innovators and engineers committed to helping businesses evolve through modern technology, intelligent solutions, and user-focused digital experiences.
         </motion.p>
       </motion.div>
 
       {/* Decorative animated elements */}
       <motion.div 
-        className="absolute top-20 left-10 w-72 h-72 bg-[#EAF044] rounded-full mix-blend-multiply filter blur-3xl opacity-20"
+        className="absolute top-20 left-10 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl "
         animate={{
           scale: [1, 1.2, 1],
           x: [0, 30, 0],
@@ -124,7 +122,7 @@ function AboutHero() {
         }}
       />
       <motion.div 
-        className="absolute top-40 right-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
+        className="absolute top-40 right-10 w-72 h-72  rounded-full mix-blend-multiply filter blur-3xl "
         animate={{
           scale: [1, 1.3, 1],
           x: [0, -30, 0],
@@ -154,15 +152,15 @@ function AboutHero() {
 
 function StorySection() {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"]
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: ref,
+  //   offset: ["start end", "end start"]
+  // });
 
-  const rotateX = useTransform(scrollYProgress, [0, 0.5, 1], [15, 0, -15]);
+  // const rotateX = useTransform(scrollYProgress, [0, 0.5, 1], [15, 0, -15]);
 
   return (
-    <section ref={ref} className="px-4 sm:px-6 lg:px-8 py-8 bg-white">
+    <section ref={ref} className="px-4 sm:px-6 lg:px-8 py-20 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left - Story Content */}
@@ -171,135 +169,144 @@ function StorySection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, type: "spring", stiffness: 50 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
           >
-            <motion.div className="mb-6">
-             
-              <motion.h2 
-                className="text-4xl md:text-5xl font-Kairos font-normal text-black"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                Our Story
-              </motion.h2>
-            </motion.div>
-            
+            <motion.h2 
+              className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              Our Story
+            </motion.h2>
             <div className="space-y-6 text-lg text-[#5D5D5D] leading-relaxed font-inter">
-              <motion.div
-                className="p-4 bg-gray-50 rounded-xl border-l-4 border-black-400 hover:bg-gray-100 transition-colors duration-300"
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
                 viewport={{ once: true }}
-                whileHover={{ x: 5 }}
               >
-                <strong className="text-black">Founded with Vision:</strong> We bridge the gap between innovative technology and real-world business challenges, growing from a small startup to a trusted technology partner worldwide.
-              </motion.div>
-              
-              <motion.div
-                className="p-4 bg-gray-50 rounded-xl border-l-4 border-[#EAF044] hover:bg-gray-100 transition-colors duration-300"
+    Initech began with a vision to create meaningful digital solutions that help businesses grow. From a small startup, we’ve evolved into a trusted technology partner for companies across industries.
+              </motion.p>
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
                 viewport={{ once: true }}
-                whileHover={{ x: 5 }}
               >
-                <strong className="text-black">From Passion to Purpose:</strong> What started as a passion project has evolved into a full-service digital solutions company, helping 200+ clients transform operations and achieve measurable growth.
-              </motion.div>
-              
-              <motion.div
-                className="p-4 bg-gray-50 rounded-xl border-l-4 border-gray-400 hover:bg-gray-100 transition-colors duration-300"
+    What started with a passionate team of problem-solvers has grown into a full-service tech company delivering custom software, web platforms, and mobile applications that drive real business value.
+              </motion.p>
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
                 viewport={{ once: true }}
-                whileHover={{ x: 5 }}
               >
-                <strong className="text-black">Today's Excellence:</strong> We combine expertise in web development, mobile applications, AI/ML, IoT, and strategic consulting to exceed expectations.
-              </motion.div>
+    Guided by transparency, innovation, and teamwork, we build technology that empowers organizations to adapt, scale, and succeed in a digital-first world.
+              </motion.p>
             </div>
 
-           
+            <motion.div 
+              className="mt-8 flex flex-wrap gap-4"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              {['200+ Projects Delivered', '50+ Team Members', '15+ Countries Served'].map((text, idx) => (
+                <motion.div 
+                  key={idx}
+                  className="flex items-center gap-3"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.7 + idx * 0.1, duration: 0.5 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05, x: 5 }}
+                >
+                  <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <CheckCircle className="w-6 h-6 text-[#EAF044]" />
+                  </motion.div>
+                  <span className="text-black font-medium">{text}</span>
+                </motion.div>
+              ))}
+            </motion.div>
           </motion.div>
 
-          {/* Right - Image/Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, type: "spring", stiffness: 50 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="relative"
-            style={{ rotateX }}
-          >
-            <div className="relative h-[500px] bg-linear-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden">
+          {/* Right - Static Image */}
+          <div className="flex items-center justify-center">
+            <div className="h-[500px] w-full bg-gray-100 rounded-2xl overflow-hidden">
               <img 
                 src="/ourstory.jpg" 
                 alt="Our Story" 
                 className="w-full h-full object-cover"
               />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
-
 function MissionVisionValues() {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  // const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
-  const cards = [
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Mission",
-      subtitle: "Our Purpose",
-      description: "Empowering businesses with innovative technology solutions that drive growth and competitive advantage.",
-      features: [
-        "Cutting-edge technology solutions",
-        "Long-term strategic partnerships",
-        "Scalable business solutions",
-        "Innovation-driven approach"
-      ],
-      gradient: "from-slate-600 to-gray-800",
-      bgColor: "bg-slate-50",
-      accentColor: "text-slate-600"
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Vision",
-      subtitle: "Our Future",
-      description: "To be the world's most trusted technology partner, shaping the future of digital innovation.",
-      features: [
-        "Industry-leading solutions",
-        "Global presence & impact",
-        "Culture of excellence",
-        "Accessible technology"
-      ],
-      gradient: "from-[#EAF044] to-yellow-400",
-      bgColor: "bg-yellow-50",
-      accentColor: "text-yellow-600"
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: "Values",
-      subtitle: "Our Principles",
-      description: "The core principles that guide everything we do and define who we are as a company.",
-      features: [
-        "Innovation & creativity",
-        "Integrity & transparency",
-        "Excellence in delivery",
-        "Customer-first mindset"
-      ],
-      gradient: "from-gray-700 to-black",
-      bgColor: "bg-gray-50",
-      accentColor: "text-gray-700"
-    }
-  ];
+ const cards = [
+  {
+    icon: <Globe className="w-8 h-8" />,
+    title: "Mission",
+    subtitle: "Our Purpose",
+    description:
+      "Empowering organizations through scalable and sustainable digital solutions that accelerate growth, optimize operations, and strengthen competitive advantage.",
+    features: [
+      "Sustainable, high-performance technology solutions",
+      "Client-focused strategies tailored to business goals",
+      "Agile development for faster time-to-market",
+      "Innovation driven by measurable outcomes",
+    ],
+    gradient: "from-slate-600 to-gray-800",
+    bgColor: "bg-slate-50",
+    accentColor: "text-slate-600",
+  },
+  {
+    icon: <TrendingUp className="w-8 h-8" />,
+    title: "Vision",
+    subtitle: "Our Future",
+    description:
+      "To become the world’s most trusted technology innovation partner, delivering future-ready digital solutions that shape industries and empower global businesses.",
+    features: [
+      "Global excellence in software engineering",
+      "Future-driven innovation culture",
+      "Scalable solutions for evolving markets",
+      "Commitment to continuous improvement",
+    ],
+    gradient: "from-yellow-300 to-yellow-200",
+    bgColor: "bg-yellow-50",
+    accentColor: "text-yellow-600",
+  },
+  {
+    icon: <Award className="w-8 h-8" />,
+    title: "Values",
+    subtitle: "Our Principles",
+    description:
+      "Our values define how we work—prioritizing integrity, transparency, innovation, cultural awareness, and unwavering commitment to delivering secure and impactful solutions.",
+    features: [
+      "Integrity, transparency & ethical practices",
+      "Security-first development & data protection",
+      "Collaborative innovation through teamwork",
+      "Cultural sensitivity & global awareness",
+    ],
+    gradient: "from-gray-700 to-black",
+    bgColor: "bg-gray-50",
+    accentColor: "text-gray-700",
+  },
+];
+
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-20 bg-linear-to-b from-white to-gray-50 relative overflow-hidden">
+    <section className="px-4 sm:px-6 lg:px-8 py-20 bg-gray-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -347,24 +354,19 @@ function MissionVisionValues() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              onHoverStart={() => setHoveredCard(index)}
-              onHoverEnd={() => setHoveredCard(null)}
               className="group relative"
             >
               <motion.div
-                className={`relative h-full ${card.bgColor} rounded-3xl p-8 border border-gray-100 overflow-hidden cursor-pointer`}
+                className="relative h-full bg-white rounded-3xl p-8 border border-gray-200 hover:border-gray-300 overflow-hidden cursor-pointer transition-all duration-500 ease-out"
                 whileHover={{ 
-                  scale: 1.02,
-                  y: -8,
-                  boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.15)"
+                  y: -2,
+                  boxShadow: "0 8px 25px -8px rgba(0, 0, 0, 0.1)"
                 }}
-                transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                style={{
+                  boxShadow: "0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+                }}
               >
-                {/* Gradient Background */}
-                <motion.div
-                  className={`absolute inset-0 bg-linear-to-br ${card.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
-                />
-                
                 {/* Static Icon */}
                 <div className={`w-16 h-16 bg-linear-to-br ${card.gradient} rounded-2xl flex items-center justify-center mb-6 text-white shadow-lg`}>
                   {card.icon}
@@ -372,93 +374,34 @@ function MissionVisionValues() {
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <motion.div className="mb-4">
-                    <motion.p 
-                      className={`text-sm font-semibold ${card.accentColor} mb-1`}
-                      initial={{ opacity: 0.7 }}
-                      whileHover={{ opacity: 1 }}
-                    >
+                  <div className="mb-4">
+                    <p className={`text-sm font-semibold ${card.accentColor} mb-1`}>
                       {card.subtitle}
-                    </motion.p>
-                    <motion.h3 
-                      className="text-2xl font-Kairos font-bold text-black"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.2 }}
-                    >
+                    </p>
+                    <h3 className="text-2xl font-Kairos font-bold text-black">
                       {card.title}
-                    </motion.h3>
-                  </motion.div>
+                    </h3>
+                  </div>
 
-                  <motion.p 
-                    className="text-[#5D5D5D] leading-relaxed mb-6"
-                    initial={{ opacity: 0.8 }}
-                    whileHover={{ opacity: 1 }}
-                  >
+                  <p className="text-[#5D5D5D] leading-relaxed mb-6">
                     {card.description}
-                  </motion.p>
+                  </p>
 
                   {/* Features List */}
                   <div className="space-y-3">
                     {card.features.map((feature, idx) => (
-                      <motion.div
+                      <div
                         key={idx}
                         className="flex items-center gap-3"
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.8 + idx * 0.1, duration: 0.4 }}
-                        viewport={{ once: true }}
-                        whileHover={{ x: 5 }}
                       >
-                        <motion.div
-                          className={`w-2 h-2 bg-linear-to-r ${card.gradient} rounded-full`}
-                          whileHover={{ scale: 1.5 }}
-                          transition={{ duration: 0.2 }}
-                          animate={{
-                            scale: hoveredCard === index ? [1, 1.2, 1] : 1
-                          }}
-                        />
-                        <span className="text-sm text-[#5D5D5D] group-hover:text-black transition-colors duration-300">
+                        <div className={`w-2 h-2 bg-linear-to-r ${card.gradient} rounded-full`} />
+                        <span className="text-sm text-[#5D5D5D]">
                           {feature}
                         </span>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </div>
-
-                {/* Hover Effect Overlay */}
-                <motion.div
-                  className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-current to-transparent opacity-0 group-hover:opacity-100"
-                  style={{ color: card.gradient.includes('EAF044') ? '#EAF044' : card.gradient.includes('blue') ? '#3B82F6' : '#374151' }}
-                  transition={{ duration: 0.3 }}
-                />
-                
-                {/* Floating particles animation */}
-                <motion.div
-                  className="absolute top-4 right-4 w-2 h-2 bg-current rounded-full opacity-20"
-                  animate={{
-                    y: [0, -10, 0],
-                    opacity: [0.2, 0.6, 0.2]
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    delay: index * 0.5
-                  }}
-                  style={{ color: card.gradient.includes('EAF044') ? '#EAF044' : card.gradient.includes('blue') ? '#3B82F6' : '#374151' }}
-                />
-                <motion.div
-                  className="absolute top-8 right-8 w-1 h-1 bg-current rounded-full opacity-30"
-                  animate={{
-                    y: [0, -8, 0],
-                    opacity: [0.3, 0.8, 0.3]
-                  }}
-                  transition={{
-                    duration: 2.5,
-                    repeat: Infinity,
-                    delay: index * 0.7
-                  }}
-                  style={{ color: card.gradient.includes('EAF044') ? '#EAF044' : card.gradient.includes('blue') ? '#3B82F6' : '#374151' }}
-                />
               </motion.div>
             </motion.div>
           ))}
@@ -494,107 +437,52 @@ function MissionVisionValues() {
   );
 }
 
-function StatsSection() {
-  const stats = [
-    { value: "200+", label: "Projects Completed" },
-    { value: "150+", label: "Happy Clients" },
-    { value: "15+", label: "Countries Served" },
-    { value: "98%", label: "Client Satisfaction" },
-  ];
+// function StatsSection() {
+//   const stats = [
+//     { value: "200+", label: "Projects Completed" },
+//     { value: "150+", label: "Happy Clients" },
+//     { value: "15+", label: "Countries Served" },
+//     { value: "98%", label: "Client Satisfaction" },
+//   ];
 
-  return (
-    <section className="px-4 sm:px-6 lg:px-8 py-20 bg-white relative overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, #EAF044 2px, transparent 2px)`,
-          backgroundSize: '60px 60px'
-        }} />
-      </div>
+//   return (
+//     <section className="px-4 sm:px-6 lg:px-8 py-20 bg-white">
+//       <div className="max-w-7xl mx-auto">
+//         {/* Header */}
+//         <div className="text-center mb-16">
+//           <h2 className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-4">
+//             Our Impact in Numbers
+//           </h2>
+//           <p className="text-lg text-[#5D5D5D] max-w-2xl mx-auto font-inter">
+//             Measurable results that speak to our commitment to excellence
+//           </p>
+//         </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <motion.h2 
-            className="text-4xl md:text-6xl font-Kairos font-normal text-black mb-4"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            Our Impact in Numbers
-          </motion.h2>
-          <motion.p 
-            className="text-lg text-[#5D5D5D] max-w-2xl mx-auto font-inter"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            Measurable results that speak to our commitment to excellence
-          </motion.p>
-        </motion.div>
-
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ 
-                duration: 0.6, 
-                delay: idx * 0.15,
-                type: "spring",
-                stiffness: 100
-              }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ 
-                y: -5,
-                transition: { duration: 0.3 }
-              }}
-              className="text-center bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 group"
-            >
-              {/* Static Checkmark Icon */}
-              <div className="w-16 h-16 bg-[#EAF044] rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
-                <CheckCircle className="w-8 h-8 text-black" />
-              </div>
+//         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+//           {stats.map((stat, idx) => (
+//             <div
+//               key={idx}
+//               className="text-center bg-white rounded-2xl p-8 shadow-lg border border-yellow-200/40 hover:border-yellow-300/50 hover:shadow-xl transition-all duration-300"
+//             >
+//               {/* Static Icon */}
+//               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 border border-gray-200">
+//                 <CheckCircle className="w-8 h-8 text-gray-600" />
+//               </div>
               
-              <motion.div 
-                className="text-4xl font-bold text-black mb-2 font-Kairos group-hover:text-[#EAF044] transition-colors duration-300"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                transition={{ 
-                  delay: idx * 0.15 + 0.3,
-                  type: "spring",
-                  stiffness: 200
-                }}
-                viewport={{ once: true }}
-              >
-                {stat.value}
-              </motion.div>
+//               <div className="text-4xl font-bold text-black mb-2 font-Kairos">
+//                 {stat.value}
+//               </div>
               
-              <motion.div 
-                className="text-[#5D5D5D] text-sm md:text-base font-medium"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: idx * 0.15 + 0.5 }}
-                viewport={{ once: true }}
-              >
-                {stat.label}
-              </motion.div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+//               <div className="text-[#5D5D5D] text-sm md:text-base font-medium">
+//                 {stat.label}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 // function TeamSection() {
 //   const teamMembers = [
@@ -861,7 +749,7 @@ function StatsSection() {
 //       </div>
 //     </section>
 //   );
-// }
+// } 
 
 function TimelineSection() {
   const ref = useRef(null);
@@ -890,6 +778,14 @@ function TimelineSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
+          <motion.h2 
+            className="text-2xl font-Kairos md:text-6xl text-black mb-3 max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+Milestones          </motion.h2>
           
           <motion.p 
             className="text-lg text-[#5D5D5D] max-w-2xl mx-auto"
@@ -941,7 +837,7 @@ function TimelineSection() {
                     transition={{ duration: 0.3 }}
                   >
                     <motion.div 
-                      className="text-4xl font-normal text-[#EAF044] mb-2 font-Kairos"
+                      className="text-4xl font-normal text-black mb-2 font-Kairos"
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       transition={{ 
@@ -954,7 +850,7 @@ function TimelineSection() {
                       {milestone.year}
                     </motion.div>
                     <motion.h3 
-                      className="text-2xl font-Kairos font-normal text-black mb-2"
+                      className="text-2xl font-Kairos font-normal text-gray-500 mb-2"
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: idx * 0.1 + 0.4 }}
@@ -975,7 +871,7 @@ function TimelineSection() {
                 </div>
 
                 <motion.div 
-                  className="w-12 h-12 bg-[#EAF044] rounded-full flex items-center justify-center shrink-0 relative z-10 border-4 border-white shadow-lg"
+                  className="w-12 h-12 bg-[#EAF044] rounded-full flex items-center justify-center shrink-0 relative z-10 border-4 border-gray-200 shadow-lg"
                   initial={{ scale: 0, rotate: -180 }}
                   whileInView={{ scale: 1, rotate: 0 }}
                   transition={{ 
@@ -1016,7 +912,7 @@ function TimelineSection() {
 function CTASection() {
   return (
     <section
-      className="relative flex flex-col mb-10 items-center justify-center mx-auto h-[360px] bg-black text-center overflow-hidden w-[88%] md:w-[88%] rounded-2xl"
+      className="relative flex flex-col my-10 items-center justify-center mx-auto h-[400px] bg-black text-center overflow-hidden w-[88%] md:w-[88%] rounded-2xl"
       aria-label="Ready to Transform Your Business"
     >
       {/* Animated Dotted Background Layer */}
@@ -1036,7 +932,7 @@ function CTASection() {
 
       {/* Main Content */}
       <div className="relative z-20 px-6">
-        <h1 className="text-[#F6F6F6] text-3xl sm:text-4xl md:text-5xl font-Kairos tracking-tight leading-snug max-w-3xl mx-auto">
+        <h1 className="text-[#F6F6F6] text-3xl sm:text-4xl md:text-5xl font-Kairos tracking-tight leading-snug max-w-xl mx-auto">
           Ready to Transform <span className="text-[#EAF044]">Your Business?</span>
         </h1>
 
