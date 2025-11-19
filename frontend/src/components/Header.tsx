@@ -92,10 +92,10 @@ const Header = () => {
           <button className="px-4 py-3 transition bg-gray-100 rounded-xl hover:bg-gray-200">
             LOGIN
           </button> */}
-          <button className="flex items-center gap-2 px-4 py-2 text-sm text-white transition bg-[#0A0A0A] rounded-xl hover:bg-gray-800">
+          <a href="mailto:support@initech.com" className="flex items-center gap-2 px-4 py-2 text-sm text-white transition bg-[#0A0A0A] rounded-xl hover:bg-gray-800">
             {/* <div className="w-2.5 h-2.5 bg-white"></div> */}
             LET'S TALK
-          </button>
+          </a>
         </div>
 
         {/* Hamburger Icon (Mobile) */}
@@ -189,10 +189,10 @@ const Header = () => {
                 <button className="w-full px-4 py-3 transition bg-gray-100 rounded-xl hover:bg-gray-200">
                   LOGIN
                 </button> */}
-                <button className="w-full flex justify-center items-center gap-2 px-4 py-2 text-sm text-white transition bg-[#0A0A0A] rounded-xl hover:bg-gray-800">
+                <a href="mailto:support@initech.com" className="w-full flex justify-center items-center gap-2 px-4 py-2 text-sm text-white transition bg-[#0A0A0A] rounded-xl hover:bg-gray-800">
                   <div className="w-2.5 h-2.5 bg-white"></div>
                   GET STARTED
-                </button>
+                </a>
               </div>
             </nav>
           </motion.div>

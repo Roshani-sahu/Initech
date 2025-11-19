@@ -29,7 +29,7 @@ export default function AboutPage() {
     
       {/* <TeamSection /> */}
       {/* <WhyChooseUs /> */}
-      <TimelineSection />
+      {/* <TimelineSection /> */}
       <HowWeCanHelp />
       <CTASection />
       <Footer />
@@ -938,8 +938,8 @@ function CTASection() {
 
         {/* CTA Button */}
         <div className="mt-8 flex justify-center">
-          <button
-            type="button"
+          <a
+            href="mailto:support@initech.com"
             className="group flex items-center gap-2 px-5 py-3 rounded-xl bg-[#EAF044] text-black font-semibold text-base md:text-lg transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#EAF044]/50"
           >
             {/* Animated Icon */}
@@ -956,7 +956,7 @@ function CTASection() {
               />
             </div>
             SCHEDULE A CALL
-          </button>
+          </a>
         </div>
       </div>
     </section>

@@ -532,7 +532,7 @@ function CTASection() {
           viewport={{ once: true }}
           className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-16"
         >
-          <button className="group flex items-center text-lg gap-3 px-3 py-2 font-bold text-gray-900 transition-all bg-[#EAF044] rounded-2xl hover:scale-105 hover:shadow-2xl hover:shadow-[#EAF044]/50">
+          <a href="mailto:support@initech.com" className="group flex items-center text-lg gap-3 px-3 py-2 font-bold text-gray-900 transition-all bg-[#EAF044] rounded-2xl hover:scale-105 hover:shadow-2xl hover:shadow-[#EAF044]/50">
             <div className="w-10 h-10 bg-[#0A0A0A1A] hover:bg-black transition-all duration-500 ease-in-out rounded-xl flex items-center justify-center relative overflow-hidden">
               <img
                 src="/11.svg"
@@ -546,7 +546,7 @@ function CTASection() {
               />
             </div>
             GET IN TOUCH
-          </button>
+          </a>
 
           <button className="px-4 py-3 bg-transparent text-lg font-bold text-white transition-all border-2 border-gray-600 rounded-2xl hover:bg-white hover:text-gray-900 hover:border-white hover:scale-105">
             VIEW OUR PORTFOLIO

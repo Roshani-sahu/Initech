@@ -43,7 +43,7 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-4">
-            <button className="group flex items-center text-base gap-2 px-2 py-1 md:py-2 font-medium text-gray-900 transition-all bg-[#EAF044] rounded-xl hover:scale-105">
+            <a href="mailto:support@initech.com" className="group flex items-center text-base gap-2 px-2 py-1 md:py-2 font-medium text-gray-900 transition-all bg-[#EAF044] rounded-xl hover:scale-105">
               <div className="w-10 h-10 bg-[#0A0A0A1A] hover:bg-black transition-all duration-500 ease-in-out rounded-lg flex items-center justify-center relative overflow-hidden">
                 {/* White Icon (initially visible) */}
                 <img
@@ -61,7 +61,7 @@ const Hero = () => {
               </div>
 
               TALK TO AN EXPERT
-            </button>
+            </a>
 
             {/* <button className="px-6 py-2 bg-white text-base font-medium text-gray-900 transition-colors border border-gray-200 md:py-4 rounded-xl hover:bg-gray-200 hover:text-gray-700">
               SCHEDULE A DEMO
